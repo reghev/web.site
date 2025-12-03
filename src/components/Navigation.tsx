@@ -1,4 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
+import { motion } from 'framer-motion'
 
 export default function Navigation() {
   const location = useLocation()
@@ -11,29 +12,40 @@ export default function Navigation() {
     <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
         <Link to="/" className="text-xl font-semibold hover:text-gray-600 transition-colors">
-          Raghav
+          raghav.fit
         </Link>
         
-        <div className="flex gap-2 bg-gray-100 p-1 rounded-full">
-          <Link
-            to="/"
-            className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
-              isActive('/') 
-                ? 'bg-black text-white shadow-md' 
-                : 'text-gray-600 hover:text-black'
+        <div className="flex gap-8 relative">
+          <Link 
+            to="/" 
+            className={`relative py-2 transition-colors ${
+              isActive('/') ? 'text-black font-medium' : 'text-gray-600 hover:text-black'
             }`}
           >
             Home
+            {isActive('/') && (
+              <motion.div
+                layoutId="activeTab"
+                className="absolute bottom-0 left-0 right-0 h-0.5 bg-black"
+                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              />
+            )}
           </Link>
-          <Link
-            to="/about"
-            className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
-              isActive('/about') 
-                ? 'bg-black text-white shadow-md' 
-                : 'text-gray-600 hover:text-black'
+          
+          <Link 
+            to="/about" 
+            className={`relative py-2 transition-colors ${
+              isActive('/about') ? 'text-black font-medium' : 'text-gray-600 hover:text-black'
             }`}
           >
             About
+            {isActive('/about') && (
+              <motion.div
+                layoutId="activeTab"
+                className="absolute bottom-0 left-0 right-0 h-0.5 bg-black"
+                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              />
+            )}
           </Link>
         </div>
       </div>

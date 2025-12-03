@@ -1,21 +1,15 @@
 import { SplitText } from '@/components/ui/split-text'
 import AnimatedContent from '@/components/ui/animated-content'
-import Navigation from '@/components/Navigation'
-import { Button } from '@/components/ui/button'
+
 import { Link } from 'react-router-dom'
 
-export default function ProjectLois() {
+import Navigation from '@/components/Navigation'
+
+
+export default function About() {
   return (
-    <div className="min-h-screen bg-white">
-      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
-          <h1 className="text-xl font-semibold">raghav.fit</h1>
-          <div className="flex gap-8 text-sm">
-            <Link to="/" className="hover:text-gray-600 transition-colors">Home</Link>
-            <Link to="/about" className="hover:text-gray-600 transition-colors">About</Link>
-          </div>
-        </div>
-      </nav>
+    <div className="w-screen min-h-screen">
+      <Navigation />
 
       <div className="pt-32 pb-20 px-8">
         <div className="max-w-4xl mx-auto">
@@ -25,11 +19,11 @@ export default function ProjectLois() {
             </Link>
             
             <h1 className="text-6xl font-bold mb-6">
-              <SplitText text="Dinosaur Icon" />
+              <SplitText text="seth-green" />
             </h1>
             
             <p className="text-xl text-gray-600 mb-8">
-              Minimalist vector illustration
+              my project for solder
             </p>
           </AnimatedContent>
 
@@ -43,18 +37,17 @@ export default function ProjectLois() {
 
           <AnimatedContent distance={60} duration={0.8} delay={0.4}>
             <div className="prose prose-lg max-w-none">
-              <h2 className="text-3xl font-bold mb-4">Design Philosophy</h2>
+              <h2 className="text-3xl font-bold mb-4">what is it</h2>
               <p className="text-gray-700 mb-6">
-                A minimalist approach to icon design, focusing on simple shapes and 
-                clear silhouettes to create an instantly recognizable symbol.
+                This was my project for solder when i started taking hackclub seriously and wanted to go into chip design so my sister pushed me to do solder so i could really know what it meant to design pcbs
               </p>
               
-              <h3 className="text-2xl font-bold mb-4">Design Elements</h3>
+              <h3 className="text-2xl font-bold mb-4">features/what i would change</h3>
               <ul className="list-disc list-inside text-gray-700 space-y-2">
-                <li>Simple geometric shapes</li>
-                <li>High contrast design</li>
-                <li>Scalable vector format</li>
-                <li>Clean, modern aesthetic</li>
+                <li>It was supposed to light up and "roar" when you pressed the button</li>
+                <li>Never finished it either because i was lazy</li>
+                <li>Im actually really proud of the dinosaur design for the pcb because it was really hard to make it</li>
+                <li>I wish that i couldve made it have more features</li>
               </ul>
             </div>
           </AnimatedContent>

@@ -1,34 +1,59 @@
 import { SplitText } from '@/components/ui/split-text'
 import AnimatedContent from '@/components/ui/animated-content'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-
+import Navigation from '@/components/Navigation'
+import Waves from '@/components/Waves'
+import GradientWaves from '@/components/GradientWaves'
+import ShinyText from '@/components/ShinyText';
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
-          <div className="flex gap-8 text-sm">
-            <Link to="/" className="hover:text-gray-600 transition-colors">Home</Link>
-            <Link to="/about" className="hover:text-gray-600 transition-colors">About Me</Link>
-          </div>
-        </div>
-      </nav>
+    <div className="min-h-screen bg-base-100">
+      <GradientWaves
+        waveSpeedX={0.02}
+        waveSpeedY={0.01}
+        waveAmpX={40}
+        waveAmpY={20}
+        friction={0.9}
+        tension={0.01}
+        maxCursorMove={120}
+        xGap={12}
+        yGap={36}
+      />
+
+      <Navigation />
+
 
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center pt-20 px-8">
-        <div className="max-w-5xl text-center">
+      <section className="min-h-screen bg-base-100 flex items-center justify-center pt-20 px-8 relative">
+
+        <Waves
+          lineColor="rgba(255, 255, 255, 0.1)"
+          backgroundColor="black"
+          waveSpeedX={0.02}
+          waveSpeedY={0.01}
+          waveAmpX={40}
+          waveAmpY={20}
+          friction={0.9}
+          tension={0.01}
+          maxCursorMove={120}
+          xGap={12}
+          yGap={36}
+        />
+
+        {/* Hero Content */}
+        <div className="max-w-5xl text-center relative z-10">
+
           <AnimatedContent
             distance={80}
             direction="vertical"
             duration={1}
             delay={0.2}
           >
-            <h1 className="text-7xl md:text-8xl font-bold text-black mb-6 leading-tight">
-              <SplitText text="Raghav.fit" className="inline-block" delay={0.03} />
+            <h1 className="text-7xl md:text-8xl font-bold text-white mb-6 leading-tight">
+              <SplitText text="Welcome." className="inline-block" delay={0.03} />
             </h1>
           </AnimatedContent>
 
@@ -38,9 +63,13 @@ export default function Home() {
             duration={1}
             delay={0.5}
           >
-            <p className="text-2xl md:text-3xl text-gray-600 font-light mb-12">
-              check out some of my stuff!
-            </p>
+
+            <ShinyText
+              text="In search of good enough"
+              disabled={false}
+              speed={3}
+              className="text-2xl md:text-3xl text-gray-400 font-medium mb-12"
+            />
           </AnimatedContent>
 
           <AnimatedContent
@@ -54,11 +83,11 @@ export default function Home() {
                 asChild
                 className="bg-black text-white hover:bg-gray-800 rounded-full px-8 py-6 text-lg"
               >
-                <Link to="/about">About Me</Link>
+                <Link to="/about">Learn more</Link>
               </Button>
               <Button
                 variant="outline"
-                className="border-2 border-gray-300 hover:border-gray-400 rounded-full px-8 py-6 text-lg"
+                className="border-2 border-gray-300 hover:border-gray-400 hover:text-grey-400 rounded-full px-8 py-6 text-white"
                 onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 View projects
@@ -68,69 +97,88 @@ export default function Home() {
         </div>
       </section>
 
+
+
+
+
+
       {/* Gallery Section */}
-      <section className="py-20 px-8 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <AnimatedContent distance={60} duration={0.8}>
-            <h2 className="text-5xl md:text-6xl font-bold text-center mb-4">
-              Featured Work
-            </h2>
-            <p className="text-xl text-gray-600 text-center mb-16 font-light">
-              A collection of my creative projects
-            </p>
-          </AnimatedContent>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
-            <AnimatedContent distance={100} duration={0.8} delay={0}>
-              <Link to="/project/matrix" className="block group">
-                <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
-                  <img
-                    src="/images/lois.png"
-                    alt="Matrix Project"
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <span className="text-white text-2xl font-semibold">View Project →</span>
-                  </div>
-                </div>
-              </Link>
+      <section className="min-h-screen bg-base-100">
+        
+          <GradientWaves
+            waveSpeedX={0.02}
+            waveSpeedY={0.01}
+            waveAmpX={40}
+            waveAmpY={20}
+            friction={0.9}
+            tension={0.01}
+            maxCursorMove={120}
+            xGap={12}
+            yGap={36}
+          />
+
+          <div className="max-w-6xl mx-auto">
+            <AnimatedContent distance={60} duration={0.8}>
+              <h2 className="text-5xl md:text-6xl font-bold text-center mb-4">
+                Hackclub projects
+              </h2>
+              <p className="text-xl text-gray-600 text-center mb-16 font-medium">
+                stuff i did thats pretty cool
+              </p>
             </AnimatedContent>
 
-            <AnimatedContent distance={100} duration={0.8} delay={0.2}>
-              <Link to="/project/circuit" className="block group">
-                <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
-                  <img
-                    src="/images/bp.webp"
-                    alt="Circuit Board"
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <span className="text-white text-2xl font-semibold">View Project →</span>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+              <AnimatedContent distance={100} duration={0.8} delay={0}>
+                <Link to="/project/matrix" className="block group">
+                  <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
+                    <img
+                      src="/images/lois.png"
+                      alt="Matrix Project"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                      <span className="text-white text-2xl font-semibold">View Project →</span>
+                    </div>
                   </div>
-                </div>
-              </Link>
-            </AnimatedContent>
+                </Link>
+              </AnimatedContent>
 
-            <AnimatedContent distance={100} duration={0.8} delay={0.4}>
-              <Link to="/project/dinosaur" className="block group">
-                <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
-                  <img
-                    src="/images/dinosaur.png"
-                    alt="Dinosaur Icon"
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <span className="text-white text-2xl font-semibold">View Project →</span>
+              <AnimatedContent distance={100} duration={0.8} delay={0.2}>
+                <Link to="/project/circuit" className="block group">
+                  <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
+                    <img
+                      src="/images/bp.webp"
+                      alt="Circuit Board"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                      <span className="text-white text-2xl font-semibold">View Project →</span>
+                    </div>
                   </div>
-                </div>
-              </Link>
-            </AnimatedContent>
+                </Link>
+              </AnimatedContent>
+
+              <AnimatedContent distance={100} duration={0.8} delay={0.4}>
+                <Link to="/project/dinosaur" className="block group">
+                  <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
+                    <img
+                      src="/images/dinosaur.png"
+                      alt="Dinosaur Icon"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                      <span className="text-white text-2xl font-semibold">View Project →</span>
+                    </div>
+                  </div>
+                </Link>
+              </AnimatedContent>
+            </div>
           </div>
-        </div>
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-32 px-8 bg-white">
+      <section id="projects" className="min-h-screen bg-base-100">
         <div className="max-w-7xl mx-auto">
           <AnimatedContent distance={60} duration={0.8}>
             <h2 className="text-5xl md:text-6xl font-bold text-center mb-4">
@@ -165,6 +213,7 @@ export default function Home() {
                     <a href="https://tiermaker.com/create/top-40-ice-cream-flavors-15607441" target="_blank" rel="noopener noreferrer">
                       View →
                     </a>
+
                   </Button>
                 </CardFooter>
               </Card>
@@ -182,7 +231,7 @@ export default function Home() {
                 <CardHeader>
                   <CardTitle className="text-2xl">Protein Powder Rankings</CardTitle>
                   <CardDescription className="text-base text-gray-600">
-                    The definitive guide to protein
+                    every single protein powder that matters
                   </CardDescription>
                 </CardHeader>
                 <CardFooter>
@@ -208,9 +257,9 @@ export default function Home() {
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-2xl">Energy Drinks</CardTitle>
+                  <CardTitle className="text-2xl">EVERY single energy drink ranked</CardTitle>
                   <CardDescription className="text-base text-gray-600">
-                    Comprehensive taste analysis
+                    this took way too long
                   </CardDescription>
                 </CardHeader>
                 <CardFooter>

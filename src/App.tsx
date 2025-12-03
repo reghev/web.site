@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
-import ProjectLois from './pages/ProjectLois'
-import ProjectCircuit from './pages/ProjectCircuit'
-import ProjectDinosaur from './pages/ProjectDinosaur'
+import ProjectLois from './pages/mark-wahlberg'
+import ProjectCircuit from './pages/takeachillpill'
+import ProjectDinosaur from './pages/seth-green'
 
 function App() {
   return (

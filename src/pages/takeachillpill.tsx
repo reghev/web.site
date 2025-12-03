@@ -1,21 +1,15 @@
 import { SplitText } from '@/components/ui/split-text'
 import AnimatedContent from '@/components/ui/animated-content'
-import Navigation from '@/components/Navigation'
-import { Button } from '@/components/ui/button'
+
 import { Link } from 'react-router-dom'
 
-export default function ProjectLois() {
+import Navigation from '@/components/Navigation'
+
+
+export default function About() {
   return (
-    <div className="min-h-screen bg-white">
-      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
-          <h1 className="text-xl font-semibold">Raghav</h1>
-          <div className="flex gap-8 text-sm">
-            <Link to="/" className="hover:text-gray-600 transition-colors">Home</Link>
-            <Link to="/about" className="hover:text-gray-600 transition-colors">About</Link>
-          </div>
-        </div>
-      </nav>
+    <div className="w-screen min-h-screen">
+      <Navigation />
 
       <div className="pt-32 pb-20 px-8">
         <div className="max-w-4xl mx-auto">
@@ -25,11 +19,11 @@ export default function ProjectLois() {
             </Link>
             
             <h1 className="text-6xl font-bold mb-6">
-              <SplitText text="Circuit Board Design" />
+              <SplitText text="seth-blue" />
             </h1>
             
             <p className="text-xl text-gray-600 mb-8">
-              Electronic engineering project
+              My first chrome extension called takeachillpill
             </p>
           </AnimatedContent>
 
@@ -45,15 +39,14 @@ export default function ProjectLois() {
             <div className="prose prose-lg max-w-none">
               <h2 className="text-3xl font-bold mb-4">Project Overview</h2>
               <p className="text-gray-700 mb-6">
-                A custom circuit board design showcasing electronic engineering principles 
-                and PCB layout techniques.
+                I wanted to make something for Reality so i made something to help with my screentime that would time your website uses and redirect you to pictures of pills if you exceeded the time you set for the website
               </p>
               
-              <h3 className="text-2xl font-bold mb-4">Features</h3>
+              <h3 className="text-2xl font-bold mb-4">Changes I would make</h3>
               <ul className="list-disc list-inside text-gray-700 space-y-2">
-                <li>Custom PCB layout</li>
-                <li>Optimized component placement</li>
-                <li>Professional manufacturing quality</li>
+                <li>A functioning extension would be priority number one because i never really got it to work</li>
+                <li>A better UI than what i was planning because it was really basic and some more colors and better layout would be really helpful</li>
+                <li>Making it funnier</li>
               </ul>
             </div>
           </AnimatedContent>

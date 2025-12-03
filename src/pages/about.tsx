@@ -1,12 +1,11 @@
 import { SplitText } from '@/components/ui/split-text'
-import AnimatedContent from '@/components/ui/animated-content'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
 export default function About() {
   return (
-    <div className="w-screen min-h-screen">
+    <div className="min-h-screen bg-base-200">
       <Navigation />
 
       <div className="m-8 flex items-center justify-center pt-20">
