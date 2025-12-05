@@ -1,11 +1,9 @@
 import { SplitText } from '@/components/ui/split-text'
 import AnimatedContent from '@/components/ui/animated-content'
-
 import { Link } from 'react-router-dom'
-
 import Navigation from '@/components/Navigation'
 
-
+  
 export default function About() {
   return (
     <div className="w-screen min-h-screen">

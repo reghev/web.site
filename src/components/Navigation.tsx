@@ -9,9 +9,9 @@ export default function Navigation() {
   }
 
   return (
-    <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-200">
+    <nav className="fixed top-0 w-full bg-black/90 backdrop-blur-md z-50 border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
-        <Link to="/" className="text-xl font-semibold hover:text-gray-600 transition-colors">
+        <Link to="/" className="text-xl font-semibold hover:text-white-600 transition-colors text-white">
           raghav.fit
         </Link>
         
@@ -19,7 +19,7 @@ export default function Navigation() {
           <Link 
             to="/" 
             className={`relative py-2 transition-colors ${
-              isActive('/') ? 'text-black font-medium' : 'text-gray-600 hover:text-black'
+              isActive('/') ? 'text-white font-medium' : 'text-white hover:text-white '
             }`}
           >
             Home
@@ -35,7 +35,7 @@ export default function Navigation() {
           <Link 
             to="/about" 
             className={`relative py-2 transition-colors ${
-              isActive('/about') ? 'text-black font-medium' : 'text-gray-600 hover:text-black'
+              isActive('/about') ? 'text-white font-medium' : 'text-white hover:text-white'
             }`}
           >
             About
