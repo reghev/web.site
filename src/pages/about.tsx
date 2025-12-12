@@ -7,9 +7,9 @@ import ClickSpark from '@/components/ClickSpark'
 
 export default function About() {
   return (
-    <div className="h-full bg-black relative">
+    <div className="min-h-screen bg-black relative">
       <ClickSpark />
-      <Navigation/>
+      
       {/* Waves background for entire page */}
       <div className="fixed inset-0 pointer-events-none">
         <Waves
@@ -28,21 +28,21 @@ export default function About() {
       </div>
 
       <div className="relative z-10">
-   
+        <Navigation />
 
-    <div className=" flex items-center justify-center ">
+        <div className="flex items-center justify-center pt-32 pb-12 px-8">
           <div className="text-5xl border-2 border-white rounded-xl p-4 bg-black/50">
             <SplitText text="about me" className="font-bold text-white" />
           </div>
         </div>
 
-        <div className="max-w-4xl mx-auto p-8">
-          <Card className="bg-white border-2 border-white">
+        <div className="max-w-4xl mx-auto px-8 pb-8">
+          <Card className="bg-black border-2 border-white">
             <CardHeader>
-              <CardTitle className="text-3xl">Hi, I'm Raghav!</CardTitle>
+              <CardTitle className="text-3xl text-white">Hi, I'm Raghav!</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
-              <p className="text-lg">
+              <p className="text-lg text-white">
                 I'm Raghav, A little bit about me is I'm 13, I'm into bodybuilding and powerlifting and I'm a hackclubber. I was 3rd in NASA's spaceapps hackathon in Cleveland in 2022 and I am incredibly lazy and haven't done anything generally useful for hackclub YET. My favorite band is Nirvana and my favorite artist is 21 Savage, I play guitar, violin, bass and spend my time in school, eating, sleeping, or lighting things on fire (still got that 4.0 gpa tho). If you need anything which I doubt you do from me then feel free to contact me at raghavmadiraju@gmail.com or slack or go to the footer and look for alternate contact.
               </p>
             </CardContent>

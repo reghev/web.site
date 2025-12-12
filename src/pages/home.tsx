@@ -6,20 +6,21 @@ import { Link } from 'react-router-dom'
 import Navigation from '@/components/Navigation'
 import ShinyText from '@/components/ShinyText'
 import Footer from '@/components/Footer'
-import Waves from '@/components/Waves';
-import ClickSpark from '@/components/ClickSpark';
-import CircularGallery from '@/components/CircularGallery'
-import GlitchText from '@/components/GlitchText'
+import Waves from '@/components/Waves'
+import Noise from '@/components/Noise'
+import StarBorder from '@/components/StarBorder'
+import { useState } from 'react'
 
 export default function Home() {
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+
   return (
     <div className="min-h-screen bg-black relative">
-      <ClickSpark sparkColor="#ffffffff" />
 
-      {/* Waves background for entire page */}
+
       <div className="fixed inset-0 pointer-events-none">
         <Waves
-          lineColor="#481c81ff"
+          lineColor="#481c81"
           backgroundColor="rgba(0, 0, 0, 0.22)"
           waveSpeedX={0.02}
           waveSpeedY={0.01}
@@ -41,33 +42,29 @@ export default function Home() {
           <div className="max-w-5xl text-center relative z-10">
             <AnimatedContent distance={80} direction="vertical" duration={1} delay={0.2}>
               <h1 className="text-7xl md:text-8xl font-bold text-white mb-6 leading-tight">
-                <SplitText text="Welcome." className="inline-block" delay={0.03} />
+                <SplitText text="raghav.fit" className="inline-block" delay={0.03} />
               </h1>
             </AnimatedContent>
 
             <AnimatedContent distance={60} direction="vertical" duration={1} delay={0.5}>
-              <div className="text-2xl md:text-3xl text-gray-400 font-medium mb-12">
+              <div className="text-2xl md:text-3xl font-medium mb-12">
                 <ShinyText
-                  text="In search of good "
+                  text="In search of good enough"
                   disabled={false}
-                  speed={3}
-                  className="text-2xl md:text-3xl text-gray-400 font-medium"
-                />
-                <GlitchText
-                  text="enough"
-                  className="text-2xl md:text-3xl text-gray-400 font-medium"
+                  speed={5}
+                  className="text-2xl md:text-3xl"
                 />
               </div>
             </AnimatedContent>
 
             <AnimatedContent distance={40} direction="vertical" duration={1} delay={0.8}>
-              <div className="flex gap-4 justify-center">
-                <Button asChild className="bg-white text-black hover:bg-gray-200 rounded-full px-8 py-6 text-lg">
+              <div className="flex gap-4 justify-center flex-wrap">
+                <Button asChild className="border-2 border-black text-white hover:bg-black bg-white hover:border-white text-black hover:text-white rounded-full px-8 py-6 text-lg transition-all">
                   <Link to="/about">Learn more</Link>
                 </Button>
                 <Button
                   variant="outline"
-                  className="border-2 border-white text-white hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg"
+                  className="border-2 hover:border-black border-white text-white hover:bg-white bg-black hover:text-black rounded-full px-8 py-6 text-lg transition-all"
                   onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   View projects
@@ -77,9 +74,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Gallery Section */}
-        <section className="py-20 px-8 h-screen">
-          <div className="max-w-6xl mx-auto h-full">
+        <section className="py-20 px-8">
+          <div className="max-w-6xl mx-auto">
             <AnimatedContent distance={60} duration={0.8}>
               <h2 className="text-5xl md:text-6xl font-bold text-center mb-4 text-white">
                 Hackclub projects
@@ -89,38 +85,96 @@ export default function Home() {
               </p>
             </AnimatedContent>
 
-            <div className="h-[600px]">
-              <CircularGallery
-                items={[
-                  { image: '/images/lois.png', text: 'Matrix Project' },
-                  { image: '/images/bp.webp', text: 'Circuit Board' },
-                  { image: '/images/dinosaur.png', text: 'Dinosaur' }
-                ]}
-                bend={3}
-                textColor="#ffffff"
-                borderRadius={0.05}
-                scrollSpeed={2}
-                scrollEase={0.05}
-              />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+              <AnimatedContent distance={100} duration={0.8} delay={0}>
+                <Link to="/project/pathfinder" className="block group">
+                  <div
+                    className="relative"
+                    onMouseEnter={() => setHoveredCard(0)}
+                    onMouseLeave={() => setHoveredCard(null)}
+                  >
+                    <StarBorder color="#ffffff">
+                      <div className="relative aspect-[4/3] rounded-3xl overflow-hidden">
+                        {hoveredCard === 0 && <Noise/>}
+                        <img
+                          src="/images/pathfinder1.png"
+                          alt="mark-wahlberg"
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        />
+                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                          <span className="text-white text-2xl font-semibold">View Project →</span>
+                        </div>
+                      </div>
+                    </StarBorder>
+                  </div>
+                </Link>
+              </AnimatedContent>
+
+              <AnimatedContent distance={100} duration={0.8} delay={0.2}>
+                <Link to="/project/reality" className="block group">
+                  <div
+                    className="relative"
+                    onMouseEnter={() => setHoveredCard(1)}
+                    onMouseLeave={() => setHoveredCard(null)}
+                  >
+                    <StarBorder color="#ffffff">
+                      <div className="relative aspect-[4/3] rounded-3xl overflow-hidden">
+                        {hoveredCard === 0 && <Noise/>}
+                        <img
+                          src="/images/reality1.webp"
+                          alt="takeachillpill"
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        />
+                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                          <span className="text-white text-2xl font-semibold">View Project →</span>
+                        </div>
+                      </div>
+                    </StarBorder>
+                  </div>
+                </Link>
+              </AnimatedContent>
+
+              <AnimatedContent distance={100} duration={0.8} delay={0.4}>
+                <Link to="/project/solder" className="block group">
+                  <div
+                    className="relative"
+                    onMouseEnter={() => setHoveredCard(2)}
+                    onMouseLeave={() => setHoveredCard(null)}
+                  >
+                    <StarBorder color="#ffffff">
+                      <div className="relative aspect-[4/3] rounded-3xl overflow-hidden">
+                        {hoveredCard === 0 && <Noise/>}
+                        <img
+                          src="/images/solder1.png"
+                          alt="seth-green"
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        />
+                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                          <span className="text-white text-2xl font-semibold">View Project →</span>
+                        </div>
+                      </div>
+                    </StarBorder>
+                  </div>
+                </Link>
+              </AnimatedContent>
             </div>
           </div>
         </section>
 
-        {/* Projects Section */}
         <section id="projects" className="py-32 px-8">
           <div className="max-w-7xl mx-auto">
             <AnimatedContent distance={60} duration={0.8}>
               <h2 className="text-5xl md:text-6xl font-bold text-center mb-4 text-white">
                 Projects
               </h2>
-              <p className="text-xl text-gray-400 text-center mb-20 font-light">
+              <p className="text-xl text-gray-400 text-center mb-20 font-medium">
                 Rankings and reviews you didn't ask for
               </p>
             </AnimatedContent>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <AnimatedContent distance={80} duration={0.8} delay={0}>
-                <Card className="border-0 shadow-lg hover:shadow-2xl transition-all duration-500 rounded-3xl overflow-hidden bg-white hover:-translate-y-2, border-2 border-white">
+                <Card className="border-2 border-white shadow-lg hover:shadow-2xl transition-all duration-500 rounded-3xl overflow-hidden bg-white hover:-translate-y-2 ">
                   <div className="aspect-[4/3] overflow-hidden">
                     <img
                       src="/images/icecream.png"
@@ -134,14 +188,14 @@ export default function Home() {
                       My factual opinions on ice cream
                     </CardDescription>
                   </CardHeader>
-                  <CardFooter>
-                    <Button asChild className="w-full bg-black text-white hover:bg-gray-800 rounded-full py-6">
+                  <CardFooter className="flex flex-col gap-3">
+                    <Button asChild className="w-full bg-black text-white hover:bg-gray-800 rounded-full py-6 transition-all">
                       <a href="https://tiermaker.com/create/top-40-ice-cream-flavors-15607441" target="_blank" rel="noopener noreferrer">
-                        View →
+                        View Tier List →
                       </a>
                     </Button>
-                    <Button asChild className="w-full bg-black text-white hover:bg-gray-800 rounded-full py-6">
-                      <Link to="pages/icecreamtierlist">
+                    <Button asChild variant="outline" className="w-full border-2 border-black text-black hover:bg-black hover:text-white rounded-full py-6 transition-all">
+                      <Link to="/project/icecream"  className="block group">
                         More info
                       </Link>
                     </Button>
@@ -150,7 +204,7 @@ export default function Home() {
               </AnimatedContent>
 
               <AnimatedContent distance={80} duration={0.8} delay={0.2}>
-                <Card className="border-0 shadow-lg hover:shadow-2xl transition-all duration-500 rounded-3xl overflow-hidden bg-white hover:-translate-y-2, border-2 border-white">
+                <Card className="border-2 border-white shadow-lg hover:shadow-2xl transition-all duration-500 rounded-3xl overflow-hidden bg-white hover:-translate-y-2">
                   <div className="aspect-[4/3] overflow-hidden">
                     <img
                       src="/images/protein.png"
@@ -164,14 +218,14 @@ export default function Home() {
                       every single protein powder that matters
                     </CardDescription>
                   </CardHeader>
-                  <CardFooter>
-                    <Button asChild className="w-full bg-black text-white hover:bg-gray-800 rounded-full py-6">
+                  <CardFooter className="flex flex-col gap-3">
+                    <Button asChild className="w-full bg-black text-white hover:bg-gray-800 rounded-full py-6 transition-all">
                       <a href="https://tiermaker.com/create/protein-powder-tier-list-17372092" target="_blank" rel="noopener noreferrer">
-                        View →
+                        View Tier List →
                       </a>
                     </Button>
-                    <Button asChild className="w-full bg-black text-white hover:bg-gray-800 rounded-full py-6">
-                      <Link to='/pages/proteintierlist'>
+                    <Button asChild variant="outline" className="w-full border-2 border-black text-black hover:bg-black hover:text-white rounded-full py-6 transition-all">
+                      <Link to="/project/proteinpowder" className="block group">
                         More info
                       </Link>
                     </Button>
@@ -180,7 +234,7 @@ export default function Home() {
               </AnimatedContent>
 
               <AnimatedContent distance={80} duration={0.8} delay={0.4}>
-                <Card className="border-0 shadow-lg hover:shadow-2xl transition-all duration-500 rounded-3xl overflow-hidden bg-white hover:-translate-y-2, border-2 border-white">
+                <Card className="border-2 border-white shadow-lg hover:shadow-2xl transition-all duration-500 rounded-3xl overflow-hidden bg-white hover:-translate-y-2">
                   <div className="aspect-[4/3] overflow-hidden">
                     <img
                       src="/images/monster.jpg"
@@ -194,14 +248,14 @@ export default function Home() {
                       this took way too long
                     </CardDescription>
                   </CardHeader>
-                  <CardFooter>
-                    <Button asChild className="w-full bg-black text-white hover:bg-gray-800 rounded-full py-6">
+                  <CardFooter className="flex flex-col gap-3">
+                    <Button asChild className="w-full bg-black text-white hover:bg-gray-800 rounded-full py-6 transition-all">
                       <a href="https://tiermaker.com/create/absolute-best-energy-drinks-16706475" target="_blank" rel="noopener noreferrer">
-                        View →
+                        View Tier List →
                       </a>
                     </Button>
-                    <Button asChild className="w-full bg-black text-white hover:bg-gray-800 rounded-full py-6">
-                      <Link to="pages/energydrinkstierlist">
+                    <Button asChild variant="outline" className="w-full border-2 border-black text-black hover:bg-black hover:text-white rounded-full py-6 transition-all">
+                      <Link to="/project/energydrinks" className="block group">
                         More info
                       </Link>
                     </Button>
@@ -211,8 +265,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        {/* Footer */}
         <div className="pt-24">
           <Footer />
         </div>

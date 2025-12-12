@@ -19,7 +19,7 @@ interface ClickSparkProps {
 
 const ClickSpark = ({
   sparkColor = '#fff',
-  sparkSize = 10,
+  sparkSize = 15,
   sparkRadius = 15,
   sparkCount = 8,
   duration = 400,

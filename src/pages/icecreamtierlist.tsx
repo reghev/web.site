@@ -1,62 +1,84 @@
 import { SplitText } from '@/components/ui/split-text'
 import AnimatedContent from '@/components/ui/animated-content'
-
-
-import { Link } from 'react-router-dom'
-
+import Footer from '@/components/Footer'
 import Navigation from '@/components/Navigation'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import ShinyText from '@/components/ShinyText'
+import { Button } from '@/components/ui/button'
 
 export default function About() {
   return (
-    <div className="w-screen min-h-screen">
+    <div className="h-full bg-black relative">
       <Navigation />
+      <div className="fixed inset-0 pointer-events-none">
+      </div>
+      <div className="relative z-10">
 
-      {/* Project Content */}
-      <div className="pt-32 pb-20 px-8">
-        <div className="max-w-4xl mx-auto">
-          <AnimatedContent distance={60} duration={0.8}>
-            <Link to="/" className="text-gray-600 hover:text-black mb-8 inline-flex items-center gap-2">
-              ← Back to Home
-            </Link>
-            
-            <h1 className="text-6xl font-bold mb-6">
-              <SplitText text="mark-wahlberg" />
-            </h1>
-            
-            <p className="text-xl text-gray-600 mb-8">
-              i really like ted
-            </p>
-          </AnimatedContent>
+        <div className="pt-32 pb-20 px-8">
+          <div className="max-w-4xl mx-auto">
+            <AnimatedContent distance={60} duration={0.8}>
+              <div className=" flex items-center justify-center mt-24 mb-12">
+                <div className="text-5xl border-2 border-white rounded-xl p-4 bg-black/50">
+                  <SplitText text="Every single ice cream flavor ranked" className="font-bold text-white" />
+                </div>
+              </div>
+              <div className="text-2xl md:text-3xl font-medium mb-12">
 
-          <AnimatedContent distance={60} duration={0.8} delay={0.2}>
-            <img 
-              src="/images/lois.png" 
-              alt="Matrix Project" 
-              className="w-full rounded-3xl shadow-2xl mb-12"
-            />
-          </AnimatedContent>
+                <ShinyText
+                  text="i need to make my own tier list"
+                  disabled={false}
+                  speed={5}
+                  className="text-2xl md:text-3xl"
 
-          <AnimatedContent distance={60} duration={0.8} delay={0.4}>
-            <div className="prose prose-lg max-w-none">
-              <h2 className="text-3xl font-bold mb-4">About This Project</h2>
-              <p className="text-gray-700 mb-6">
-                This was for Pathfinder and the only reason i did it was because my sister made pathfinder
-              </p>
-              
-              <h3 className="text-2xl font-bold mb-4">what does it do</h3>
-              <p className="text-gray-700 mb-6">
-                I wanted to have a macropad that lights up and looks cool on my shelf
-              </p>
+                />
 
-              <h3 className="text-2xl font-bold mb-4">what would you change?</h3>
-              <ul className="list-disc list-inside text-gray-700 space-y-2 mb-6">
-                <li>Making it more than desk fodder would be number one</li>
-                <li>something that has a purpose other than being rgb throwup would be nice</li>
-                <li>if at the time i knew how to code like sensors would be sick because i had access to them with this</li>
-              </ul>
-            </div>
-          </AnimatedContent>
+              </div>
+              <div className="text-2xl md:text-3xl font-medium mb-12">
+                <Button asChild className=" bg-black text-white hover:bg-gray-800 rounded-full py-6 transition-all">
+                  <a href="https://tiermaker.com/create/top-40-ice-cream-flavors-15607441" target="_blank" rel="noopener noreferrer">
+                    View Tier List →
+                  </a>
+                </Button>
+              </div>
+            </AnimatedContent>
+
+            <AnimatedContent distance={60} duration={0.8} delay={0.2}>
+              <img
+                src="/images/icecream.png"
+                alt="creamedice"
+                className="w-full rounded-3xl shadow-2xl mb-12"
+              />
+            </AnimatedContent>
+
+            <AnimatedContent distance={60} duration={0.8} delay={0.4}>
+              <div className="max-w-4xl mx-auto p-8">
+                <Card className="bg-black border-2 border-white">
+                  <CardContent className="space-y-6">
+
+                    <div className="prose prose-lg max-w-none">
+                      <CardHeader>
+                        <CardTitle className="text-2xl text-white"> For many years, philosophers have pondered a question so vast, so complex, so inexplicitly
+                          unsolvable, some considered it to be their eternal punishment to bear the everlonging need to
+                          answer what ubiquitously is considered a privlege no mere mortal can nay deserves to
+                          answer.</CardTitle>
+                      </CardHeader>
+                      <p className="text-lg text-white">
+                        to what can only be described as a proof of a higher being. A diety,
+                        someone who posseses the eternal wisdom needed to answer this question,
+                        the vast knowledge spanning from our amalgomation of stone floating in the
+                        ever changing, ever expanding cosmos, farthest depths of our containment of exististance. But even it, fears those godforsaken 8 words made to be the greatest challenge the human race has yet to solve. But dear readers i dont come bearing inevitable depressions, But a solution to the epitome of thought considered a forever and constant impossible task.
+                         "What is the best flavor of ice cream?" 
+                      </p>
+
+
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </AnimatedContent>
+          </div>
         </div>
+        <Footer></Footer>
       </div>
     </div>
   )
