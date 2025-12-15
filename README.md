@@ -15,6 +15,7 @@ The React Compiler is not enabled on this template because of its impact on dev 
 
 If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
+I USED ALL MY THINGYS FROM REACTBITS CHECK IT OUT https://reactbits.dev
 ```js
 export default defineConfig([
   globalIgnores(['dist']),
