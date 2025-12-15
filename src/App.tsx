@@ -15,12 +15,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/project/matrix" element={<ProjectLois />} />
-        <Route path="/project/circuit" element={<ProjectCircuit />} />
-        <Route path="/project/dinosaur" element={<ProjectDinosaur />} />
-        <Route path="/icecreamtierlist" element={<IceCream />}/>
-        <Route path="/proteintierlist" element={<ProteinPowder />} />
-        <Route path="/energydrinkstierlist" element={<EnergyDrinks />} />
+        <Route path="/project/pathfinder" element={<ProjectLois />} />
+        <Route path="/project/reality" element={<ProjectCircuit />} />
+        <Route path="/project/solder" element={<ProjectDinosaur />} />
+        <Route path="tl/icecream" element={<IceCream />}/>
+        <Route path="tl/protein" element={<ProteinPowder />} />
+        <Route path="tl/energydrinks" element={<EnergyDrinks />} />
         <Route path="/shhh" element={<Shhh />} />
       </Routes>
     </Router>

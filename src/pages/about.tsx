@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { SplitText } from '@/components/ui/split-text'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
@@ -6,11 +7,28 @@ import Waves from '@/components/Waves'
 import ClickSpark from '@/components/ClickSpark'
 
 export default function About() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null)
+  const images = [
+    {
+      src: 'images/tuff.jpg',
+      alt: 'frostymobile',
+      caption: 'me next to the frostymobile'
+    },
+    {
+      src: 'images/friends.jpg',
+      alt: 'laim',
+      caption: 'freinds'
+    },
+    {
+      src: 'images/fb.jpg',
+      alt: 'fb',
+      caption: 'go rcoks'
+    },
+  ]
+
   return (
     <div className="min-h-screen bg-black relative">
       <ClickSpark />
-      
-      {/* Waves background for entire page */}
       <div className="fixed inset-0 pointer-events-none">
         <Waves
           lineColor="#481c81"
@@ -36,7 +54,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="max-w-4xl mx-auto px-8 pb-8">
+        <div className="max-w-4xl mx-auto px-8 pb-8 space-y-8">
           <Card className="bg-black border-2 border-white">
             <CardHeader>
               <CardTitle className="text-3xl text-white">Hi, I'm Raghav!</CardTitle>
@@ -47,12 +65,65 @@ export default function About() {
               </p>
             </CardContent>
           </Card>
+
+          <Card className="bg-black border-2 border-white">
+            <CardHeader>
+              <CardTitle className="text-3xl text-white">Gallery</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                {images.map((image, index) => (
+                  <div
+                    key={index}
+                    className="relative aspect-square overflow-hidden rounded-lg border-2 border-white/50 hover:border-white cursor-pointer transition-all duration-300 hover:scale-105"
+                    onClick={() => setSelectedImage(image.src)}
+                  >
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-full object-cover"
+                    />
+                    {image.caption && (
+                      <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white text-xs p-2 text-center">
+                        {image.caption}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
         <div className="pt-24">
           <Footer />
         </div>
       </div>
+
+      {selectedImage && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <button
+            className="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition-colors"
+            onClick={() => setSelectedImage(null)}
+          >
+            
+          </button>
+          <div className="relative max-w-7xl max-h-full">
+            <img
+              src={selectedImage}
+              alt="Enlarged view"
+              className="max-w-full max-h-[90vh] object-contain rounded-lg border-2 border-white"
+              onClick={(e) => e.stopPropagation()}
+            />
+            <p className="text-white text-center mt-4 text-sm">
+              Click outside to close
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

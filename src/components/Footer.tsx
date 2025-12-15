@@ -297,7 +297,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-4 text-white">
               <img src="/images/FOUND.png" alt="Logo" className="w-12 h-12" />
-              <h3 className="font-semibold text-xl">Raghav.fit</h3>
+              <h3 className="font-semibold text-xl">raghav.fit</h3>
             </div>
             <FooterRandomText />
           </div>

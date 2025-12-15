@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 import ChromaGrid from '@/components/ChromaGrid';
 import Noise from '@/components/Noise';
 import OfficeWavePreloader from './OfficeWavePreloader';
@@ -64,7 +65,6 @@ const CABINET_DATA: Drawer[] = [
     ],
   },
   {
-
     id: 'outsiders',
     label: 'FILE-002: personal favorites',
     items: [
@@ -169,9 +169,11 @@ const CABINET_DATA: Drawer[] = [
 ];
 
 const AudioArchive: React.FC = () => {
+  const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [openDrawerId, setOpenDrawerId] = useState<string | null>('nirvana-primary');
   const [selectedItem, setSelectedItem] = useState<Item | null>(null);
+  const [isPowerOn, setIsPowerOn] = useState(true);
 
   const handlePreloaderFinish = useCallback(() => {
     setIsLoading(false);
@@ -185,6 +187,13 @@ const AudioArchive: React.FC = () => {
   const handleItemSelect = useCallback((item: Item | ChromaItem) => {
     setSelectedItem(item as Item);
   }, []);
+
+  const handlePowerOff = () => {
+    setIsPowerOn(false);
+    setTimeout(() => {
+      navigate('/');
+    }, 300);
+  };
 
   const currentDrawer = CABINET_DATA.find(d => d.id === openDrawerId);
   const itemsToDisplay = currentDrawer ? currentDrawer.items : [];
@@ -207,7 +216,38 @@ const AudioArchive: React.FC = () => {
           <div className="w-full max-w-6xl flex justify-between items-center text-xs md:text-sm tracking-widest text-[#4A3728] mb-8 uppercase border-b-2 border-[#8B5A3C] pb-2">
             <span>TEMPORAL ARCHIVE: GUEST</span>
             <span>VARIANT_ID: 808-X</span>
-            <span className="animate-pulse">● ACTIVE</span>
+            <button
+              onClick={handlePowerOff}
+              className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer group"
+              title="Power Off"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                className={`transition-all ${isPowerOn ? 'opacity-100' : 'opacity-50'}`}
+              >
+                <rect
+                  x="6"
+                  y="9"
+                  width="12"
+                  height="6"
+                  rx="3"
+                  fill={isPowerOn ? "#D77A3D" : "#8B5A3C"}
+                  className="transition-colors"
+                />
+                <circle
+                  cx={isPowerOn ? "15" : "9"}
+                  cy="12"
+                  r="2.5"
+                  fill="#F5DCC4"
+                  className="transition-all duration-300"
+                />
+              </svg>
+              <span className={`${isPowerOn ? 'animate-pulse' : ''}`}>
+                {isPowerOn ? 'ACTIVE' : 'OFF'}
+              </span>
+            </button>
           </div>
 
           <div className="w-full max-w-5xl border-4 border-[#4A3728] shadow-[8px_8px_0px_0px_rgba(45,35,25,0.8)] bg-[#D4A574]">
@@ -249,7 +289,11 @@ const AudioArchive: React.FC = () => {
                         damping={0.3}
                         fadeOut={0.7}
                       />
-
+                      {itemsToDisplay.length === 0 && (
+                        <div className="absolute inset-0 flex items-center justify-center text-[#D77A3D]/70 text-sm font-mono z-30">
+                          [TEMPORAL VARIANT NOT FOUND. CONTACT TVA ADMINISTRATOR.]
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>

@@ -7,8 +7,6 @@ import Navigation from '@/components/Navigation'
 import ShinyText from '@/components/ShinyText'
 import Footer from '@/components/Footer'
 import Waves from '@/components/Waves'
-import Noise from '@/components/Noise'
-import StarBorder from '@/components/StarBorder'
 import { useState } from 'react'
 
 export default function Home() {
@@ -37,7 +35,6 @@ export default function Home() {
       <div className="relative z-10">
         <Navigation />
 
-        {/* Hero Section */}
         <section className="min-h-screen flex items-center justify-center pt-20 px-8 relative">
           <div className="max-w-5xl text-center relative z-10">
             <AnimatedContent distance={80} direction="vertical" duration={1} delay={0.2}>
@@ -85,77 +82,95 @@ export default function Home() {
               </p>
             </AnimatedContent>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
-              <AnimatedContent distance={100} duration={0.8} delay={0}>
-                <Link to="/project/pathfinder" className="block group">
-                  <div
-                    className="relative"
-                    onMouseEnter={() => setHoveredCard(0)}
-                    onMouseLeave={() => setHoveredCard(null)}
-                  >
-                    <StarBorder color="#ffffff">
-                      <div className="relative aspect-[4/3] rounded-3xl overflow-hidden">
-                        {hoveredCard === 0 && <Noise/>}
-                        <img
-                          src="/images/pathfinder1.png"
-                          alt="mark-wahlberg"
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                        />
-                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                          <span className="text-white text-2xl font-semibold">View Project →</span>
-                        </div>
-                      </div>
-                    </StarBorder>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <AnimatedContent distance={80} duration={0.8} delay={0}>
+                <Card className="border-2 border-black shadow-lg hover:shadow-2xl transition-all duration-500 rounded-3xl overflow-hidden bg-black hover:-translate-y-2 ">
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img
+                      src="/images/pathfinder1.png"
+                      alt="Pathfinder"
+                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+                    />
                   </div>
-                </Link>
+                  <CardHeader>
+                    <CardTitle className="text-2xl">mark-wahlberg</CardTitle>
+                    <CardDescription className="text-base text-gray-600">
+                      My project for pathfinder
+                    </CardDescription>
+                  </CardHeader>
+                  <CardFooter className="flex flex-col gap-3">
+                    <Button asChild className="w-full bg-white text-black hover:bg-gray-800 rounded-full py-6 transition-all">
+                      <a href="https://github.com/reghev/mark-wahlberg" target="_blank" rel="noopener noreferrer">
+                        View Project →
+                      </a>
+                    </Button>
+                    <Button asChild variant="outline" className="w-full border-2 border-white text-white hover:bg-black hover:text-white rounded-full py-6 transition-all">
+                      <Link to="/project/pathfinder" className="block group">
+                        More info
+                      </Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
               </AnimatedContent>
 
-              <AnimatedContent distance={100} duration={0.8} delay={0.2}>
-                <Link to="/project/reality" className="block group">
-                  <div
-                    className="relative"
-                    onMouseEnter={() => setHoveredCard(1)}
-                    onMouseLeave={() => setHoveredCard(null)}
-                  >
-                    <StarBorder color="#ffffff">
-                      <div className="relative aspect-[4/3] rounded-3xl overflow-hidden">
-                        {hoveredCard === 0 && <Noise/>}
-                        <img
-                          src="/images/reality1.webp"
-                          alt="takeachillpill"
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                        />
-                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                          <span className="text-white text-2xl font-semibold">View Project →</span>
-                        </div>
-                      </div>
-                    </StarBorder>
+              <AnimatedContent distance={80} duration={0.8} delay={0.2}>
+                <Card className="border-2 border-black shadow-lg hover:shadow-2xl transition-all duration-500 rounded-3xl overflow-hidden bg-black hover:-translate-y-2 ">
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img
+                      src="/images/reality1.webp"
+                      alt="Reality"
+                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+                    />
                   </div>
-                </Link>
+                  <CardHeader>
+                    <CardTitle className="text-2xl">take-a-chill-pill</CardTitle>
+                    <CardDescription className="text-base text-gray-600">
+                      My project for reality
+                    </CardDescription>
+                  </CardHeader>
+                  <CardFooter className="flex flex-col gap-3">
+                    <Button asChild className="w-full bg-white text-black hover:bg-gray-800 rounded-full py-6 transition-all">
+                      <a href="https://github.com/reghev/seth-blue" target="_blank" rel="noopener noreferrer">
+                        View Project →
+                      </a>
+                    </Button>
+                    <Button asChild variant="outline" className="w-full border-2 border-white text-white hover:bg-white hover:text-black rounded-full py-6 transition-all">
+                      <Link to="/project/reality" className="block group">
+                        More info
+                      </Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
               </AnimatedContent>
 
-              <AnimatedContent distance={100} duration={0.8} delay={0.4}>
-                <Link to="/project/solder" className="block group">
-                  <div
-                    className="relative"
-                    onMouseEnter={() => setHoveredCard(2)}
-                    onMouseLeave={() => setHoveredCard(null)}
-                  >
-                    <StarBorder color="#ffffff">
-                      <div className="relative aspect-[4/3] rounded-3xl overflow-hidden">
-                        {hoveredCard === 0 && <Noise/>}
-                        <img
-                          src="/images/solder1.png"
-                          alt="seth-green"
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                        />
-                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                          <span className="text-white text-2xl font-semibold">View Project →</span>
-                        </div>
-                      </div>
-                    </StarBorder>
+              <AnimatedContent distance={80} duration={0.8} delay={0.2}>
+                <Card className="border-2 border-black shadow-lg hover:shadow-2xl transition-all duration-500 rounded-3xl overflow-hidden bg-black hover:-translate-y-2 ">
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img
+                      src="/images/solder1.png"
+                      alt="Reality"
+                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+                    />
                   </div>
-                </Link>
+                  <CardHeader>
+                    <CardTitle className="text-2xl">take-a-chill-pill</CardTitle>
+                    <CardDescription className="text-base text-gray-600">
+                      My project for solder
+                    </CardDescription>
+                  </CardHeader>
+                  <CardFooter className="flex flex-col gap-3">
+                    <Button asChild className="w-full bg-white text-black hover:bg-gray-800 rounded-full py-6 transition-all">
+                      <a href="https://github.com/reghev/seth-green" target="_blank" rel="noopener noreferrer">
+                        View Project →
+                      </a>
+                    </Button>
+                    <Button asChild variant="outline" className="w-full border-2 border-white text-white hover:bg-white hover:text-black rounded-full py-6 transition-all">
+                      <Link to="/project/reality" className="block group">
+                        More info
+                      </Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
               </AnimatedContent>
             </div>
           </div>
@@ -195,7 +210,7 @@ export default function Home() {
                       </a>
                     </Button>
                     <Button asChild variant="outline" className="w-full border-2 border-black text-black hover:bg-black hover:text-white rounded-full py-6 transition-all">
-                      <Link to="/project/icecream"  className="block group">
+                      <Link to="/tl/icecream" className="block group">
                         More info
                       </Link>
                     </Button>
@@ -225,7 +240,7 @@ export default function Home() {
                       </a>
                     </Button>
                     <Button asChild variant="outline" className="w-full border-2 border-black text-black hover:bg-black hover:text-white rounded-full py-6 transition-all">
-                      <Link to="/project/proteinpowder" className="block group">
+                      <Link to="/tl/proteinpowder" className="block group">
                         More info
                       </Link>
                     </Button>
@@ -255,7 +270,7 @@ export default function Home() {
                       </a>
                     </Button>
                     <Button asChild variant="outline" className="w-full border-2 border-black text-black hover:bg-black hover:text-white rounded-full py-6 transition-all">
-                      <Link to="/project/energydrinks" className="block group">
+                      <Link to="/tl/energydrinks" className="block group">
                         More info
                       </Link>
                     </Button>

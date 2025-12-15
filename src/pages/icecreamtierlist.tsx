@@ -67,7 +67,7 @@ export default function About() {
                         someone who posseses the eternal wisdom needed to answer this question,
                         the vast knowledge spanning from our amalgomation of stone floating in the
                         ever changing, ever expanding cosmos, farthest depths of our containment of exististance. But even it, fears those godforsaken 8 words made to be the greatest challenge the human race has yet to solve. But dear readers i dont come bearing inevitable depressions, But a solution to the epitome of thought considered a forever and constant impossible task.
-                         "What is the best flavor of ice cream?" 
+                         "What is the best flavor of ice cream?" But fret not dear readers, for I bare the answers my predesors have failed. Here is an objectively correct tier list of ice cream that no one can contest 
                       </p>
 
 

@@ -1,7 +1,6 @@
 import { SplitText } from '@/components/ui/split-text'
 import AnimatedContent from '@/components/ui/animated-content'
 import Footer from '@/components/Footer'
-import ClickSpark from '@/components/ClickSpark'
 import Navigation from '@/components/Navigation'
 import Waves from '@/components/Waves'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -10,7 +9,6 @@ import ShinyText from '@/components/ShinyText'
 export default function About() {
   return (
     <div className="h-full bg-black relative">
-      <ClickSpark />
       <Navigation />
       <div className="fixed inset-0 pointer-events-none">
         <Waves
@@ -49,7 +47,7 @@ export default function About() {
 
             <AnimatedContent distance={60} duration={0.8} delay={0.2}>
               <img
-                src="/images/bp.webp"
+                src="/images/reality1.webp"
                 alt="reality"
                 className="w-full rounded-3xl shadow-2xl mb-12"
               />
