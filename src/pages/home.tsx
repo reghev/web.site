@@ -6,8 +6,12 @@ import Footer from '@/components/Footer'
 import Waves from '@/components/Waves'
 import { Marquee } from '@/components/Marquee'
 import { Cursor } from '@/components/cursor'
+import { useState } from 'react' // ADD THIS IMPORT
 
 export default function Home() {
+  // ADD THIS STATE HERE
+  const [selectedSkill, setSelectedSkill] = useState<string | null>(null);
+
   const techLogos = [
     { src: "/logos/react.png", alt: "React" },
     { src: "/logos/typescript.png", alt: "TypeScript" },
@@ -21,32 +25,39 @@ export default function Home() {
     { src: "/logos/cow.png", alt: "Cow" },
   ]
 
+  // UPDATE YOUR SKILLS ARRAY TO INCLUDE ICONS AND DESCRIPTIONS
   const skills = [
-    { name: "Graphic Design" },
-    { name: "Web Development" },
-    { name: "Electrical Engineering*" },
-    { name: "Physio Science" },
-    { name: "Branding" },
-    { name: "Fitness Trainer" },
+    {
+      name: "Graphic Design",
+      icon: "🎨",
+      description: "Creating visual identities and design systems for modern brands"
+    },
+    {
+      name: "Web Development",
+      icon: "💻",
+      description: "Building responsive, performant web applications with React and TypeScript"
+    },
+    {
+      name: "Electrical Engineering*",
+      icon: "⚡",
+      description: "Working with circuits, microcontrollers, and embedded systems"
+    },
+    {
+      name: "Physio Science",
+      icon: "🧬",
+      description: "Understanding human physiology and biomechanics"
+    },
+    {
+      name: "Branding",
+      icon: "✨",
+      description: "Crafting memorable brand experiences and identities"
+    },
+    {
+      name: "Fitness Trainer",
+      icon: "💪",
+      description: "Strength training, programming, and coaching athletes"
+    },
   ]
-
-  function StarIcon({ className }: { className?: string }) {
-    return (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 200 200"
-        width="24"
-        height="24"
-        className={className}
-      >
-        <path
-          fill="currentColor"
-          d="m100 5 3.635 86.223 63.54-58.398-58.398 63.54L195 100l-86.223 3.635 58.398 63.54-63.54-58.398L100 195l-3.635-86.223-63.54 58.398 58.398-63.54L5 100l86.223-3.635-58.398-63.54 63.54 58.398z"
-        />
-      </svg>
-    )
-  }
 
   return (
     <div className="min-h-screen bg-black relative overflow-hidden">
@@ -132,36 +143,63 @@ export default function Home() {
 
           <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" />
           <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" />
-          <section className="py-16 border-y border-white/10 relative overflow-hidden">
+          <section className="py-16 px-8 border-y border-white/10 relative overflow-hidden bg-black">
 
-            <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-black to-transparent z-10" />
-            <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-black to-transparent z-10" />
+            <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" />
+            <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" />
+
 
             <AnimatedContent distance={30} duration={0.6}>
-              <div className="w-full overflow-hidden">
-                <Marquee pauseOnHover className="[--duration:60s]">
-                  <div className="flex items-center gap-6 pr-6">
-                    {[...skills, ...skills].map((skill, i) => (
-                      <div
-                        key={i}
-                        className={`px-6 py-3 rounded-full border whitespace-nowrap transition-all
-                         ${skill.active
-                            ? 'border-white bg-white/10 text-white'
-                            : 'border-white/20 text-gray-400 hover:text-white hover:border-white/50'
-                          }
-                      `}
-                      >
-                        <span className="text-lg font-medium">
-                          {skill.name}
-                        </span>
-                      </div>
-                    ))}
+          <div className="w-full overflow-visible">
+            <Marquee pauseOnHover className="[--duration:60s]">
+              <div className="flex items-center gap-4 pr-4">
+                {[...skills, ...skills].map((skill, i) => (
+                  <div
+                    key={`skill-${i}`}
+                    onClick={() => setSelectedSkill(skill.name)}
+                    className={`px-6 py-3 rounded-full border whitespace-nowrap transition-all cursor-pointer
+                      ${selectedSkill === skill.name
+                        ? 'border-white bg-white/10 text-white'
+                        : 'border-white/20 text-gray-400 hover:text-white hover:border-white/50'
+                      }
+                    `}
+                  >
+                    <span className="text-lg font-medium">{skill.name}</span>
                   </div>
-                </Marquee>
+                ))}
               </div>
-            </AnimatedContent>
-          </section>
+            </Marquee>
 
+            {/* Card below marquee */}
+            {selectedSkill && (
+              <div className="mt-12 max-w-2xl mx-auto px-4">
+                <div className="bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-2xl p-8 transition-all">
+                  <div className="flex items-start gap-4">
+                    <div className="text-4xl">
+                      {skills.find(s => s.name === selectedSkill)?.icon || '💼'}
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-semibold text-white mb-3">
+                        {selectedSkill}
+                      </h3>
+                      <p className="text-base text-gray-400 leading-relaxed">
+                        {skills.find(s => s.name === selectedSkill)?.description || 
+                          `Expert level proficiency in ${selectedSkill}`}
+                      </p>
+                    </div>
+                    <button 
+                      onClick={() => setSelectedSkill(null)}
+                      className="text-gray-400 hover:text-white transition-colors text-2xl leading-none"
+                    >
+                      ×
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        </AnimatedContent>
+      </section>
 
         </section>
 
