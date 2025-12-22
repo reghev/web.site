@@ -1,289 +1,251 @@
-import { SplitText } from '@/components/ui/split-text'
 import AnimatedContent from '@/components/ui/animated-content'
-import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Link } from 'react-router-dom'
 import Navigation from '@/components/Navigation'
-import ShinyText from '@/components/ShinyText'
 import Footer from '@/components/Footer'
 import Waves from '@/components/Waves'
-import { useState } from 'react'
+import { Marquee } from '@/components/Marquee'
+import { Cursor } from '@/components/cursor'
 
 export default function Home() {
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const techLogos = [
+    { src: "/logos/react.png", alt: "React" },
+    { src: "/logos/typescript.png", alt: "TypeScript" },
+    { src: "/logos/tailwind.png", alt: "Tailwind CSS" },
+    { src: "/logos/js.png", alt: "JavaScript" },
+    { src: "/logos/github.png", alt: "GitHub" },
+    { src: "/logos/download.png", alt: "Python" },
+    { src: "/logos/clash.png", alt: "Clash Royale" },
+    { src: "/logos/pat.jpg", alt: "Patrick Star" },
+    { src: "/images/MISSING.png", alt: "Logo" },
+    { src: "/logos/cow.png", alt: "Cow" },
+  ]
+
+  const skills = [
+    { name: "Graphic Design" },
+    { name: "Web Development" },
+    { name: "Electrical Engineering*" },
+    { name: "Physio Science" },
+    { name: "Branding" },
+    { name: "Fitness Trainer" },
+  ]
+
+  function StarIcon({ className }: { className?: string }) {
+    return (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 200 200"
+        width="24"
+        height="24"
+        className={className}
+      >
+        <path
+          fill="currentColor"
+          d="m100 5 3.635 86.223 63.54-58.398-58.398 63.54L195 100l-86.223 3.635 58.398 63.54-63.54-58.398L100 195l-3.635-86.223-63.54 58.398 58.398-63.54L5 100l86.223-3.635-58.398-63.54 63.54 58.398z"
+        />
+      </svg>
+    )
+  }
 
   return (
-    <div className="min-h-screen bg-black relative">
+    <div className="min-h-screen bg-black relative overflow-hidden">
+      <div className="fixed inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-white/10 blur-[140px] rounded-full" />
+        <div className="absolute top-[30%] left-[10%] w-[500px] h-[500px] bg-white/5 blur-[120px] rounded-full" />
+        <div className="absolute bottom-[10%] right-[5%] w-[600px] h-[600px] bg-white/5 blur-[140px] rounded-full" />
 
+        <div
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage:
+              "linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)",
+            backgroundSize: "80px 80px",
+          }}
+        />
+
+        <div className="absolute inset-y-0 left-[20%] w-px bg-gradient-to-b from-transparent via-white/20 to-transparent" />
+        <div className="absolute inset-y-0 right-[30%] w-px bg-gradient-to-b from-transparent via-white/10 to-transparent" />
+      </div>
 
       <div className="fixed inset-0 pointer-events-none">
         <Waves
-          lineColor="#481c81"
-          backgroundColor="rgba(0, 0, 0, 0.22)"
-          waveSpeedX={0.02}
-          waveSpeedY={0.01}
-          waveAmpX={40}
-          waveAmpY={20}
-          friction={0.9}
+          lineColor="#ffffff05"
+          backgroundColor="rgba(0, 0, 0, 1)"
+          waveSpeedX={0.003}
+          waveSpeedY={0.002}
+          waveAmpX={30}
+          waveAmpY={15}
+          friction={0.95}
           tension={0.01}
-          maxCursorMove={120}
-          xGap={12}
-          yGap={36}
+          maxCursorMove={80}
+          xGap={16}
+          yGap={40}
         />
       </div>
-
+      <Cursor />
       <div className="relative z-10">
         <Navigation />
 
-        <section className="min-h-screen flex items-center justify-center pt-20 px-8 relative">
-          <div className="max-w-5xl text-center relative z-10">
-            <AnimatedContent distance={80} direction="vertical" duration={1} delay={0.2}>
-              <h1 className="text-7xl md:text-8xl font-bold text-white mb-6 leading-tight">
-                <SplitText text="raghav.fit" className="inline-block" delay={0.03} />
+        <section className="min-h-screen flex items-center justify-center px-8 relative">
+          <div className="absolute inset-0 -z-10 flex justify-center items-center">
+            <div className="w-[700px] h-[700px] rounded-full bg-gradient-to-br from-white/20 to-transparent blur-[160px]" />
+          </div>
+
+          <div className="max-w-4xl w-full text-center">
+            <AnimatedContent distance={80} direction="vertical" duration={1} delay={0.3}>
+              <h1 className="text-[clamp(3rem,8vw,6.5rem)] font-extrabold tracking-tight text-white mb-6 leading-[0.95]">
+                Building cool stuff one project at a time
+                <br />
               </h1>
             </AnimatedContent>
 
             <AnimatedContent distance={60} direction="vertical" duration={1} delay={0.5}>
-              <div className="text-2xl md:text-3xl font-medium mb-12">
-                <ShinyText
-                  text="In search of good enough"
-                  disabled={false}
-                  speed={5}
-                  className="text-2xl md:text-3xl"
-                />
-              </div>
+              <p className="text-[clamp(1.25rem,3vw,2rem)] font-medium tracking-tight text-white mb-6 leading-relaxed">
+                13-year-old developer, hackclub enthusiast, amatuer powerlifter and bodybuilder,
+                Third place at NASA SpaceApps 2022 Cleveland. "You dont learn if you dont try".
+              </p>
             </AnimatedContent>
 
-            <AnimatedContent distance={40} direction="vertical" duration={1} delay={0.8}>
+            <AnimatedContent distance={40} direction="vertical" duration={1} delay={0.7}>
               <div className="flex gap-4 justify-center flex-wrap">
-                <Button asChild className="border-2 border-black text-white hover:bg-black bg-white hover:border-white text-black hover:text-white rounded-full px-8 py-6 text-lg transition-all">
-                  <Link to="/about">Learn more</Link>
-                </Button>
                 <Button
-                  variant="outline"
-                  className="border-2 hover:border-black border-white text-white hover:bg-white bg-black hover:text-black rounded-full px-8 py-6 text-lg transition-all"
-                  onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+                  asChild
+                  className="relative overflow-hidden rounded-full bg-white text-black px-8 py-6 text-lg font-medium transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_40px_rgba(255,255,255,0.35)]"
                 >
-                  View projects
+                  <Link to="/projects">View My Work</Link>
+                </Button>
+
+                <Button
+                  asChild
+                  variant="outline"
+                  className="border border-white/30 text-white backdrop-blur-md hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg transition-all "
+                >
+                  <Link to="/about">About Me</Link>
                 </Button>
               </div>
             </AnimatedContent>
           </div>
         </section>
 
-        <section className="py-20 px-8">
-          <div className="max-w-6xl mx-auto">
-            <AnimatedContent distance={60} duration={0.8}>
-              <h2 className="text-5xl md:text-6xl font-bold text-center mb-4 text-white">
-                Hackclub projects
-              </h2>
-              <p className="text-xl text-gray-400 text-center mb-16 font-medium">
-                stuff i did thats pretty cool
-              </p>
+        <section className="py-16 px-8 border-y border-white/10 relative overflow-hidden bg-black">
+
+          <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" />
+          <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" />
+          <section className="py-16 border-y border-white/10 relative overflow-hidden">
+
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-black to-transparent z-10" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-black to-transparent z-10" />
+
+            <AnimatedContent distance={30} duration={0.6}>
+              <div className="w-full overflow-hidden">
+                <Marquee pauseOnHover className="[--duration:60s]">
+                  <div className="flex items-center gap-6 pr-6">
+                    {[...skills, ...skills].map((skill, i) => (
+                      <div
+                        key={i}
+                        className={`px-6 py-3 rounded-full border whitespace-nowrap transition-all
+                         ${skill.active
+                            ? 'border-white bg-white/10 text-white'
+                            : 'border-white/20 text-gray-400 hover:text-white hover:border-white/50'
+                          }
+                      `}
+                      >
+                        <span className="text-lg font-medium">
+                          {skill.name}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </Marquee>
+              </div>
             </AnimatedContent>
+          </section>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <AnimatedContent distance={80} duration={0.8} delay={0}>
-                <Card className="border-2 border-black shadow-lg hover:shadow-2xl transition-all duration-500 rounded-3xl overflow-hidden bg-black hover:-translate-y-2 ">
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <img
-                      src="/images/pathfinder1.png"
-                      alt="Pathfinder"
-                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
-                    />
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="text-2xl">mark-wahlberg</CardTitle>
-                    <CardDescription className="text-base text-gray-600">
-                      My project for pathfinder
-                    </CardDescription>
-                  </CardHeader>
-                  <CardFooter className="flex flex-col gap-3">
-                    <Button asChild className="w-full bg-white text-black hover:bg-gray-800 rounded-full py-6 transition-all">
-                      <a href="https://github.com/reghev/mark-wahlberg" target="_blank" rel="noopener noreferrer">
-                        View Project →
-                      </a>
-                    </Button>
-                    <Button asChild variant="outline" className="w-full border-2 border-white text-white hover:bg-black hover:text-white rounded-full py-6 transition-all">
-                      <Link to="/project/pathfinder" className="block group">
-                        More info
-                      </Link>
-                    </Button>
-                  </CardFooter>
-                </Card>
-              </AnimatedContent>
 
-              <AnimatedContent distance={80} duration={0.8} delay={0.2}>
-                <Card className="border-2 border-black shadow-lg hover:shadow-2xl transition-all duration-500 rounded-3xl overflow-hidden bg-black hover:-translate-y-2 ">
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <img
-                      src="/images/reality1.webp"
-                      alt="Reality"
-                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
-                    />
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="text-2xl">take-a-chill-pill</CardTitle>
-                    <CardDescription className="text-base text-gray-600">
-                      My project for reality
-                    </CardDescription>
-                  </CardHeader>
-                  <CardFooter className="flex flex-col gap-3">
-                    <Button asChild className="w-full bg-white text-black hover:bg-gray-800 rounded-full py-6 transition-all">
-                      <a href="https://github.com/reghev/seth-blue" target="_blank" rel="noopener noreferrer">
-                        View Project →
-                      </a>
-                    </Button>
-                    <Button asChild variant="outline" className="w-full border-2 border-white text-white hover:bg-white hover:text-black rounded-full py-6 transition-all">
-                      <Link to="/project/reality" className="block group">
-                        More info
-                      </Link>
-                    </Button>
-                  </CardFooter>
-                </Card>
-              </AnimatedContent>
+        </section>
 
-              <AnimatedContent distance={80} duration={0.8} delay={0.2}>
-                <Card className="border-2 border-black shadow-lg hover:shadow-2xl transition-all duration-500 rounded-3xl overflow-hidden bg-black hover:-translate-y-2 ">
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <img
-                      src="/images/solder1.png"
-                      alt="Reality"
-                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
-                    />
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="text-2xl">take-a-chill-pill</CardTitle>
-                    <CardDescription className="text-base text-gray-600">
-                      My project for solder
-                    </CardDescription>
-                  </CardHeader>
-                  <CardFooter className="flex flex-col gap-3">
-                    <Button asChild className="w-full bg-white text-black hover:bg-gray-800 rounded-full py-6 transition-all">
-                      <a href="https://github.com/reghev/seth-green" target="_blank" rel="noopener noreferrer">
-                        View Project →
-                      </a>
-                    </Button>
-                    <Button asChild variant="outline" className="w-full border-2 border-white text-white hover:bg-white hover:text-black rounded-full py-6 transition-all">
-                      <Link to="/project/reality" className="block group">
-                        More info
-                      </Link>
-                    </Button>
-                  </CardFooter>
-                </Card>
-              </AnimatedContent>
-            </div>
+        <section className="py-40 px-8 relative">
+          <div className="absolute inset-0 bg-white/[0.02] backdrop-blur-[2px]" />
+          <div className="max-w-3xl mx-auto relative">
+            <AnimatedContent distance={60} duration={0.8}>
+              <div className="rounded-3xl bg-white/[0.03] backdrop-blur-xl p-12 md:p-16 hover:bg-white/[0.06] transition-all">
+                <h3 className="text-[clamp(2rem,4vw,6rem)] font-extrabold tracking-tight text-white mb-6 leading-[0.95] text-center">
+                  About Me
+                </h3>
+                <p className="text-[clamp(1rem,2vw,1.125rem)] font-extralight tracking-wider text-gray-300/80 leading-loose">
+                  Your mini about me content goes here. Share your passion, background,
+                  and what drives you as a developer. Keep it concise and engaging.
+                </p>
+              </div>
+            </AnimatedContent>
           </div>
         </section>
 
-        <section id="projects" className="py-32 px-8">
-          <div className="max-w-7xl mx-auto">
+        <section className="py-32 px-8 border-t border-white/10 bg-gradient-to-b from-black via-white/[0.02] to-black relative">
+          <div className="absolute inset-0 opacity-[0.015] pointer-events-none" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+          }} />
+
+          <div className="max-w-6xl mx-auto mb-16 text-center relative z-10">
             <AnimatedContent distance={60} duration={0.8}>
-              <h2 className="text-5xl md:text-6xl font-bold text-center mb-4 text-white">
-                Projects
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Tech Stack
               </h2>
-              <p className="text-xl text-gray-400 text-center mb-20 font-medium">
-                Rankings and reviews you didn't ask for
+              <p className="text-gray-500 text-lg">
+                stuff i use and sometimes understand
               </p>
             </AnimatedContent>
+          </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <AnimatedContent distance={80} duration={0.8} delay={0}>
-                <Card className="border-2 border-white shadow-lg hover:shadow-2xl transition-all duration-500 rounded-3xl overflow-hidden bg-white hover:-translate-y-2 ">
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <img
-                      src="/images/icecream.png"
-                      alt="Ice Cream"
-                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
-                    />
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="text-2xl">Ice Cream Tier List</CardTitle>
-                    <CardDescription className="text-base text-gray-600">
-                      My factual opinions on ice cream
-                    </CardDescription>
-                  </CardHeader>
-                  <CardFooter className="flex flex-col gap-3">
-                    <Button asChild className="w-full bg-black text-white hover:bg-gray-800 rounded-full py-6 transition-all">
-                      <a href="https://tiermaker.com/create/top-40-ice-cream-flavors-15607441" target="_blank" rel="noopener noreferrer">
-                        View Tier List →
-                      </a>
-                    </Button>
-                    <Button asChild variant="outline" className="w-full border-2 border-black text-black hover:bg-black hover:text-white rounded-full py-6 transition-all">
-                      <Link to="/tl/icecream" className="block group">
-                        More info
-                      </Link>
-                    </Button>
-                  </CardFooter>
-                </Card>
-              </AnimatedContent>
-
-              <AnimatedContent distance={80} duration={0.8} delay={0.2}>
-                <Card className="border-2 border-white shadow-lg hover:shadow-2xl transition-all duration-500 rounded-3xl overflow-hidden bg-white hover:-translate-y-2">
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <img
-                      src="/images/protein.png"
-                      alt="Protein"
-                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
-                    />
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="text-2xl">Protein Powder Rankings</CardTitle>
-                    <CardDescription className="text-base text-gray-600">
-                      every single protein powder that matters
-                    </CardDescription>
-                  </CardHeader>
-                  <CardFooter className="flex flex-col gap-3">
-                    <Button asChild className="w-full bg-black text-white hover:bg-gray-800 rounded-full py-6 transition-all">
-                      <a href="https://tiermaker.com/create/protein-powder-tier-list-17372092" target="_blank" rel="noopener noreferrer">
-                        View Tier List →
-                      </a>
-                    </Button>
-                    <Button asChild variant="outline" className="w-full border-2 border-black text-black hover:bg-black hover:text-white rounded-full py-6 transition-all">
-                      <Link to="/tl/proteinpowder" className="block group">
-                        More info
-                      </Link>
-                    </Button>
-                  </CardFooter>
-                </Card>
-              </AnimatedContent>
-
-              <AnimatedContent distance={80} duration={0.8} delay={0.4}>
-                <Card className="border-2 border-white shadow-lg hover:shadow-2xl transition-all duration-500 rounded-3xl overflow-hidden bg-white hover:-translate-y-2">
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <img
-                      src="/images/monster.jpg"
-                      alt="Energy Drinks"
-                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
-                    />
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="text-2xl">Energy Drinks Ranked</CardTitle>
-                    <CardDescription className="text-base text-gray-600">
-                      this took way too long
-                    </CardDescription>
-                  </CardHeader>
-                  <CardFooter className="flex flex-col gap-3">
-                    <Button asChild className="w-full bg-black text-white hover:bg-gray-800 rounded-full py-6 transition-all">
-                      <a href="https://tiermaker.com/create/absolute-best-energy-drinks-16706475" target="_blank" rel="noopener noreferrer">
-                        View Tier List →
-                      </a>
-                    </Button>
-                    <Button asChild variant="outline" className="w-full border-2 border-black text-black hover:bg-black hover:text-white rounded-full py-6 transition-all">
-                      <Link to="/tl/energydrinks" className="block group">
-                        More info
-                      </Link>
-                    </Button>
-                  </CardFooter>
-                </Card>
-              </AnimatedContent>
-            </div>
+          <div className="relative z-10">
+            <Marquee className="[--duration:30s]" pauseOnHover>
+              {techLogos.map((logo, i) => (
+                <div key={i} className="flex items-center justify-center w-32 h-32 mx-4">
+                  <img
+                    src={logo.src}
+                    alt={logo.alt}
+                    className="h-16 w-auto grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                  />
+                </div>
+              ))}
+            </Marquee>
           </div>
         </section>
-        <div className="pt-24">
-          <Footer />
-        </div>
+
+        <section className="py-40 px-8 text-center relative border-t border-white/10 bg-black overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.05)_0%,transparent_70%)] pointer-events-none" />
+
+          <div
+            className="absolute inset-0 opacity-[0.03] pointer-events-none"
+            style={{
+              backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+              backgroundSize: '50px 50px',
+            }}
+          />
+
+          <div className="relative z-10">
+            <AnimatedContent distance={60} duration={0.8}>
+              <h2 className="text-6xl font-bold text-white mb-6 leading-tight">
+                want to see how i waste my time?
+              </h2>
+              <p className="text-gray-400 text-xl mb-12 max-w-2xl mx-auto">
+                From Hackclub projects to random tier lists, I've been doing all sorts of things.
+              </p>
+              <Button
+                asChild
+                className="bg-white text-black rounded-full px-12 py-7 text-xl font-medium transition-all hover:scale-[1.04] hover:shadow-[0_0_40px_rgba(255,255,255,0.35)]"
+              >
+                <Link to="/projects">View All Projects →</Link>
+              </Button>
+            </AnimatedContent>
+          </div>
+        </section>
+
+        <Footer />
       </div>
+      <div className="fixed inset-0 pointer-events-none opacity-[0.025] bg-[url('/noise.png')]" />
     </div>
   )
 }

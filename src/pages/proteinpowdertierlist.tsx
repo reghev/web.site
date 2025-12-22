@@ -5,28 +5,29 @@ import Navigation from '@/components/Navigation'
 import Waves from '@/components/Waves'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import ShinyText from '@/components/ShinyText'
+import { Cursor } from '@/components/cursor'
 
 export default function About() {
   return (
     <div className="h-full bg-black relative">
       <Navigation />
       <div className="fixed inset-0 pointer-events-none">
-        <Waves
-          lineColor="#481c81"
-          backgroundColor="rgba(0, 0, 0, 0.22)"
-          waveSpeedX={0.02}
-          waveSpeedY={0.01}
-          waveAmpX={40}
-          waveAmpY={20}
-          friction={0.9}
+       <Waves
+          lineColor="#ffffff05"
+          backgroundColor="rgba(0, 0, 0, 1)"
+          waveSpeedX={0.003}
+          waveSpeedY={0.002}
+          waveAmpX={30}
+          waveAmpY={15}
+          friction={0.95}
           tension={0.01}
-          maxCursorMove={120}
-          xGap={12}
-          yGap={36}
+          maxCursorMove={80}
+          xGap={16}
+          yGap={40}
         />
       </div>
       <div className="relative z-10">
-
+<Cursor />
         <div className="pt-32 pb-20 px-8">
           <div className="max-w-4xl mx-auto">
             <AnimatedContent distance={60} duration={0.8}>
@@ -37,7 +38,7 @@ export default function About() {
               </div>
             <div className="text-2xl md:text-3xl font-medium mb-12">
                 <ShinyText
-                  text="i really like ted"
+                  text="Ilpbiceibigfbisg"
                   disabled={false}
                   speed={5}
                   className="text-2xl md:text-3xl"
@@ -47,8 +48,8 @@ export default function About() {
 
             <AnimatedContent distance={60} duration={0.8} delay={0.2}>
               <img
-                src="/images/lois.png"
-                alt="pathfinder"
+                src="/images/protein.png"
+                alt="prontein"
                 className="w-full rounded-3xl shadow-2xl mb-12"
               />
             </AnimatedContent>
@@ -60,27 +61,21 @@ export default function About() {
 
                     <div className="prose prose-lg max-w-none">
                       <CardHeader>
-                        <CardTitle className="text-3xl text-white">About this project</CardTitle>
+                        <CardTitle className="text-3xl text-white">why</CardTitle>
                       </CardHeader>
                       <p className="text-lg text-white">
-                        This was for Pathfinder and the only reason i did it was because my sister made pathfinder
+                        i ranked every single protein powder that ive tried and that matters
                       </p>
 
                       <CardHeader>
-                        <CardTitle className="text-3xl text-white">What does it do?</CardTitle>
+                        <CardTitle className="text-3xl text-white">???</CardTitle>
                       </CardHeader>
                       <p className="text-lg text-white">
-                        I wanted to have a macropad that lights up and looks cool on my shelf
+                        I put ghost ryse and isopure high because on average theyll have good flavors but i hate the
+                        vegan ghost flavors i think they suck, i think quest is super overrated because of how it just shows
+                        a picture of something and tastes the exact opposite and its not worth the 10,000 dollars for half a
+                        protein bar price tag
                       </p>
-
-                      <CardHeader>
-                        <CardTitle className="text-3xl text-white">what would you change?</CardTitle>
-                      </CardHeader>
-                      <ul className="list-disc list-inside text-white text-lg space-y-2 mb-6">
-                        <li>Making it more than desk fodder would be number one</li>
-                        <li>something that has a purpose other than being rgb throwup would be nice</li>
-                        <li>if at the time i knew how to code like sensors would be sick because i had access to them</li>
-                      </ul>
                     </div>
                   </CardContent>
                 </Card>

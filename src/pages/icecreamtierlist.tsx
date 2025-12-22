@@ -5,15 +5,19 @@ import Navigation from '@/components/Navigation'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import ShinyText from '@/components/ShinyText'
 import { Button } from '@/components/ui/button'
+import { Cursor } from '@/components/cursor'
+import Waves from '@/components/Waves'
 
 export default function About() {
   return (
+    
+    
     <div className="h-full bg-black relative">
       <Navigation />
       <div className="fixed inset-0 pointer-events-none">
       </div>
       <div className="relative z-10">
-
+<Cursor />
         <div className="pt-32 pb-20 px-8">
           <div className="max-w-4xl mx-auto">
             <AnimatedContent distance={60} duration={0.8}>

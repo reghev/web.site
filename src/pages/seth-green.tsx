@@ -1,30 +1,30 @@
 import { SplitText } from '@/components/ui/split-text'
 import AnimatedContent from '@/components/ui/animated-content'
 import Footer from '@/components/Footer'
-import ClickSpark from '@/components/ClickSpark'
 import Navigation from '@/components/Navigation'
 import Waves from '@/components/Waves'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import ShinyText from '@/components/ShinyText'
+import { Cursor } from '@/components/cursor'
 
 export default function About() {
   return (
     <div className="h-full bg-black relative">
-      <ClickSpark />
+      <Cursor />
       <Navigation />
       <div className="fixed inset-0 pointer-events-none">
         <Waves
-          lineColor="#481c81"
-          backgroundColor="rgba(0, 0, 0, 0.22)"
-          waveSpeedX={0.02}
-          waveSpeedY={0.01}
-          waveAmpX={40}
-          waveAmpY={20}
-          friction={0.9}
+          lineColor="#ffffff05"
+          backgroundColor="rgba(0, 0, 0, 1)"
+          waveSpeedX={0.003}
+          waveSpeedY={0.002}
+          waveAmpX={30}
+          waveAmpY={15}
+          friction={0.95}
           tension={0.01}
-          maxCursorMove={120}
-          xGap={12}
-          yGap={36}
+          maxCursorMove={80}
+          xGap={16}
+          yGap={40}
         />
       </div>
       <div className="relative z-10">

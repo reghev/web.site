@@ -24,7 +24,7 @@ interface Drawer {
 const CABINET_DATA: Drawer[] = [
   {
     id: 'nirvana-primary',
-    label: 'FILE-001: Grunge',
+    label: 'FILE-001: Rock',
     items: [
       {
         image: "https://upload.wikimedia.org/wikipedia/en/thumb/a/a1/Nirvana-Bleach.jpg/250px-Nirvana-Bleach.jpg",
@@ -33,7 +33,7 @@ const CABINET_DATA: Drawer[] = [
         borderColor: "#333333",
         gradient: "linear-gradient(to bottom, #dcdad1, #b0aea4)",
         url: "https://open.spotify.com/album/1KVGkkahKY4MvHFS7fELdB",
-        thoughts: "The raw, dark energy of this album set the stage. It's the sound of Seattle still finding its voice, unpolished and vital. Favorite track: School."
+        thoughts: "Crazy good drumming from Chad Channing and hearing early krist and kurt with their bleach tones is insane compared to the nevermind and in utero tones"
       },
       {
         image: "https://i.scdn.co/image/ab67616d0000b273e175a19e530c898d167d39bf",
@@ -42,7 +42,7 @@ const CABINET_DATA: Drawer[] = [
         borderColor: "#0055ff",
         gradient: "linear-gradient(to bottom, #dcdad1, #b0aea4)",
         url: "https://open.spotify.com/album/2guirTSEqLizK7j9i1MTTZ",
-        thoughts: "The one that changed everything. Perfectly produced, slightly too clean, but undeniable pop sensibility fused with punk angst. A true cultural shift."
+        thoughts: "Definitely the most influential album they made, even in utero didnt have the great contrast this did to the EVH and KISS rock era"
       },
       {
         image: "https://upload.wikimedia.org/wikipedia/en/e/e5/In_Utero_%28Nirvana%29_album_cover.jpg",
@@ -51,7 +51,7 @@ const CABINET_DATA: Drawer[] = [
         borderColor: "#ff3333",
         gradient: "linear-gradient(to bottom, #dcdad1, #b0aea4)",
         url: "https://open.spotify.com/album/7wOOA7l306K8HfBKfPoafr",
-        thoughts: "A masterpiece of defiance. Steve Albini's production made it sound raw and abrasive, exactly what they wanted after Nevermind. The contrast between beauty and noise is perfect."
+        thoughts: "The Steve Albini production is definitely better in my opinion than butch vigs but this is a beheamoth of an album"
       },
       {
         image: "https://i.scdn.co/image/ab67616d0000b273e1f5fcef5fb5f70aa0a717fc",
@@ -61,7 +61,25 @@ const CABINET_DATA: Drawer[] = [
         gradient: "linear-gradient(to bottom, #dcdad1, #b0aea4)",
         url: "https://open.spotify.com/album/5K2xNMi6tbmLj9P6c8GEne",
         thoughts: "A collection for the hardcore fans—B-sides and rarities that demonstrate their punk roots. Dive into 'Aero Zeppelin' for a noisy ride."
-      }
+      },
+      {
+        image: "https://upload.wikimedia.org/wikipedia/en/thumb/1/17/Screaming_Life.jpg/250px-Screaming_Life.jpg",
+        title: "ASSET_006: Screaming Life",
+        subtitle: "STATUS: GRITTY // 1990",
+        borderColor: "#d4af37",
+        gradient: "linear-gradient(to bottom, #dcdad1, #b0aea4)",
+        url: "https://open.spotify.com/album/5wStnX0uKJRKlWX4rifrSb?si=FankyKyYQEiYbcIdJVHj0w",
+        thoughts: "Sound gardens grunge style definitely is one of the most noteable"
+      },
+      {
+        image: "https://upload.wikimedia.org/wikipedia/en/7/70/Weezer_-_Blue_Album.png",
+        title: "ASSET_001: BLUE",
+        subtitle: "STATUS: OUTLIER_DETECTED // 1994",
+        borderColor: "#0088ff",
+        gradient: "linear-gradient(to bottom, #dcdad1, #b0aea4)",
+        url: "https://open.spotify.com/album/4LH7ZurR7uC2cXab86NauS",
+        thoughts: "An anomaly in this archive, but essential. Perfect nerd-rock with flawless hooks. It balances the melancholy here perfectly. Undone is a masterpiece."
+      },
     ],
   },
   {
@@ -138,7 +156,7 @@ const CABINET_DATA: Drawer[] = [
         thoughts: "Aged amazingly and still carries the same energy it did that summer"
       },
       {
-        image: "https://open.spotify.com/album/18NOKLkZETa4sWwLMIm0UZ",
+        image: "https://i.scdn.co/image/ab67616d0000b27304481c826dd292e5e4983b3f",
         title: "ASSET_004: UTOPIA",
         subtitle: "STATUS: ANTHEM // 2024",
         borderColor: "#d4af37",
@@ -184,9 +202,6 @@ const AudioArchive: React.FC = () => {
     setSelectedItem(null);
   }, []);
 
-  const handleItemSelect = useCallback((item: Item | ChromaItem) => {
-    setSelectedItem(item as Item);
-  }, []);
 
   const handlePowerOff = () => {
     setIsPowerOn(false);
@@ -214,12 +229,12 @@ const AudioArchive: React.FC = () => {
         <div className="relative z-10 flex flex-col items-center min-h-screen py-12 px-4">
 
           <div className="w-full max-w-6xl flex justify-between items-center text-xs md:text-sm tracking-widest text-[#4A3728] mb-8 uppercase border-b-2 border-[#8B5A3C] pb-2">
-            <span>TEMPORAL ARCHIVE: GUEST</span>
-            <span>VARIANT_ID: 808-X</span>
+            <span>check out some songs</span>
+            <span>enjoy your stay</span>
             <button
               onClick={handlePowerOff}
               className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer group"
-              title="Power Off"
+              title="go home"
             >
               <svg
                 width="24"
@@ -254,7 +269,7 @@ const AudioArchive: React.FC = () => {
 
             <div className="p-4 text-center border-b-2 border-[#4A3728] bg-[#E8C4A0]">
               <h2 className="text-2xl font-serif font-bold text-[#2D2319] uppercase tracking-tight">
-                TEMPORAL AUDIO ARCHIVE • CABINET {CABINET_DATA.length}
+                ALBUM • CABINET {CABINET_DATA.length}
               </h2>
             </div>
 
