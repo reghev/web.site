@@ -43,6 +43,8 @@ export default defineConfig([
   },
 ])
 ```
+<img width="1533" height="744" alt="image" src="https://github.com/user-attachments/assets/711174c5-8b68-4b0f-a7b7-2613e2a19792" />
+<img width="1537" height="735" alt="Screenshot 2025-12-23 133248" src="https://github.com/user-attachments/assets/69ac8b51-9aba-4ae8-8775-b62012c2cd37" />
 
 You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
