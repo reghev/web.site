@@ -65,11 +65,6 @@ export default function Projects() {
 
         <section className="pt-32 pb-20 px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block mb-6">
-              <span className="px-4 py-2 border border-white/20 rounded-full text-sm text-gray-400 backdrop-blur-sm">
-                💼 My Work
-              </span>
-            </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Things I've Built
             </h1>

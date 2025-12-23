@@ -6,46 +6,44 @@ import Footer from '@/components/Footer'
 import Waves from '@/components/Waves'
 import { Marquee } from '@/components/Marquee'
 import { Cursor } from '@/components/cursor'
-import { useState } from 'react' // ADD THIS IMPORT
+import { useState } from 'react'
+import BlurText from '@/components/BlurText'
+
+
 
 export default function Home() {
-  // ADD THIS STATE HERE
-  const [selectedSkill, setSelectedSkill] = useState<string | null>(null);
-
   const techLogos = [
     { src: "/logos/react.png", alt: "React" },
     { src: "/logos/typescript.png", alt: "TypeScript" },
-    { src: "/logos/tailwind.png", alt: "Tailwind CSS" },
-    { src: "/logos/js.png", alt: "JavaScript" },
-    { src: "/logos/github.png", alt: "GitHub" },
+    { src: "/logos/tailwind.png", alt: "Tailwind" },
+    { src: "/logos/pat.jpg", alt: "pat" },
+    { src: "/logos/js.png", alt: "Java Script" },
+    { src: "/logos/github.png", alt: "Gurthub😂👋" },
     { src: "/logos/download.png", alt: "Python" },
-    { src: "/logos/clash.png", alt: "Clash Royale" },
-    { src: "/logos/pat.jpg", alt: "Patrick Star" },
-    { src: "/images/MISSING.png", alt: "Logo" },
-    { src: "/logos/cow.png", alt: "Cow" },
+    { src: "/logos/cow.png", alt: "cow" },
+    { src: "/logos/clash.png", alt: "clash" },
   ]
 
-  // UPDATE YOUR SKILLS ARRAY TO INCLUDE ICONS AND DESCRIPTIONS
   const skills = [
     {
       name: "Graphic Design",
       icon: "🎨",
-      description: "Creating visual identities and design systems for modern brands"
+      description: "Created over 30+ logos for companies, clients, and others"
     },
     {
       name: "Web Development",
       icon: "💻",
-      description: "Building responsive, performant web applications with React and TypeScript"
+      description: "Built multiple websites using applications like react, typescript, javascript, html, and css"
     },
     {
       name: "Electrical Engineering*",
       icon: "⚡",
-      description: "Working with circuits, microcontrollers, and embedded systems"
+      description: "Made a few projects using Kicad and various tools to design and build PCBs and other electronics"
     },
     {
       name: "Physio Science",
       icon: "🧬",
-      description: "Understanding human physiology and biomechanics"
+      description: "Avid researcher of the fields of physio science, sports science, nutrition, and overall anatomical science"
     },
     {
       name: "Branding",
@@ -53,11 +51,29 @@ export default function Home() {
       description: "Crafting memorable brand experiences and identities"
     },
     {
-      name: "Fitness Trainer",
+      name: "Fitness Advisor",
       icon: "💪",
-      description: "Strength training, programming, and coaching athletes"
+      description: "Made multiple people personalized fitness plans and helped them with nutrition and educated them on physio science"
     },
   ]
+
+  const [selectedSkill, setSelectedSkill] = useState<string>(skills[0].name);
+
+  const placeholders = [
+    <img key="drmikescreaminghisballsoff" src="/thingies/drmikescreaminghisballsoff.png" alt="" className="my-auto w-6 h-6 sm:w-8 sm:h-8" />,
+    <img key="kihng azoulay and ali sohbh" src="/thingies/kihng azoulay and ali sohbh.png" alt="" className="my-auto w-6 h-6 sm:w-8 sm:h-8" />,
+    <img key="or just control c then control v" src="/thingies/or just control c then control v.png" alt="" className="my-auto w-6 h-6 sm:w-8 sm:h-8" />,
+    <img key="pat" src="/thingies/pat.jpg" alt="" className="my-auto w-6 h-6 sm:w-8 sm:h-8" />,
+    <img key="charlie" src="/thingies/charchar.jpg" alt="" className="my-auto w-6 h-6 sm:w-8 sm:h-8" />,
+    <img key="charlie" src="/thingies/charchar.jpg" alt="" className="my-auto w-6 h-6 sm:w-8 sm:h-8" />,
+    <img key="charlie" src="/thingies/charchar.jpg" alt="" className="my-auto w-6 h-6 sm:w-8 sm:h-8" />,
+
+  ]
+
+
+  function handleAnimationComplete(): void {
+    throw new Error('Function not implemented.')
+  }
 
   return (
     <div className="min-h-screen bg-black relative overflow-hidden">
@@ -104,12 +120,15 @@ export default function Home() {
           </div>
 
           <div className="max-w-4xl w-full text-center">
-            <AnimatedContent distance={80} direction="vertical" duration={1} delay={0.3}>
-              <h1 className="text-[clamp(3rem,8vw,6.5rem)] font-extrabold tracking-tight text-white mb-6 leading-[0.95]">
-                Building cool stuff one project at a time
-                <br />
-              </h1>
-            </AnimatedContent>
+
+            <BlurText
+              text="Building cool stuff one project at a time"
+              delay={140}
+              animateBy="words"
+              direction="top"
+              onAnimationComplete={handleAnimationComplete}
+              className="text-[clamp(3rem,8vw,6.5rem)] font-extrabold tracking-tight text-white mb-6 leading-[0.95]"
+            />
 
             <AnimatedContent distance={60} direction="vertical" duration={1} delay={0.5}>
               <p className="text-[clamp(1.25rem,3vw,2rem)] font-medium tracking-tight text-white mb-6 leading-relaxed">
@@ -143,68 +162,79 @@ export default function Home() {
 
           <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" />
           <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" />
-          <section className="py-16 px-8 border-y border-white/10 relative overflow-hidden bg-black">
-
+          <section className="py-24 px-8 border-y border-white/10 relative overflow-hidden bg-black">
             <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" />
             <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" />
 
-
-            <AnimatedContent distance={30} duration={0.6}>
-          <div className="w-full overflow-visible">
-            <Marquee pauseOnHover className="[--duration:60s]">
-              <div className="flex items-center gap-4 pr-4">
-                {[...skills, ...skills].map((skill, i) => (
-                  <div
-                    key={`skill-${i}`}
-                    onClick={() => setSelectedSkill(skill.name)}
-                    className={`px-6 py-3 rounded-full border whitespace-nowrap transition-all cursor-pointer
-                      ${selectedSkill === skill.name
-                        ? 'border-white bg-white/10 text-white'
-                        : 'border-white/20 text-gray-400 hover:text-white hover:border-white/50'
-                      }
-                    `}
-                  >
-                    <span className="text-lg font-medium">{skill.name}</span>
-                  </div>
-                ))}
-              </div>
-            </Marquee>
-
-            {/* Card below marquee */}
-            {selectedSkill && (
-              <div className="mt-12 max-w-2xl mx-auto px-4">
-                <div className="bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-2xl p-8 transition-all">
-                  <div className="flex items-start gap-4">
-                    <div className="text-4xl">
-                      {skills.find(s => s.name === selectedSkill)?.icon || '💼'}
+            <div className="max-w-7xl mx-auto">
+              <AnimatedContent distance={30} duration={0.6}>
+                <div className="mb-16 max-w-4xl mx-auto">
+                  <div className="bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-3xl p-12 md:p-16 transition-all">
+                    <div className="flex flex-col md:flex-row items-start gap-8">
+                      <div className="text-7xl md:text-8xl">
+                        {skills.find(s => s.name === selectedSkill)?.icon || '💼'}
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                          {selectedSkill}
+                        </h3>
+                        <p className="text-xl md:text-2xl text-gray-300 leading-relaxed">
+                          {skills.find(s => s.name === selectedSkill)?.description}
+                        </p>
+                      </div>
                     </div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-semibold text-white mb-3">
-                        {selectedSkill}
-                      </h3>
-                      <p className="text-base text-gray-400 leading-relaxed">
-                        {skills.find(s => s.name === selectedSkill)?.description || 
-                          `Expert level proficiency in ${selectedSkill}`}
-                      </p>
-                    </div>
-                    <button 
-                      onClick={() => setSelectedSkill(null)}
-                      className="text-gray-400 hover:text-white transition-colors text-2xl leading-none"
-                    >
-                      ×
-                    </button>
                   </div>
                 </div>
-              </div>
-            )}
-          </div>
-        </AnimatedContent>
-      </section>
+
+                <div className="w-full overflow-visible">
+                  <Marquee pauseOnHover className="[--duration:60s]">
+                    <div className="flex items-center gap-3">
+                      {[...skills, ...skills].flatMap((skill, i) => [
+                        <button
+                          key={`skill-${i}`}
+                          onClick={() => setSelectedSkill(skill.name)}
+                          onMouseEnter={() => setSelectedSkill(skill.name)}
+                          className={`px-6 py-3 rounded-full border whitespace-nowrap transition-all cursor-pointer text-lg font-medium
+                    ${selectedSkill === skill.name
+                              ? 'border-white bg-white text-black'
+                              : 'border-white/20 bg-black text-gray-400 hover:text-white hover:border-white/50 hover:bg-white/5'
+                            }
+                  `}
+                        >
+                          {skill.name}
+                        </button>,
+                        <span key={`shape-${i}`} className="text-white/40">
+                          {placeholders[i % placeholders.length]}
+                        </span>
+                      ]).slice(0, -1)}
+                    </div>
+                  </Marquee>
+                </div>
+              </AnimatedContent>
+            </div>
+          </section>
 
         </section>
 
         <section className="py-40 px-8 relative">
           <div className="absolute inset-0 bg-white/[0.02] backdrop-blur-[2px]" />
+
+
+          <div className="absolute inset-0 pointer-events-none overflow-hidden">
+
+            <div className="absolute top-10 left-[10%] rotate-[-8deg] group">
+
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-6 bg-white/10 backdrop-blur-sm rotate-[-2deg] z-10" />
+              <div className="bg-white p-2 shadow-2xl">
+                <img
+                  src="/gifs/in utero.gif"
+                  alt=""
+                  className="w-32 h-32 object-cover"
+                />
+              </div>
+            </div>
+          </div>
+
           <div className="max-w-3xl mx-auto relative">
             <AnimatedContent distance={60} duration={0.8}>
               <div className="rounded-3xl bg-white/[0.03] backdrop-blur-xl p-12 md:p-16 hover:bg-white/[0.06] transition-all">
@@ -212,13 +242,13 @@ export default function Home() {
                   About Me
                 </h3>
                 <p className="text-[clamp(1rem,2vw,1.125rem)] font-extralight tracking-wider text-gray-300/80 leading-loose">
-                  Your mini about me content goes here. Share your passion, background,
-                  and what drives you as a developer. Keep it concise and engaging.
+                  Hey, Im raghav i like lifting, science, tech, music, and im a scout, Im a hackclubber and ive been to a couple hackathons
                 </p>
               </div>
             </AnimatedContent>
           </div>
         </section>
+
 
         <section className="py-32 px-8 border-t border-white/10 bg-gradient-to-b from-black via-white/[0.02] to-black relative">
           <div className="absolute inset-0 opacity-[0.015] pointer-events-none" style={{

@@ -38,9 +38,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-white/10 bg-black relative">
       <div className="max-w-6xl mx-auto px-8 py-16">
-        {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-          {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
               <AnimatedLogo
@@ -53,8 +51,6 @@ export default function Footer() {
             </div>
             <FooterRandomText />
           </div>
-
-          {/* Links */}
           <div>
             <h3 className="font-semibold mb-4 text-white text-sm uppercase tracking-wider">
               Navigation
@@ -74,8 +70,6 @@ export default function Footer() {
               </Link>
             </div>
           </div>
-
-          {/* Socials */}
           <div>
             <h3 className="font-semibold mb-4 text-white text-sm uppercase tracking-wider">
               Connect
@@ -114,8 +108,6 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
-        {/* Divider */}
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-500 text-sm">
@@ -123,7 +115,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-6 text-sm">
               <a href="/Shhh" className="text-gray-500 hover:text-white transition-colors">
-                Easter Egg
+                end
               </a>
               <Link to="/guestbook" className="text-gray-500 hover:text-white transition-colors">
                 Sign Guest Book
