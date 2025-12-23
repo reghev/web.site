@@ -74,3 +74,4 @@ export default defineConfig([
   },
 ])
 ```
+This has all of my assets and everything i used in the website
