@@ -6,7 +6,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import ShinyText from '@/components/ShinyText'
 import { Button } from '@/components/ui/button'
 import { Cursor } from '@/components/cursor'
-import Waves from '@/components/Waves'
 
 export default function About() {
   return (
