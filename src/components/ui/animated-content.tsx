@@ -25,7 +25,6 @@ export default function AnimatedContent({
   reverse = false,
   duration = 0.5,
   delay = 0,
-  ease = 'easeOut',
   initialOpacity = 0,
   animateOpacity = true,
   scale = 1,
@@ -61,7 +60,6 @@ export default function AnimatedContent({
       transition={{
         duration,
         delay,
-        ease,
       }}
       className={cn(className)}
     >
