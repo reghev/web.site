@@ -19,7 +19,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/About" element={<About />} />
         <Route path="/project/pathfinder" element={<ProjectLois />} />
         <Route path="/project/reality" element={<ProjectCircuit />} />
         <Route path="/project/solder" element={<ProjectDinosaur />} />
