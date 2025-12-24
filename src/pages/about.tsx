@@ -7,7 +7,7 @@ import { SplitText } from '@/components/ui/split-text'
 import { Cursor } from '@/components/cursor'
 
 
-export default function About() {
+export default function about() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
   return (

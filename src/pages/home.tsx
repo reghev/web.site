@@ -11,7 +11,7 @@ import BlurText from '@/components/BlurText'
 
 
 
-export default function Home() {
+export default function home() {
   const techLogos = [
     { src: "/logos/react.png", alt: "React" },
     { src: "/logos/typescript.png", alt: "TypeScript" },
