@@ -77,6 +77,7 @@ export default function Navigation() {
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
                 raghav.fit
+
                 
               </motion.span>
             </Link>
@@ -90,7 +91,7 @@ export default function Navigation() {
                     to={item.href}
                     className={`transition-colors duration-300 ${
                       isActive(item.href)
-                        ? 'text-white font-semibold'
+                        ? 'text-white font-semibold font-'
                         : 'text-gray-400 hover:text-white'
                     }`}
                   >

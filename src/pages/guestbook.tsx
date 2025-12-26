@@ -53,7 +53,6 @@ export default function GuestBook() {
 
   const loadEntries = async () => {
     try {
-      // Check if window.storage exists (Claude artifacts)
       if (typeof window !== 'undefined' && window.storage) {
         const keys = await window.storage.list('guestbook:', true)
         if (keys && keys.keys) {
@@ -69,7 +68,6 @@ export default function GuestBook() {
           setEntries(validEntries)
         }
       } else {
-        // Fallback to localStorage
         const keys = Object.keys(localStorage).filter(k => k.startsWith('guestbook:'))
         const allEntries = keys.map(key => {
           try {
@@ -103,11 +101,10 @@ export default function GuestBook() {
         id: Date.now()
       }
 
-      // Try window.storage first (Claude artifacts)
       if (typeof window !== 'undefined' && window.storage) {
         await window.storage.set(`guestbook:${entry.id}`, JSON.stringify(entry), true)
       } else {
-        // Fallback to localStorage
+
         localStorage.setItem(`guestbook:${entry.id}`, JSON.stringify(entry))
       }
       

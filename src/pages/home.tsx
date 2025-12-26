@@ -65,7 +65,7 @@ export default function home() {
     <img key="or just control c then control v" src="/thingies/or just control c then control v.png" alt="" className="my-auto w-6 h-6 sm:w-8 sm:h-8" />,
     <img key="pat" src="/thingies/pat.jpg" alt="" className="my-auto w-6 h-6 sm:w-8 sm:h-8" />,
     <img key="charlie" src="/thingies/charchar.jpg" alt="" className="my-auto w-6 h-6 sm:w-8 sm:h-8" />,
-    <img key="charlie" src="/thingies/charchar.jpg" alt="" className="my-auto w-6 h-6 sm:w-8 sm:h-8" />,
+    <img key="monkey thinking" src="/thingies/monkey.jpg" alt="" className="my-auto w-6 h-6 sm:w-8 sm:h-8" />,
     <img key="charlie" src="/thingies/charchar.jpg" alt="" className="my-auto w-6 h-6 sm:w-8 sm:h-8" />,
 
   ]
@@ -151,7 +151,7 @@ export default function home() {
                   variant="outline"
                   className="border border-white/30 text-white backdrop-blur-md hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg transition-all "
                 >
-                  <Link to="/about">About Me</Link>
+                  <Link to="about">About Me</Link>
                 </Button>
               </div>
             </AnimatedContent>
