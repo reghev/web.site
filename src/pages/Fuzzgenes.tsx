@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import ShinyText from '@/components/ShinyText'
 import { Link } from 'react-router-dom'
 
-export default function fuzzgenes() {
+export default function Fuzzgenes() {
   return (
     <div className="h-full bg-black relative">
       <Navigation />
