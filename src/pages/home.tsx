@@ -151,7 +151,7 @@ export default function home() {
                   variant="outline"
                   className="border border-white/30 text-white backdrop-blur-md hover:bg-white hover:text-black rounded-full px-8 py-6 text-lg transition-all "
                 >
-                  <Link to="about">About Me</Link>
+                  <Link to="/about">About Me</Link>
                 </Button>
               </div>
             </AnimatedContent>
@@ -232,6 +232,7 @@ export default function home() {
                   className="w-32 h-32 object-cover"
                 />
               </div>
+              
             </div>
           </div>
 
