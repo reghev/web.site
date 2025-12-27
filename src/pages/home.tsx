@@ -219,11 +219,8 @@ export default function home() {
         <section className="py-40 px-8 relative">
           <div className="absolute inset-0 bg-white/[0.02] backdrop-blur-[2px]" />
 
-
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
-
             <div className="absolute top-10 left-[10%] rotate-[-8deg] group">
-
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-6 bg-white/10 backdrop-blur-sm rotate-[-2deg] z-10" />
               <div className="bg-white p-2 shadow-2xl">
                 <img
@@ -232,7 +229,46 @@ export default function home() {
                   className="w-32 h-32 object-cover"
                 />
               </div>
-              
+            </div>
+            <div className="absolute top-20 right-[15%] rotate-[12deg] group">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-6 bg-white/10 backdrop-blur-sm rotate-[3deg] z-10" />
+              <div className="bg-white p-2 shadow-2xl">
+                <img
+                  src="/gifs/trentwins.gif"
+                  alt=""
+                  className="w-40 h-40 object-cover"
+                />
+              </div>
+            </div>
+            <div className="absolute bottom-32 left-[8%] rotate-[6deg] group">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-24 h-6 bg-white/10 backdrop-blur-sm rotate-[-4deg] z-10" />
+              <div className="bg-white p-2 shadow-2xl">
+                <img
+                  src="/gifs/patrick.gif"
+                  alt=""
+                  className="w-36 h-36 object-cover"
+                />
+              </div>
+            </div>
+            <div className="absolute bottom-20 right-[12%] rotate-[-10deg] group">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-6 bg-white/10 backdrop-blur-sm rotate-[2deg] z-10" />
+              <div className="bg-white p-2 shadow-2xl">
+                <img
+                  src="/gifs/tspud.gif"
+                  alt=""
+                  className="w-32 h-32 object-cover"
+                />
+              </div>
+            </div>
+            <div className="absolute top-1/2 left-[5%] -translate-y-1/2 rotate-[-15deg] group">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-6 bg-white/10 backdrop-blur-sm rotate-[5deg] z-10" />
+              <div className="bg-white p-2 shadow-2xl">
+                <img
+                  src="/gifs/carterhere.gif"
+                  alt=""
+                  className="w-28 h-28 object-cover"
+                />
+              </div>
             </div>
           </div>
 
@@ -243,13 +279,12 @@ export default function home() {
                   About Me
                 </h3>
                 <p className="text-[clamp(1rem,2vw,1.125rem)] font-extralight tracking-wider text-gray-300/80 leading-loose">
-                  Hey, Im raghav i like lifting, science, tech, music, and im a scout, Im a hackclubber and ive been to a couple hackathons
+                  Hey, Im raghav i like lifting, science, tech, music, and im a scout,
                 </p>
               </div>
             </AnimatedContent>
           </div>
         </section>
-
 
         <section className="py-32 px-8 border-t border-white/10 bg-gradient-to-b from-black via-white/[0.02] to-black relative">
           <div className="absolute inset-0 opacity-[0.015] pointer-events-none" style={{

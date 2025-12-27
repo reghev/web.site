@@ -33,7 +33,7 @@ const CABINET_DATA: Drawer[] = [
         borderColor: "#333333",
         gradient: "linear-gradient(to bottom, #dcdad1, #b0aea4)",
         url: "https://open.spotify.com/album/1KVGkkahKY4MvHFS7fELdB",
-        thoughts: "Crazy good drumming from Chad Channing and hearing early krist and kurt with their bleach tones is insane compared to the nevermind and in utero tones"
+        thoughts: ""
       },
       {
         image: "https://i.scdn.co/image/ab67616d0000b273e175a19e530c898d167d39bf",
@@ -42,7 +42,7 @@ const CABINET_DATA: Drawer[] = [
         borderColor: "#0055ff",
         gradient: "linear-gradient(to bottom, #dcdad1, #b0aea4)",
         url: "https://open.spotify.com/album/2guirTSEqLizK7j9i1MTTZ",
-        thoughts: "Definitely the most influential album they made, even in utero didnt have the great contrast this did to the EVH and KISS rock era"
+        thoughts: ""
       },
       {
         image: "https://upload.wikimedia.org/wikipedia/en/e/e5/In_Utero_%28Nirvana%29_album_cover.jpg",
@@ -51,7 +51,7 @@ const CABINET_DATA: Drawer[] = [
         borderColor: "#ff3333",
         gradient: "linear-gradient(to bottom, #dcdad1, #b0aea4)",
         url: "https://open.spotify.com/album/7wOOA7l306K8HfBKfPoafr",
-        thoughts: "The Steve Albini production is definitely better in my opinion than butch vigs but this is a beheamoth of an album"
+        thoughts: ""
       },
       {
         image: "https://i.scdn.co/image/ab67616d0000b273e1f5fcef5fb5f70aa0a717fc",
@@ -60,7 +60,7 @@ const CABINET_DATA: Drawer[] = [
         borderColor: "#d4af37",
         gradient: "linear-gradient(to bottom, #dcdad1, #b0aea4)",
         url: "https://open.spotify.com/album/5K2xNMi6tbmLj9P6c8GEne",
-        thoughts: "A collection for the hardcore fans—B-sides and rarities that demonstrate their punk roots. Dive into 'Aero Zeppelin' for a noisy ride."
+        thoughts: ""
       },
       {
         image: "https://upload.wikimedia.org/wikipedia/en/thumb/1/17/Screaming_Life.jpg/250px-Screaming_Life.jpg",
@@ -69,7 +69,7 @@ const CABINET_DATA: Drawer[] = [
         borderColor: "#d4af37",
         gradient: "linear-gradient(to bottom, #dcdad1, #b0aea4)",
         url: "https://open.spotify.com/album/5wStnX0uKJRKlWX4rifrSb?si=FankyKyYQEiYbcIdJVHj0w",
-        thoughts: "Sound gardens grunge style definitely is one of the most noteable"
+        thoughts: ""
       },
       {
         image: "https://upload.wikimedia.org/wikipedia/en/7/70/Weezer_-_Blue_Album.png",
@@ -78,7 +78,7 @@ const CABINET_DATA: Drawer[] = [
         borderColor: "#0088ff",
         gradient: "linear-gradient(to bottom, #dcdad1, #b0aea4)",
         url: "https://open.spotify.com/album/4LH7ZurR7uC2cXab86NauS",
-        thoughts: "An anomaly in this archive, but essential. Perfect nerd-rock with flawless hooks. It balances the melancholy here perfectly. Undone is a masterpiece."
+        thoughts: ""
       },
     ],
   },
@@ -93,7 +93,7 @@ const CABINET_DATA: Drawer[] = [
         borderColor: "#0088ff",
         gradient: "linear-gradient(to bottom, #dcdad1, #b0aea4)",
         url: "https://open.spotify.com/album/4LH7ZurR7uC2cXab86NauS",
-        thoughts: "An anomaly in this archive, but essential. Perfect nerd-rock with flawless hooks. It balances the melancholy here perfectly. Undone is a masterpiece."
+        thoughts: ""
       },
       {
         image: "https://upload.wikimedia.org/wikipedia/en/5/59/Radiohead_-_OKNOTOK_-_Physical_Album_Cover_Art.jpg",
@@ -102,7 +102,7 @@ const CABINET_DATA: Drawer[] = [
         borderColor: "#0088ff",
         gradient: "linear-gradient(to bottom, #dcdad1, #b0aea4)",
         url: "https://open.spotify.com/album/4LH7ZurR7uC2cXab86NauS",
-        thoughts: "An anomaly in this archive, but essential. Perfect nerd-rock with flawless hooks. It balances the melancholy here perfectly. Undone is a masterpiece."
+        thoughts: ""
       },
       {
         image: "https://upload.wikimedia.org/wikipedia/en/5/54/Nirvana_mtv_unplugged_in_new_york.png",
@@ -111,7 +111,7 @@ const CABINET_DATA: Drawer[] = [
         borderColor: "#551a8b",
         gradient: "linear-gradient(to bottom, #dcdad1, #b0aea4)",
         url: "https://open.spotify.com/album/7gjAqPXKthUBQ3TOh6NQ3i",
-        thoughts: "This showcases their vulnerability and songwriting depth. It feels like an intimate funeral, especially the Bowie cover. It's chilling and beautiful."
+        thoughts: ""
       },
       {
         image: "https://upload.wikimedia.org/wikipedia/en/6/6f/Pearl_Jam_Ten_Alt_Cover.jpg",
@@ -120,7 +120,7 @@ const CABINET_DATA: Drawer[] = [
         borderColor: "#58252cff",
         gradient: "linear-gradient(to bottom, #dcdad1, #b0aea4)",
         url: "https://open.spotify.com/album/5B4PYA7wNN4WdEXdIJu58a?si=dTssjGE1SOWQk4FWpx-HAA",
-        thoughts: "It's actually post nirvana grunge at it's finest even though there is no connection to nirvana, but the moodyness and still really smooth tracklist is something you cant ignore"
+        thoughts: ""
       },
     ],
   },
