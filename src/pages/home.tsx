@@ -12,48 +12,32 @@ import BlurText from '@/components/BlurText'
 
 
 export default function home() {
-  const techLogos = [
-    { src: "/logos/react.png", alt: "React" },
-    { src: "/logos/typescript.png", alt: "TypeScript" },
-    { src: "/logos/tailwind.png", alt: "Tailwind" },
-    { src: "/logos/pat.jpg", alt: "pat" },
-    { src: "/logos/js.png", alt: "Java Script" },
-    { src: "/logos/github.png", alt: "Gurthub😂👋" },
-    { src: "/logos/download.png", alt: "Python" },
-    { src: "/logos/cow.png", alt: "cow" },
-    { src: "/logos/clash.png", alt: "clash" },
-  ]
 
   const skills = [
     {
-      name: "Graphic Design",
-      icon: "🎨",
-      description: "Created over 30+ logos for companies, clients, and others"
+      name: "Hackathon(ing?)",
+      icon: "",
+      description: "Gone to over 8 hackathons, won none, top 3 at 3"
     },
     {
-      name: "Web Development",
+      name: "Code(ing?)",
       icon: "💻",
-      description: "Built multiple websites using applications like react, typescript, javascript, html, and css"
+      description: "Used my massive amounts of freetime to build PCBs websites and various other useless objects"
     },
     {
-      name: "Electrical Engineering*",
+      name: "Hardware(ing?)",
       icon: "⚡",
       description: "Made a few projects using Kicad and various tools to design and build PCBs and other electronics"
     },
     {
-      name: "Physio Science",
-      icon: "🧬",
-      description: "Avid researcher of the fields of physio science, sports science, nutrition, and overall anatomical science"
+      name: "Powerlifting",
+      icon: "",
+      description: "Been to over 5 powerlifting meets, won 1 and top 3 and 4"
     },
     {
-      name: "Branding",
-      icon: "✨",
-      description: "Crafting memorable brand experiences and identities"
-    },
-    {
-      name: "Fitness Advisor",
-      icon: "💪",
-      description: "Made multiple people personalized fitness plans and helped them with nutrition and educated them on physio science"
+      name: "Volunteering",
+      icon: "",
+      description: "Volunteered at various hackathons aswell as educational camps for computer engineering"
     },
   ]
 
@@ -122,7 +106,7 @@ export default function home() {
           <div className="max-w-4xl w-full text-center">
 
             <BlurText
-              text="Building cool stuff one project at a time"
+              text="Making things as to not be useless slowly but surely"
               delay={140}
               animateBy="words"
               direction="top"
@@ -132,8 +116,7 @@ export default function home() {
 
             <AnimatedContent distance={60} direction="vertical" duration={1} delay={0.5}>
               <p className="text-[clamp(1.25rem,3vw,2rem)] font-medium tracking-tight text-white mb-6 leading-relaxed">
-                13-year-old developer, hackclub enthusiast, amatuer powerlifter and bodybuilder,
-                Third place at NASA SpaceApps 2022 Cleveland. "You dont learn if you dont try".
+                14-year-old developer, hacker, amateur powerlifter and bodybuilder. "The dream of a person defines more than themselves, but the entire world for who they choose to use as their canvas."
               </p>
             </AnimatedContent>
 
@@ -279,7 +262,7 @@ export default function home() {
                   About Me
                 </h3>
                 <p className="text-[clamp(1rem,2vw,1.125rem)] font-extralight tracking-wider text-gray-300/80 leading-loose">
-                  Hey, Im raghav i like lifting, science, tech, music, and im a scout,
+                  Whats up reader, Im Raghav, I lift, I code, and I try not to be useless, check out some stuff or do something else i guess?.
                 </p>
               </div>
             </AnimatedContent>
@@ -302,19 +285,6 @@ export default function home() {
             </AnimatedContent>
           </div>
 
-          <div className="relative z-10">
-            <Marquee className="[--duration:30s]" pauseOnHover>
-              {techLogos.map((logo, i) => (
-                <div key={i} className="flex items-center justify-center w-32 h-32 mx-4">
-                  <img
-                    src={logo.src}
-                    alt={logo.alt}
-                    className="h-16 w-auto grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
-                  />
-                </div>
-              ))}
-            </Marquee>
-          </div>
         </section>
 
         <section className="py-40 px-8 text-center relative border-t border-white/10 bg-black overflow-hidden">
@@ -335,7 +305,7 @@ export default function home() {
                 want to see how i waste my time?
               </h2>
               <p className="text-gray-400 text-xl mb-12 max-w-2xl mx-auto">
-                From Hackclub projects to random tier lists, I've been doing all sorts of things.
+                Stuff I do to not waste time but end up wasting time
               </p>
               <Button
                 asChild

@@ -70,7 +70,7 @@ export default function about() {
           <div className="h-px bg-white/10 mb-32" />
         </div>
 
-
+    
 
         <Footer />
       </div>
