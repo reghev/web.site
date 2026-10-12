@@ -15,16 +15,6 @@ interface GuestBookEntry {
   id: number
 }
 
-declare global {
-  interface Window {
-    storage: {
-      get: (key: string, shared: boolean) => Promise<{ key: string; value: string; shared: boolean } | null>
-      set: (key: string, value: string, shared: boolean) => Promise<{ key: string; value: string; shared: boolean } | null>
-      list: (prefix: string, shared: boolean) => Promise<{ keys: string[]; prefix?: string; shared: boolean } | null>
-    }
-  }
-}
-
 export default function GuestBook() {
   const [entries, setEntries] = useState<GuestBookEntry[]>([])
   const [name, setName] = useState('')
@@ -47,40 +37,19 @@ export default function GuestBook() {
     return loadingMessages[Math.floor(Math.random() * loadingMessages.length)]
   })
 
-  useEffect(() => {
-    loadEntries()
-  }, [])
-
-  const loadEntries = async () => {
+    const loadEntries = async () => {
     try {
-      if (typeof window !== 'undefined' && window.storage) {
-        const keys = await window.storage.list('guestbook:', true)
-        if (keys && keys.keys) {
-          const allEntries = await Promise.all(
-            keys.keys.map(async (key: string) => {
-              const result = await window.storage.get(key, true)
-              return result ? JSON.parse(result.value) as GuestBookEntry : null
-            })
-          )
-          const validEntries = allEntries
-            .filter((entry): entry is GuestBookEntry => entry !== null)
-            .sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime())
-          setEntries(validEntries)
-        }
-      } else {
-        const keys = Object.keys(localStorage).filter(k => k.startsWith('guestbook:'))
-        const allEntries = keys.map(key => {
-          try {
-            return JSON.parse(localStorage.getItem(key) || '') as GuestBookEntry
-          } catch {
-            return null
-          }
-        })
-        const validEntries = allEntries
-          .filter((entry): entry is GuestBookEntry => entry !== null)
-          .sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime())
-        setEntries(validEntries)
-      }
+      const res = await fetch('/api/guestbook')
+      const data = await res.json()
+      if (!Array.isArray(data)) throw new Error('Bad response from /api/guestbook')
+      setEntries(
+        data.map((e: { name: string; message: string; created_at: number }) => ({
+          name: e.name,
+          message: e.message,
+          timestamp: new Date(e.created_at).toISOString(),
+          id: e.created_at,
+        }))
+      )
     } catch (error) {
       console.log('Loading entries:', error)
       setEntries([])
@@ -89,28 +58,26 @@ export default function GuestBook() {
     }
   }
 
+  useEffect(() => {
+    loadEntries()
+  }, [])
   const handleSubmit = async () => {
     if (!name.trim() || !message.trim()) return
-
     setIsSubmitting(true)
     try {
-      const entry: GuestBookEntry = {
-        name: name.trim(),
-        message: message.trim(),
-        timestamp: new Date().toISOString(),
-        id: Date.now()
+      const res = await fetch('/api/guestbook', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, message }),
+      })
+      const data = await res.json()
+      if (!res.ok) {
+        alert(data.error || 'Failed to save your entry.')
+        return
       }
-
-      if (typeof window !== 'undefined' && window.storage) {
-        await window.storage.set(`guestbook:${entry.id}`, JSON.stringify(entry), true)
-      } else {
-
-        localStorage.setItem(`guestbook:${entry.id}`, JSON.stringify(entry))
-      }
-      
-      setEntries([entry, ...entries])
       setName('')
       setMessage('')
+      loadEntries()
     } catch (error) {
       console.error('Error saving entry:', error)
       alert('Failed to save your entry. Please try again!')
@@ -121,9 +88,9 @@ export default function GuestBook() {
 
   const formatDate = (timestamp: string) => {
     const date = new Date(timestamp)
-    return date.toLocaleDateString('en-US', { 
-      month: 'short', 
-      day: 'numeric', 
+    return date.toLocaleDateString('en-US', {
+      month: 'short',
+      day: 'numeric',
       year: 'numeric',
       hour: '2-digit',
       minute: '2-digit'

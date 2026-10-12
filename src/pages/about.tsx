@@ -39,7 +39,7 @@ export default function about() {
               <SplitText text="about me" />
             </h1>
             <p className="text-gray-400 text-xl max-w-3xl mx-auto">
-              some context behind the code, lifting, and random ideas
+              some context me, lifting, and random ideas
             </p>
           </div>
         </section>
