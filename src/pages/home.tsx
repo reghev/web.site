@@ -43,16 +43,6 @@ export default function home() {
 
   const [selectedSkill, setSelectedSkill] = useState<string>(skills[0].name);
 
-  const placeholders = [
-    <img key="drmikescreaminghisballsoff" src="/thingies/drmikescreaminghisballsoff.png" alt="" className="my-auto w-6 h-6 sm:w-8 sm:h-8" />,
-    <img key="kihng azoulay and ali sohbh" src="/thingies/kihng azoulay and ali sohbh.png" alt="" className="my-auto w-6 h-6 sm:w-8 sm:h-8" />,
-    <img key="or just control c then control v" src="/thingies/or just control c then control v.png" alt="" className="my-auto w-6 h-6 sm:w-8 sm:h-8" />,
-    <img key="pat" src="/thingies/pat.jpg" alt="" className="my-auto w-6 h-6 sm:w-8 sm:h-8" />,
-    <img key="charlie" src="/thingies/charchar.jpg" alt="" className="my-auto w-6 h-6 sm:w-8 sm:h-8" />,
-    <img key="monkey thinking" src="/thingies/monkey.jpg" alt="" className="my-auto w-6 h-6 sm:w-8 sm:h-8" />,
-    <img key="charlie" src="/thingies/charchar.jpg" alt="" className="my-auto w-6 h-6 sm:w-8 sm:h-8" />,
-
-  ]
 
 
   function handleAnimationComplete(): void {
@@ -171,27 +161,24 @@ export default function home() {
 
                 <div className="w-full overflow-visible">
                   <Marquee pauseOnHover className="[--duration:60s]">
-                    <div className="flex items-center gap-3">
-                      {[...skills, ...skills].flatMap((skill, i) => [
-                        <button
-                          key={`skill-${i}`}
-                          onClick={() => setSelectedSkill(skill.name)}
-                          onMouseEnter={() => setSelectedSkill(skill.name)}
-                          className={`px-6 py-3 rounded-full border whitespace-nowrap transition-all cursor-pointer text-lg font-medium
-                    ${selectedSkill === skill.name
-                              ? 'border-white bg-white text-black'
-                              : 'border-white/20 bg-black text-gray-400 hover:text-white hover:border-white/50 hover:bg-white/5'
-                            }
-                  `}
-                        >
-                          {skill.name}
-                        </button>,
-                        <span key={`shape-${i}`} className="text-white/40">
-                          {placeholders[i % placeholders.length]}
-                        </span>
-                      ]).slice(0, -1)}
-                    </div>
-                  </Marquee>
+  <div className="flex items-center gap-3">
+    {[...skills, ...skills].map((skill, i) => (
+      <button
+        key={`skill-${i}`}
+        onClick={() => setSelectedSkill(skill.name)}
+        onMouseEnter={() => setSelectedSkill(skill.name)}
+        className={`px-6 py-3 rounded-full border whitespace-nowrap transition-all cursor-pointer text-lg font-medium
+          ${selectedSkill === skill.name
+            ? 'border-white bg-white text-black'
+            : 'border-white/20 bg-black text-gray-400 hover:text-white hover:border-white/50 hover:bg-white/5'
+          }
+        `}
+      >
+        {skill.name}
+      </button>
+    ))}
+  </div>
+</Marquee>
                 </div>
               </AnimatedContent>
             </div>
