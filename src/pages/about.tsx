@@ -63,11 +63,17 @@ export default function about() {
 
         <div style={{ width: '100vw', height: '100vh' }}>
           <DomeGallery
-            images={[]}
+            images={[
+            '/thingies/castle1.jpg',
+            '/thingies/castle2.jpg',
+            '/thingies/md.jpeg',
+            '/thingies/snowcastle.jpeg',
+
+            ]}   
             fit={0.8}
             minRadius={600}
             maxVerticalRotationDeg={0}
-            segments={34}
+            segments={34}  
             dragDampening={2}
             fitBasis={'auto'}
             overlayBlurColor={'rgba(0, 0, 0, 0.5)'}
