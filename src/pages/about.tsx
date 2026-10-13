@@ -2,7 +2,6 @@ import { useState } from 'react'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import Waves from '@/components/Waves'
-import ClickSpark from '@/components/ClickSpark'
 import { SplitText } from '@/components/ui/split-text'
 import { Cursor } from '@/components/cursor'
 import DomeGallery from '@/components/DomeGallery';
@@ -12,7 +11,6 @@ export default function about() {
 
   return (
     <div className="min-h-screen bg-black relative overflow-hidden">
-      <ClickSpark />
 
       <div className="fixed inset-0 pointer-events-none">
         <Waves
@@ -65,11 +63,14 @@ export default function about() {
 
         <div style={{ width: '100vw', height: '100vh' }}>
           <DomeGallery
+            images={[]}
             fit={0.8}
             minRadius={600}
             maxVerticalRotationDeg={0}
             segments={34}
             dragDampening={2}
+            fitBasis={'auto'}
+            overlayBlurColor={'rgba(0, 0, 0, 0.5)'}
           />
         </div>
 
