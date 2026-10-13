@@ -66,8 +66,8 @@ export default function about() {
             images={[
             '/thingies/castle1.jpg',
             '/thingies/castle2.jpg',
-            '/thingies/md.jpeg',
-            '/thingies/snowcastle.jpeg',
+            '/thingies/md.jpg',
+            '/thingies/snowcastle.jpg',
 
             ]}   
             fit={0.8}
