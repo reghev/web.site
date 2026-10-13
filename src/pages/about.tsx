@@ -38,9 +38,6 @@ export default function about() {
             <h1 className="text-6xl md:text-7xl font-bold text-white mb-6">
               <SplitText text="about me" />
             </h1>
-            <p className="text-gray-400 text-xl max-w-3xl mx-auto">
-              some context me, lifting, and random ideas
-            </p>
           </div>
         </section>
 
@@ -51,13 +48,9 @@ export default function about() {
                 Hi, I'm Raghav
               </h2>
               <p className="text-gray-300 text-lg leading-relaxed">
-                I'm 13, into bodybuilding and powerlifting, and a Hack Clubber.
-                I placed 3rd at NASA SpaceApps Cleveland in 2022 and spend most of
-                my time building things, lifting, listening to Nirvana, or
-                researching something I probably don't need to know.
+                Im 14 and I do literally nothing with my time except for school and lifting, I like to code sometimes
                 <br /><br />
-                I play guitar, violin, bass, and somehow still maintain a 4.0 GPA
-                while lighting things on fire (educationally).
+                I play guitar and bass and read alot
                 <br /><br />
                 If you need anything — which you probably don'  t — email me at
                 <span className="text-white font-medium"> raghavmadiraju@gmail.com</span>.
