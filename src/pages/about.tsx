@@ -68,7 +68,7 @@ export default function about() {
             '/thingies/castle2.jpg',
             '/thingies/md.jpg',
             '/thingies/snowcastle.jpg',
-
+            '/thingies/aust.jpg',
             ]}   
             fit={0.8}
             minRadius={600}

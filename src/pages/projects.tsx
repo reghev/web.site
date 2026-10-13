@@ -69,7 +69,7 @@ export default function Projects() {
               Things I've Built
             </h1>
             <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto">
-              From Hackclub projects to random tier lists, here's everything I've been working on.
+              stuff i do
             </p>
           </div>
         </section>
@@ -89,6 +89,33 @@ export default function Projects() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <Card className="border border-white/10 shadow-xl transition-all duration-300 rounded-2xl overflow-hidden bg-black/50 backdrop-blur-sm hover:border-white/30 hover:-translate-y-1 group">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <ImageWithLoader
+                    src="/images/raghav.beer.png"
+                    alt="raghav.beer"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    onClick={() => setSelectedImage("/images/raghav.beer.png")}
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle className="text-xl text-white">mark-wahlberg</CardTitle>
+                  <CardDescription className="text-sm text-gray-400">
+                    One of my projects for Terra
+                  </CardDescription>
+                </CardHeader>
+                <CardFooter className="flex gap-2">
+                  <Button asChild className="flex-1 bg-white text-black hover:bg-gray-200 rounded-full transition-all">
+                    <a href="https://github.com/reghev/thebeginningoftheend" target="_blank" rel="noopener noreferrer">
+                      GitHub
+                    </a>
+                  </Button>
+                  <Button asChild variant="outline" className="flex-1 border border-white/20 text-white hover:bg-white hover:text-black rounded-full transition-all">
+                    <Link to="/project/raghav.beer">Details</Link>
+                  </Button>
+                </CardFooter>
+              </Card>
+
               <Card className="border border-white/10 shadow-xl transition-all duration-300 rounded-2xl overflow-hidden bg-black/50 backdrop-blur-sm hover:border-white/30 hover:-translate-y-1 group">
                 <div className="aspect-[4/3] overflow-hidden">
                   <ImageWithLoader
