@@ -16,7 +16,7 @@ export default function home() {
   const skills = [
     {
       name: "Hackathon(ing?)",
-      icon: "",
+      icon: "🧑‍💻",
       description: "Gone to over 8 hackathons, won none, top 3 at 3"
     },
     {
@@ -31,13 +31,18 @@ export default function home() {
     },
     {
       name: "Powerlifting",
-      icon: "",
+      icon: "🫴",
       description: "Been to over 5 powerlifting meets, won 1 and top 3 and 4"
     },
     {
       name: "Volunteering",
-      icon: "",
+      icon: "👷",
       description: "Volunteered at various hackathons aswell as educational camps for computer engineering"
+    },
+    {
+      name: "Reading",
+      icon: "📚",
+      description: "I LOVE comic books and classics, I'd say Dostoyevsky and especially Kafka are my favorites but im reading last days of Socrates right now and its okay"
     },
   ]
 
