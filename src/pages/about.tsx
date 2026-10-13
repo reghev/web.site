@@ -5,7 +5,7 @@ import Waves from '@/components/Waves'
 import ClickSpark from '@/components/ClickSpark'
 import { SplitText } from '@/components/ui/split-text'
 import { Cursor } from '@/components/cursor'
-
+import DomeGallery from '@/components/DomeGallery';
 
 export default function about() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
@@ -70,7 +70,15 @@ export default function about() {
           <div className="h-px bg-white/10 mb-32" />
         </div>
 
-    
+        <div style={{ width: '100vw', height: '100vh' }}>
+          <DomeGallery
+            fit={0.8}
+            minRadius={600}
+            maxVerticalRotationDeg={0}
+            segments={34}
+            dragDampening={2}
+          />
+        </div>
 
         <Footer />
       </div>

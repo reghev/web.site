@@ -166,24 +166,24 @@ export default function home() {
 
                 <div className="w-full overflow-visible">
                   <Marquee pauseOnHover className="[--duration:60s]">
-  <div className="flex items-center gap-3">
-    {[...skills, ...skills].map((skill, i) => (
-      <button
-        key={`skill-${i}`}
-        onClick={() => setSelectedSkill(skill.name)}
-        onMouseEnter={() => setSelectedSkill(skill.name)}
-        className={`px-6 py-3 rounded-full border whitespace-nowrap transition-all cursor-pointer text-lg font-medium
+                    <div className="flex items-center gap-3">
+                      {[...skills, ...skills].map((skill, i) => (
+                        <button
+                          key={`skill-${i}`}
+                          onClick={() => setSelectedSkill(skill.name)}
+                          onMouseEnter={() => setSelectedSkill(skill.name)}
+                          className={`px-6 py-3 rounded-full border whitespace-nowrap transition-all cursor-pointer text-lg font-medium
           ${selectedSkill === skill.name
-            ? 'border-white bg-white text-black'
-            : 'border-white/20 bg-black text-gray-400 hover:text-white hover:border-white/50 hover:bg-white/5'
-          }
+                              ? 'border-white bg-white text-black'
+                              : 'border-white/20 bg-black text-gray-400 hover:text-white hover:border-white/50 hover:bg-white/5'
+                            }
         `}
-      >
-        {skill.name}
-      </button>
-    ))}
-  </div>
-</Marquee>
+                        >
+                          {skill.name}
+                        </button>
+                      ))}
+                    </div>
+                  </Marquee>
                 </div>
               </AnimatedContent>
             </div>
@@ -265,18 +265,6 @@ export default function home() {
           <div className="absolute inset-0 opacity-[0.015] pointer-events-none" style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
           }} />
-
-          <div className="max-w-6xl mx-auto mb-16 text-center relative z-10">
-            <AnimatedContent distance={60} duration={0.8}>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Tech Stack
-              </h2>
-              <p className="text-gray-500 text-lg">
-                stuff i use and sometimes understand
-              </p>
-            </AnimatedContent>
-          </div>
-
         </section>
 
         <section className="py-40 px-8 text-center relative border-t border-white/10 bg-black overflow-hidden">
