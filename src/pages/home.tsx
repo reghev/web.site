@@ -15,35 +15,35 @@ export default function home() {
 
   const skills = [
     {
-      name: "Hackathon(ing?)",
-      icon: "🧑‍💻",
-      description: "Gone to over 8 hackathons, won none, top 3 at 3"
-    },
-    {
-      name: "Code(ing?)",
-      icon: "💻",
-      description: "Used my massive amounts of freetime to build PCBs websites and various other useless objects"
-    },
-    {
-      name: "Hardware(ing?)",
-      icon: "⚡",
-      description: "Made a few projects using Kicad and various tools to design and build PCBs and other electronics"
-    },
-    {
-      name: "Powerlifting",
-      icon: "🫴",
-      description: "Been to over 5 powerlifting meets, won 1 and top 3 and 4"
-    },
-    {
-      name: "Volunteering",
-      icon: "👷",
-      description: "Volunteered at various hackathons aswell as educational camps for computer engineering"
-    },
-    {
-      name: "Reading",
-      icon: "📚",
-      description: "I LOVE comic books and classics, I'd say Dostoyevsky and especially Kafka are my favorites but im reading last days of Socrates right now and its okay"
-    },
+  name: "Hackathon(ing?)",
+  icon: "/icons/midnight.jpeg",
+  description: "Gone to over 8 hackathons, won none, top 3 at 3"
+},
+{
+  name: "Code(ing?)",
+  icon: "/icons/larp.jpeg",
+  description: "Used my massive amounts of freetime to build PCBs websites and various other useless objects"
+},
+{
+  name: "Hardware(ing?)",
+  icon: "/icons/stasis2.jpg",
+  description: "Made a few projects using Kicad and various tools to design and build PCBs and other electronics"
+},
+{
+  name: "Powerlifting",
+  icon: "/icons/tmob.jpeg",
+  description: "Been to over 5 powerlifting meets, won 1 and top 3 and 4"
+},
+{
+  name: "Volunteering",
+  icon: "/icons/hq.jpeg",
+  description: "Volunteered at various hackathons aswell as educational camps for computer engineering"
+},
+{
+  name: "Reading",
+  icon: "/icons/guts.jpg",
+  description: "I LOVE comic books and classics, ..."
+},
   ]
 
   const [selectedSkill, setSelectedSkill] = useState<string>(skills[0].name);

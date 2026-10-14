@@ -33,12 +33,12 @@ export default function About() {
             <AnimatedContent distance={60} duration={0.8}>
               <div className=" flex items-center justify-center mt-24 mb-12">
                 <div className="text-5xl border-2 border-white rounded-xl p-4 bg-black/50">
-                  <SplitText text="mark-wahlberg" className="font-bold text-white" />
+                  <SplitText text="raghav.beer" className="font-bold text-white" />
                 </div>
               </div>
             <div className="text-2xl md:text-3xl font-medium mb-12">
                 <ShinyText
-                  text="i really like ted"
+                  text="i dont even think drinking is cool"
                   disabled={false}
                   speed={5}
                   className="text-2xl md:text-3xl"
@@ -48,7 +48,7 @@ export default function About() {
 
             <AnimatedContent distance={60} duration={0.8} delay={0.2}>
               <img
-                src="/images/pathfinder1.png"
+                src="/images/raghav.beer.png"
                 alt="pathfinder"
                 className="w-full rounded-3xl shadow-2xl mb-12"
               />

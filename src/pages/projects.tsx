@@ -107,7 +107,7 @@ export default function Projects() {
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-xl text-white">Clutch ClaudeBot9000</CardTitle>
+                  <CardTitle className="text-xl text-white">Super Awesome totally trustable Lie detector</CardTitle>
                   <CardDescription className="text-sm text-gray-400">
                     Project for Hackclub's Stasis and Forge and like 3 others (still unfinished)
                   </CardDescription>
@@ -217,6 +217,11 @@ export default function Projects() {
                   </Button>
                 </CardFooter>
               </Card>
+
+
+
+
+
 
               <Card className="border border-white/10 shadow-xl transition-all duration-300 rounded-2xl overflow-hidden bg-black/50 backdrop-blur-sm hover:border-white/30 hover:-translate-y-1 group">
                 <div className="aspect-[4/3] overflow-hidden">
