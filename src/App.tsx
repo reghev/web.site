@@ -14,6 +14,12 @@ import Clash from './pages/clash'
 import GuestBook from './pages/guestbook'
 import Projects from './pages/projects'
 import Raghavbeer from './pages/raghavdotbeer'
+import WHYISTHETVTURNINGOFF from './pages/WHYISTHETVTURNINGOFF'
+import ClutchClaudeBot9000 from './pages/ClutchClaudeBot9000'
+import Liedetector from './pages/liedetector'
+
+
+
 
 function App() {
   return (
@@ -34,6 +40,10 @@ function App() {
         <Route path="/guestbook" element={<GuestBook />} />
         <Route path="/projects" element={<Projects />} />  
         <Route path="/project/raghavdotbeer" element={<Raghavbeer />} />
+        <Route path="/project/WHYISTHETVTURNINGOFF" element={<WHYISTHETVTURNINGOFF />} />
+        <Route path="/project/ClutchClaudeBot9000" element={<ClutchClaudeBot9000 />} />
+        <Route path="/project/liedetector" element={<Liedetector />} />
+
       </Routes>
     </Router>
   )
