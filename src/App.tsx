@@ -13,7 +13,7 @@ import Dexterio from './pages/dexterio'
 import Clash from './pages/clash'
 import GuestBook from './pages/guestbook'
 import Projects from './pages/projects'
-import Raghavbeer from './pages/raghav.beer'
+import Raghavbeer from './pages/raghavdotbeer'
 
 function App() {
   return (
@@ -33,7 +33,7 @@ function App() {
         <Route path="/clash" element={<Clash />} />
         <Route path="/guestbook" element={<GuestBook />} />
         <Route path="/projects" element={<Projects />} />  
-        <Route path="/project/raghav.beer" element={<Raghavbeer />} />
+        <Route path="/project/raghavdotbeer" element={<Raghavbeer />} />
       </Routes>
     </Router>
   )

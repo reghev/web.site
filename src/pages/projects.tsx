@@ -210,7 +210,7 @@ export default function Projects() {
                     </a>
                   </Button>
                   <Button asChild variant="outline" className="flex-1 border border-white/20 text-white hover:bg-white hover:text-black rounded-full transition-all">
-                    <Link to="/project/raghavbeer">Details</Link>
+                    <Link to="/project/raghavdotbeer">Details</Link>
                   </Button>
                   <Button asChild variant="outline" className="flex-1 border border-white/20 text-white hover:bg-white hover:text-black rounded-full transition-all">
                     <Link to="https://thebeginningoftheend-fronjend.vercel.app/">Demo!</Link>
