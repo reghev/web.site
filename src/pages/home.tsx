@@ -15,39 +15,39 @@ export default function home() {
 
   const skills = [
     {
-  name: "Hackathon(ing?)",
-  icon: "/icons/midnight.jpeg",
-  description: "Gone to over 8 hackathons, won none, top 3 at 3"
-},
-{
-  name: "Code(ing?)",
-  icon: "/icons/larp.jpeg",
-  description: "Used my massive amounts of freetime to build PCBs websites and various other useless objects"
-},
-{
-  name: "Hardware(ing?)",
-  icon: "/icons/stasis2.jpg",
-  description: "Made a few projects using Kicad and various tools to design and build PCBs and other electronics"
-},
-{
-  name: "Powerlifting",
-  icon: "/icons/tmob.jpeg",
-  description: "Been to over 5 powerlifting meets, won 1 and top 3 and 4"
-},
-{
-  name: "Volunteering",
-  icon: "/icons/hq.jpeg",
-  description: "Volunteered at various hackathons aswell as educational camps for computer engineering"
-},
-{
-  name: "Reading",
-  icon: "/icons/guts.jpg",
-  description: "I LOVE comic books and classics, ..."
-},
+      name: "Hackathon(ing?)",
+      icon: "/icons/midnight.jpeg",
+      description: "Gone to over 8 hackathons, won none, top 3 at 3"
+    },
+    {
+      name: "Code(ing?)",
+      icon: "/icons/larp.jpeg",
+      description: "Used my massive amounts of freetime to build PCBs websites and various other useless objects"
+    },
+    {
+      name: "Hardware(ing?)",
+      icon: "/icons/stasis2.jpg",
+      description: "Made a few projects using Kicad and various tools to design and build PCBs and other electronics"
+    },
+    {
+      name: "Powerlifting",
+      icon: "/icons/tmob.jpeg",
+      description: "Been to over 5 powerlifting meets, won 1 and top 3 and 4"
+    },
+    {
+      name: "Volunteering",
+      icon: "/icons/hq.jpeg",
+      description: "Volunteered at various hackathons aswell as educational camps for computer engineering"
+    },
+    {
+      name: "Reading",
+      icon: "/icons/guts.jpg",
+      description: "I LOVE comic books and classics, ..."
+    },
   ]
 
   const [selectedSkill, setSelectedSkill] = useState<string>(skills[0].name);
-
+  const currentSkill = skills.find(s => s.name === selectedSkill)
 
 
   function handleAnimationComplete(): void {
@@ -149,9 +149,11 @@ export default function home() {
                 <div className="mb-16 max-w-4xl mx-auto">
                   <div className="bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-3xl p-12 md:p-16 transition-all">
                     <div className="flex flex-col md:flex-row items-start gap-8">
-                      <div className="text-7xl md:text-8xl">
-                        {skills.find(s => s.name === selectedSkill)?.icon || '💼'}
-                      </div>
+                      <img
+                        src={skills.find(s => s.name === selectedSkill)?.icon}
+                        alt=""
+                        className="h-24 w-24 md:h-32 md:w-32 rounded-2xl object-cover shrink-0"
+                      />
                       <div className="flex-1">
                         <h3 className="text-4xl md:text-5xl font-bold text-white mb-6">
                           {selectedSkill}
@@ -173,11 +175,11 @@ export default function home() {
                           onClick={() => setSelectedSkill(skill.name)}
                           onMouseEnter={() => setSelectedSkill(skill.name)}
                           className={`px-6 py-3 rounded-full border whitespace-nowrap transition-all cursor-pointer text-lg font-medium
-          ${selectedSkill === skill.name
+                              ${selectedSkill === skill.name
                               ? 'border-white bg-white text-black'
                               : 'border-white/20 bg-black text-gray-400 hover:text-white hover:border-white/50 hover:bg-white/5'
                             }
-        `}
+                          `}
                         >
                           {skill.name}
                         </button>
