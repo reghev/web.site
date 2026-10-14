@@ -47,7 +47,6 @@ export default function home() {
   ]
 
   const [selectedSkill, setSelectedSkill] = useState<string>(skills[0].name);
-  const currentSkill = skills.find(s => s.name === selectedSkill)
 
 
   function handleAnimationComplete(): void {
