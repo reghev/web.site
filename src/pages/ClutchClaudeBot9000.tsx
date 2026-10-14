@@ -33,12 +33,12 @@ export default function About() {
             <AnimatedContent distance={60} duration={0.8}>
               <div className=" flex items-center justify-center mt-24 mb-12">
                 <div className="text-5xl border-2 border-white rounded-xl p-4 bg-black/50">
-                  <SplitText text="raghav.beer" className="font-bold text-white" />
+                  <SplitText text="ClutchClaudeBot9000" className="font-bold text-white" />
                 </div>
               </div>
             <div className="text-2xl md:text-3xl font-medium mb-12">
                 <ShinyText
-                  text="i dont even think drinking is cool"
+                  text="the worlds worst car since whatever BMW did with the iX series"
                   disabled={false}
                   speed={5}
                   className="text-2xl md:text-3xl"
@@ -48,8 +48,8 @@ export default function About() {
 
             <AnimatedContent distance={60} duration={0.8} delay={0.2}>
               <img
-                src="/images/raghav.beer.png"
-                alt="raghav.beer"
+                src="/images/stasis2.jpeg"
+                alt="ClutchClaudeBot9000"
                 className="w-full rounded-3xl shadow-2xl mb-12"
               />
             </AnimatedContent>
@@ -64,23 +64,23 @@ export default function About() {
                         <CardTitle className="text-3xl text-white">About this project</CardTitle>
                       </CardHeader>
                       <p className="text-lg text-white">
-                        This was for Pathfinder and the only reason i did it was because my sister made pathfinder
+                        This was at Stasis with my 2 friends Hira and Johnny it was super fun to work on this with them and overall it genuinely made my year to spend this time at an event like this with friends and to make cool stuff like whatever this was
                       </p>
 
                       <CardHeader>
                         <CardTitle className="text-3xl text-white">What does it do?</CardTitle>
                       </CardHeader>
                       <p className="text-lg text-white">
-                        I wanted to have a macropad that lights up and looks cool on my shelf
+                        We wanted to make a car that uses a pedal board as a kind of manual gear switch, so we did with a random pedal board we found and we also made a spinout function where if you accelerated too fast youd spin out for 3 seconds or something
                       </p>
 
                       <CardHeader>
                         <CardTitle className="text-3xl text-white">what would you change?</CardTitle>
                       </CardHeader>
                       <ul className="list-disc list-inside text-white text-lg space-y-2 mb-6">
-                        <li>Making it more than desk fodder would be number one</li>
-                        <li>something that has a purpose other than being rgb throwup would be nice</li>
-                        <li>if at the time i knew how to code like sensors would be sick because i had access to them</li>
+                        <li>I would definitely work on the car design</li>
+                        <li>It would be awesome to use something better for the controller instead of a joystick in a hotglued box</li>
+                        <li>I wish I couldve kept it but johnny was the only one with bag space and somehow it works at his house</li>
                       </ul>
                     </div>
                   </CardContent>

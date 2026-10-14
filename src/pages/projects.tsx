@@ -84,7 +84,7 @@ export default function Projects() {
                 Hackclub Projects
               </h2>
               <p className="text-gray-500">
-                Things I built for Hackclub challenges
+                Things I built for Hackclub stuff
               </p>
             </div>
 

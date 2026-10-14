@@ -33,12 +33,12 @@ export default function About() {
             <AnimatedContent distance={60} duration={0.8}>
               <div className=" flex items-center justify-center mt-24 mb-12">
                 <div className="text-5xl border-2 border-white rounded-xl p-4 bg-black/50">
-                  <SplitText text="raghav.beer" className="font-bold text-white" />
+                  <SplitText text="WHYISTHETVTURNINGOFF" className="font-bold text-white" />
                 </div>
               </div>
             <div className="text-2xl md:text-3xl font-medium mb-12">
                 <ShinyText
-                  text="i dont even think drinking is cool"
+                  text="WITTVTO🥀"
                   disabled={false}
                   speed={5}
                   className="text-2xl md:text-3xl"
@@ -48,8 +48,8 @@ export default function About() {
 
             <AnimatedContent distance={60} duration={0.8} delay={0.2}>
               <img
-                src="/images/raghav.beer.png"
-                alt="raghav.beer"
+                src="/images/WHYISTHETVTURNINGOFF.png"
+                alt="WHYISTHETVTURNINGOFF"
                 className="w-full rounded-3xl shadow-2xl mb-12"
               />
             </AnimatedContent>
@@ -64,23 +64,23 @@ export default function About() {
                         <CardTitle className="text-3xl text-white">About this project</CardTitle>
                       </CardHeader>
                       <p className="text-lg text-white">
-                        This was for Pathfinder and the only reason i did it was because my sister made pathfinder
+                        This was for something for sure I have no clue why but one of my friends asked me to bring a tv remote to class and turn off the teachers tv but instead of that I said ill just make a PCB with the same off switch, so i tried and never ended up finishing it
                       </p>
 
                       <CardHeader>
                         <CardTitle className="text-3xl text-white">What does it do?</CardTitle>
                       </CardHeader>
                       <p className="text-lg text-white">
-                        I wanted to have a macropad that lights up and looks cool on my shelf
+                        Turn off tvs
                       </p>
 
                       <CardHeader>
                         <CardTitle className="text-3xl text-white">what would you change?</CardTitle>
                       </CardHeader>
                       <ul className="list-disc list-inside text-white text-lg space-y-2 mb-6">
-                        <li>Making it more than desk fodder would be number one</li>
-                        <li>something that has a purpose other than being rgb throwup would be nice</li>
-                        <li>if at the time i knew how to code like sensors would be sick because i had access to them</li>
+                        <li>Building it</li>
+                        <li>making the pcb look funny </li>
+                        <li>making it have really nice soldering and look really put together and not jank</li>
                       </ul>
                     </div>
                   </CardContent>

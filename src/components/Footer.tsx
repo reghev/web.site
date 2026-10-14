@@ -114,9 +114,7 @@ export default function Footer() {
               © 2024 raghav.fit · Built with React & Tailwind
             </p>
             <div className="flex gap-6 text-sm">
-              <a href="/shhh" className="text-gray-500 hover:text-white transition-colors">
-                end
-              </a>
+              
               <Link to="/guestbook" className="text-gray-500 hover:text-white transition-colors">
                 Sign Guest Book
               </Link>

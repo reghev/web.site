@@ -64,23 +64,23 @@ export default function About() {
                         <CardTitle className="text-3xl text-white">About this project</CardTitle>
                       </CardHeader>
                       <p className="text-lg text-white">
-                        This was for Pathfinder and the only reason i did it was because my sister made pathfinder
+                        This was for Terra and its an idea ive been having for a while
                       </p>
 
                       <CardHeader>
                         <CardTitle className="text-3xl text-white">What does it do?</CardTitle>
                       </CardHeader>
                       <p className="text-lg text-white">
-                        I wanted to have a macropad that lights up and looks cool on my shelf
+                        It's a website that is literally just a countdown until i turn 21 and its a really crappy background of a stockphoto of beer and i love it with all my heart
                       </p>
 
                       <CardHeader>
                         <CardTitle className="text-3xl text-white">what would you change?</CardTitle>
                       </CardHeader>
                       <ul className="list-disc list-inside text-white text-lg space-y-2 mb-6">
-                        <li>Making it more than desk fodder would be number one</li>
-                        <li>something that has a purpose other than being rgb throwup would be nice</li>
-                        <li>if at the time i knew how to code like sensors would be sick because i had access to them</li>
+                        <li>Finishing the guestbook</li>
+                        <li>Making it look worse</li>
+                        <li>getting the domain raghav.beer</li>
                       </ul>
                     </div>
                   </CardContent>
