@@ -246,7 +246,12 @@ export default function home() {
                 />
               </div>
             </div>
+          
+          
+          
           </div>
+
+
 
           <div className="max-w-3xl mx-auto relative">
             <AnimatedContent distance={60} duration={0.8}>

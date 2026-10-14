@@ -49,7 +49,7 @@ export default function About() {
             <AnimatedContent distance={60} duration={0.8} delay={0.2}>
               <img
                 src="/images/raghav.beer.png"
-                alt="pathfinder"
+                alt="raghav.beer"
                 className="w-full rounded-3xl shadow-2xl mb-12"
               />
             </AnimatedContent>
