@@ -59,7 +59,7 @@ export default function Projects() {
           yGap={40}
         />
       </div>
-<Cursor />
+      <Cursor />
       <div className="relative z-10">
         <Navigation />
 
@@ -77,7 +77,7 @@ export default function Projects() {
         <section className="py-20 px-8 border-t border-white/10 relative">
 
           <div className="absolute inset-0 bg-gradient-to-b from-white/[0.02] to-transparent pointer-events-none" />
-          
+
           <div className="max-w-6xl mx-auto relative z-10">
             <div className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
@@ -89,7 +89,106 @@ export default function Projects() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            <Card className="border border-white/10 shadow-xl transition-all duration-300 rounded-2xl overflow-hidden bg-black/50 backdrop-blur-sm hover:border-white/30 hover:-translate-y-1 group">
+
+
+
+
+
+
+
+
+              <Card className="border border-white/10 shadow-xl transition-all duration-300 rounded-2xl overflow-hidden bg-black/50 backdrop-blur-sm hover:border-white/30 hover:-translate-y-1 group">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <ImageWithLoader
+                    src="/images/liedetector.png"
+                    alt="liedetector"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    onClick={() => setSelectedImage("/images/liedetector.png")}
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle className="text-xl text-white">Clutch ClaudeBot9000</CardTitle>
+                  <CardDescription className="text-sm text-gray-400">
+                    Project for Hackclub's Stasis and Forge and like 3 others (still unfinished)
+                  </CardDescription>
+                </CardHeader>
+                <CardFooter className="flex gap-2">
+                  <Button asChild className="flex-1 bg-white text-black hover:bg-gray-200 rounded-full transition-all">
+                    <a href="https://github.com/reghev/awesome-lie-detector" target="_blank" rel="noopener noreferrer">
+                      GitHub
+                    </a>
+                  </Button>
+                  <Button asChild variant="outline" className="flex-1 border border-white/20 text-white hover:bg-white hover:text-black rounded-full transition-all">
+                    <Link to="/project/liedetector">Details</Link>
+                  </Button>
+                </CardFooter>
+              </Card>
+
+
+
+
+
+              <Card className="border border-white/10 shadow-xl transition-all duration-300 rounded-2xl overflow-hidden bg-black/50 backdrop-blur-sm hover:border-white/30 hover:-translate-y-1 group">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <ImageWithLoader
+                    src="/images/stasis2.jpg"
+                    alt="Clutch ClaudeBot9000"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    onClick={() => setSelectedImage("/images/stasis2.jpg")}
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle className="text-xl text-white">Clutch ClaudeBot9000</CardTitle>
+                  <CardDescription className="text-sm text-gray-400">
+                    Mine and my friends projects for Hackclub's Stasis
+                  </CardDescription>
+                </CardHeader>
+                <CardFooter className="flex gap-2">
+                  <Button asChild className="flex-1 bg-white text-black hover:bg-gray-200 rounded-full transition-all">
+                    <a href="https://github.com/Dynix7/Stasis-Project" target="_blank" rel="noopener noreferrer">
+                      GitHub
+                    </a>
+                  </Button>
+                  <Button asChild variant="outline" className="flex-1 border border-white/20 text-white hover:bg-white hover:text-black rounded-full transition-all">
+                    <Link to="/project/ClutchClaudeBot9000">Details</Link>
+                  </Button>
+                </CardFooter>
+              </Card>
+
+
+
+
+              <Card className="border border-white/10 shadow-xl transition-all duration-300 rounded-2xl overflow-hidden bg-black/50 backdrop-blur-sm hover:border-white/30 hover:-translate-y-1 group">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <ImageWithLoader
+                    src="/images/WHYISTHETVTURNINGOFF.png"
+                    alt="WHYISTHETVTURNINGOFF"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    onClick={() => setSelectedImage("/images/WHYISTHETVTURNINGOFF.png")}
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle className="text-xl text-white">WHYISTHETVTURNINGOFF</CardTitle>
+                  <CardDescription className="text-sm text-gray-400">
+                    Something I made for something I guess
+                  </CardDescription>
+                </CardHeader>
+                <CardFooter className="flex gap-2">
+                  <Button asChild className="flex-1 bg-white text-black hover:bg-gray-200 rounded-full transition-all">
+                    <a href="https://github.com/reghev/WHYISTHETVTURNINGOFF" target="_blank" rel="noopener noreferrer">
+                      GitHub
+                    </a>
+                  </Button>
+                  <Button asChild variant="outline" className="flex-1 border border-white/20 text-white hover:bg-white hover:text-black rounded-full transition-all">
+                    <Link to="/project/WHYISTHETVTURNINGOFF">Details</Link>
+                  </Button>
+                </CardFooter>
+              </Card>
+
+
+
+
+              <Card className="border border-white/10 shadow-xl transition-all duration-300 rounded-2xl overflow-hidden bg-black/50 backdrop-blur-sm hover:border-white/30 hover:-translate-y-1 group">
                 <div className="aspect-[4/3] overflow-hidden">
                   <ImageWithLoader
                     src="/images/raghav.beer.png"
@@ -99,7 +198,7 @@ export default function Projects() {
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-xl text-white">mark-wahlberg</CardTitle>
+                  <CardTitle className="text-xl text-white">raghav.beer</CardTitle>
                   <CardDescription className="text-sm text-gray-400">
                     One of my projects for Terra
                   </CardDescription>
@@ -112,6 +211,9 @@ export default function Projects() {
                   </Button>
                   <Button asChild variant="outline" className="flex-1 border border-white/20 text-white hover:bg-white hover:text-black rounded-full transition-all">
                     <Link to="/project/raghav.beer">Details</Link>
+                  </Button>
+                  <Button asChild variant="outline" className="flex-1 border border-white/20 text-white hover:bg-white hover:text-black rounded-full transition-all">
+                    <Link to="https://thebeginningoftheend-fronjend.vercel.app/">Demo!</Link>
                   </Button>
                 </CardFooter>
               </Card>
@@ -142,6 +244,9 @@ export default function Projects() {
                   </Button>
                 </CardFooter>
               </Card>
+
+
+
 
               <Card className="border border-white/10 shadow-xl transition-all duration-300 rounded-2xl overflow-hidden bg-black/50 backdrop-blur-sm hover:border-white/30 hover:-translate-y-1 group">
                 <div className="aspect-[4/3] overflow-hidden">
@@ -202,7 +307,7 @@ export default function Projects() {
 
         <section className="py-20 px-8 border-t border-white/10 relative">
 
-          <div 
+          <div
             className="absolute inset-0 opacity-[0.02] pointer-events-none"
             style={{
               backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
