@@ -38,7 +38,7 @@ export default function Fuzzgenes() {
               </div>
               <div className="text-2xl md:text-3xl font-medium mb-12">
                 <ShinyText
-                  text="best philosipher of all time"
+                  text="best philosipher of all time EDIT: I read last days of socrates and hes still my favorite"
                   disabled={false}
                   speed={5}
                   className="text-2xl md:text-3xl"

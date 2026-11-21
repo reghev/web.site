@@ -5,12 +5,10 @@ import Navigation from '@/components/Navigation'
 import Waves from '@/components/Waves'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import ShinyText from '@/components/ShinyText'
-import { Cursor } from '@/components/cursor'
 
 export default function About() {
   return (
     <div className="h-full bg-black relative">
-      <Cursor />
       <Navigation />
       <div className="fixed inset-0 pointer-events-none">
         <Waves

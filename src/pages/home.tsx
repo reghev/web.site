@@ -5,7 +5,6 @@ import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import Waves from '@/components/Waves'
 import { Marquee } from '@/components/Marquee'
-import { Cursor } from '@/components/cursor'
 import { useState } from 'react'
 import BlurText from '@/components/BlurText'
 
@@ -30,9 +29,9 @@ export default function home() {
       description: "Made a few projects using Kicad and various tools to design and build PCBs and other electronics"
     },
     {
-      name: "Powerlifting",
+      name: "Lifting",
       icon: "/icons/tmob.jpeg",
-      description: "Been to over 5 powerlifting meets, won 1 and top 3 and 4"
+      description: "I've been into fitness for a couple years and did 420 on deadlift" 
     },
     {
       name: "Volunteering",
@@ -42,7 +41,7 @@ export default function home() {
     {
       name: "Reading",
       icon: "/icons/guts.jpg",
-      description: "I LOVE comic books and classics, ..."
+      description: "Comics are my favorite as of now i'm book unemployed"
     },
   ]
 
@@ -88,7 +87,6 @@ export default function home() {
           yGap={40}
         />
       </div>
-      <Cursor />
       <div className="relative z-10">
         <Navigation />
 
@@ -260,7 +258,7 @@ export default function home() {
                   About Me
                 </h3>
                 <p className="text-[clamp(1rem,2vw,1.125rem)] font-extralight tracking-wider text-gray-300/80 leading-loose">
-                  Whats up reader, Im Raghav, I lift, I code, and I try not to be useless, check out some stuff or do something else i guess?.
+                  Whats up reader, Im raghav, I lift, I code, and I try not to be useless, check out some stuff or do something else i guess?.
                 </p>
               </div>
             </AnimatedContent>
@@ -290,9 +288,6 @@ export default function home() {
               <h2 className="text-6xl font-bold text-white mb-6 leading-tight">
                 want to see how i waste my time?
               </h2>
-              <p className="text-gray-400 text-xl mb-12 max-w-2xl mx-auto">
-                Stuff I do to not waste time but end up wasting time
-              </p>
               <Button
                 asChild
                 className="bg-white text-black rounded-full px-12 py-7 text-xl font-medium transition-all hover:scale-[1.04] hover:shadow-[0_0_40px_rgba(255,255,255,0.35)]"

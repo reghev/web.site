@@ -3,7 +3,6 @@ import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import Waves from '@/components/Waves'
 import { SplitText } from '@/components/ui/split-text'
-import { Cursor } from '@/components/cursor'
 import DomeGallery from '@/components/DomeGallery';
 
 export default function about() {
@@ -27,7 +26,6 @@ export default function about() {
           yGap={40}
         />
       </div>
-      <Cursor />
       <div className="relative z-10">
         <Navigation />
 

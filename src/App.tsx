@@ -25,6 +25,7 @@ function App() {
   return (
     <Router>
       <Routes>
+        //routes are dumb
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/project/pathfinder" element={<ProjectLois />} />

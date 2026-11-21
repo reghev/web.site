@@ -5,7 +5,6 @@ import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import Waves from '@/components/Waves'
 import { useState } from 'react'
-import { Cursor } from '@/components/cursor'
 
 function ImageWithLoader({ src, alt, className, onClick }: { src: string; alt: string; className: string; onClick?: () => void }) {
   const [isLoaded, setIsLoaded] = useState(false)
@@ -59,7 +58,6 @@ export default function Projects() {
           yGap={40}
         />
       </div>
-      <Cursor />
       <div className="relative z-10">
         <Navigation />
 
@@ -309,89 +307,6 @@ export default function Projects() {
             </div>
           </div>
         </section>
-
-        <section className="py-20 px-8 border-t border-white/10 relative">
-
-          <div
-            className="absolute inset-0 opacity-[0.02] pointer-events-none"
-            style={{
-              backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-                                linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-              backgroundSize: '50px 50px',
-            }}
-          />
-
-          <div className="max-w-6xl mx-auto relative z-10">
-            <div className="mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
-                Random Stuff
-              </h2>
-              <p className="text-gray-500">
-                Things nobody asked for but I made anyway
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-              {[
-                { img: "/images/icecream.png", title: "Ice Cream Tier List", desc: "My factual opinions", link: "https://tiermaker.com/create/top-40-ice-cream-flavors-15607441", page: "/tl/icecream" },
-                { img: "/images/protein.png", title: "Protein Rankings", desc: "Every powder that matters", link: "https://tiermaker.com/create/protein-powder-tier-list-17372092", page: "/tl/proteinpowder" },
-                { img: "/images/energydrinks.png", title: "Energy Drinks", desc: "This took way too long", link: "https://tiermaker.com/create/absolute-best-energy-drinks-16706475", page: "/tl/energydrinks" },
-              ].map((item, i) => (
-                <Card key={i} className="border border-white/10 shadow-xl transition-all duration-300 rounded-2xl overflow-hidden bg-black/50 backdrop-blur-sm hover:border-white/30 hover:-translate-y-1 group">
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <ImageWithLoader
-                      src={item.img}
-                      alt={item.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      onClick={() => setSelectedImage(item.img)}
-                    />
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="text-xl text-white">{item.title}</CardTitle>
-                    <CardDescription className="text-sm text-gray-400">{item.desc}</CardDescription>
-                  </CardHeader>
-                  <CardFooter className="flex gap-2">
-                    <Button asChild className="flex-1 bg-white text-black hover:bg-gray-200 rounded-full transition-all">
-                      <a href={item.link} target="_blank" rel="noopener noreferrer">View List</a>
-                    </Button>
-                    <Button asChild variant="outline" className="flex-1 border border-white/20 text-white hover:bg-white hover:text-black rounded-full transition-all">
-                      <Link to={item.page}>Details</Link>
-                    </Button>
-                  </CardFooter>
-                </Card>
-              ))}
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[
-                { img: "/images/diogenenes.png", title: "Diogenes Poster", desc: "The best philosopher", page: "/fuzzgenes" },
-                { img: "/images/timothy.jpg", title: "Timothy Dexter Essay", desc: "America's eccentric millionaire", page: "/dexterio" },
-                { img: "/images/minipekka.jpg", title: "Clash Rankings", desc: "Every card and deck", page: "/clash" },
-              ].map((item, i) => (
-                <Card key={i} className="border border-white/10 shadow-xl transition-all duration-300 rounded-2xl overflow-hidden bg-black/50 backdrop-blur-sm hover:border-white/30 hover:-translate-y-1 group">
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <ImageWithLoader
-                      src={item.img}
-                      alt={item.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      onClick={() => setSelectedImage(item.img)}
-                    />
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="text-xl text-white">{item.title}</CardTitle>
-                    <CardDescription className="text-sm text-gray-400">{item.desc}</CardDescription>
-                  </CardHeader>
-                  <CardFooter>
-                    <Button asChild variant="outline" className="w-full border border-white/20 text-white hover:bg-white hover:text-black rounded-full transition-all">
-                      <Link to={item.page}>View →</Link>
-                    </Button>
-                  </CardFooter>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <Footer />
       </div>
 
