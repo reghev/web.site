@@ -193,6 +193,8 @@ export default function home() {
         <section className="py-40 px-8 relative">
           <div className="absolute inset-0 bg-white/[0.02] backdrop-blur-[2px]" />
 
+
+              /*gif stickers*/
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
             <div className="absolute top-10 left-[10%] rotate-[-8deg] group">
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-6 bg-white/10 backdrop-blur-sm rotate-[-2deg] z-10" />
@@ -244,9 +246,6 @@ export default function home() {
                 />
               </div>
             </div>
-          
-          
-          
           </div>
 
 
@@ -258,11 +257,12 @@ export default function home() {
                   About Me
                 </h3>
                 <p className="text-[clamp(1rem,2vw,1.125rem)] font-extralight tracking-wider text-gray-300/80 leading-loose">
-                  Whats up reader, Im raghav, I lift, I code, and I try not to be useless, check out some stuff or do something else i guess?.
+                  
                 </p>
               </div>
             </AnimatedContent>
           </div>
+
         </section>
 
         <section className="py-32 px-8 border-t border-white/10 bg-gradient-to-b from-black via-white/[0.02] to-black relative">

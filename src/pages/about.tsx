@@ -44,12 +44,7 @@ export default function about() {
                 Hi, I'm Raghav
               </h2>
               <p className="text-gray-300 text-lg leading-relaxed">
-                Im 14 and I do literally nothing with my time except for school and lifting, I like to code sometimes
-                <br /><br />
-                I play guitar and bass and read alot
-                <br /><br />
-                If you need anything — which you probably don'  t — email me at
-                <span className="text-white font-medium"> raghavmadiraju@gmail.com</span>.
+                I've been coding since about 10 years old and then built my first pc at 11. I started lifting at 12 and did my first powerlifting meet at 13, right now im working on renovating this website because its not what i want it to be. 
               </p>
             </div>
           </div>
@@ -62,11 +57,17 @@ export default function about() {
         <div style={{ width: '100vw', height: '100vh' }}>
           <DomeGallery
             images={[
-            '/thingies/castle1.jpg',
-            '/thingies/castle2.jpg',
-            '/thingies/md.jpg',
-            '/thingies/snowcastle.jpg',
-            '/thingies/aust.jpg',
+            '/photodome/castle1.jpg',
+            '/photodome/castle2.jpg',
+            '/photodome/md.jpg',
+            '/photodome/snowcastle.jpg',
+            '/photodome/aust.jpg',
+            '/photodome/montreal.jpg',
+            '/photodome/montrea2.jpg',
+            '/photodome/montrea3.jpg',
+            '/photodome/scremaing.jpg',
+            '/photodome/vienna.jpg',
+
             ]}   
             fit={0.8}
             minRadius={600}
