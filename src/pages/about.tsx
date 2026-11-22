@@ -62,11 +62,11 @@ export default function about() {
             '/photodome/md.jpg',
             '/photodome/snowcastle.jpg',
             '/photodome/aust.jpg',
-            '/photodome/montreal.jpg',
-            '/photodome/montrea2.jpg',
-            '/photodome/montrea3.jpg',
-            '/photodome/scremaing.jpg',
-            '/photodome/vienna.jpg',
+            '/photodome/montreal.jpeg',
+            '/photodome/montrea2.jpeg',
+            '/photodome/montrea3.jpeg',
+            '/photodome/scremaing.jpeg',
+            '/photodome/vienna.jpeg',
 
             ]}   
             fit={0.8}
