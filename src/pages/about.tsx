@@ -69,13 +69,14 @@ export default function about() {
             '/photodome/vienna.jpeg',
 
             ]}   
-            fit={0.8}
-            minRadius={600}
-            maxVerticalRotationDeg={0}
-            segments={34}  
-            dragDampening={2}
+            fit={1}
+            minRadius={300}
+            maxVerticalRotationDeg={20}
+            segments={30}  
+            dragDampening={0}
             fitBasis={'auto'}
             overlayBlurColor={'rgba(0, 0, 0, 0.5)'}
+            grayscale={false}
           />
         </div>
         <div className="h-px bg-white/10 mb-32" />
