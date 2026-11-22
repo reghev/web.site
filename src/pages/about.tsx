@@ -67,6 +67,7 @@ export default function about() {
             '/photodome/montreal3.jpeg',
             '/photodome/scremaing.jpeg',
             '/photodome/vienna.jpeg',
+            
 
             ]}   
             fit={1}
