@@ -63,8 +63,8 @@ export default function about() {
             '/photodome/snowcastle.jpg',
             '/photodome/aust.jpg',
             '/photodome/montreal.jpeg',
-            '/photodome/montrea2.jpeg',
-            '/photodome/montrea3.jpeg',
+            '/photodome/montreal2.jpeg',
+            '/photodome/montreal3.jpeg',
             '/photodome/scremaing.jpeg',
             '/photodome/vienna.jpeg',
 
@@ -78,6 +78,7 @@ export default function about() {
             overlayBlurColor={'rgba(0, 0, 0, 0.5)'}
           />
         </div>
+        <div className="h-px bg-white/10 mb-32" />
 
         <Footer />
       </div>
