@@ -6,7 +6,6 @@ import Waves from '@/components/Waves'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import ShinyText from '@/components/ShinyText'
 import { Link } from 'react-router-dom'
-import { Cursor } from '@/components/cursor'
 
 export default function About() {
     return (
@@ -27,7 +26,6 @@ export default function About() {
                     yGap={40}
                 />
             </div>
-            <Cursor />
             <div className="relative z-10">
 
                 <div className="pt-32 pb-20 px-8">
