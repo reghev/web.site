@@ -13,17 +13,17 @@ export default function Navigation() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 15)
     }
-    
+
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768)
     }
-    
+
     handleScroll()
     handleResize()
-    
+
     window.addEventListener('scroll', handleScroll)
     window.addEventListener('resize', handleResize)
-    
+
     return () => {
       window.removeEventListener('scroll', handleScroll)
       window.removeEventListener('resize', handleResize)
@@ -38,7 +38,7 @@ export default function Navigation() {
     { title: 'Home', href: '/' },
     { title: 'About', href: '/about' },
     { title: 'Projects', href: '/projects' },
-    { title: 'Guestbook', href: '/guestbook' },
+    { title: 'Right Now', href: '/now' },
   ]
 
   return (
@@ -55,9 +55,8 @@ export default function Navigation() {
         />
       </div>
       <nav
-        className={`fixed top-0 right-0 left-0 z-50 border-b border-white/10 p-4 backdrop-blur-2xl transition-all duration-300 ${
-          isScrolled ? 'bg-black/50' : 'bg-black/30'
-        }`}
+        className={`fixed top-0 right-0 left-0 z-50 border-b border-white/10 p-4 backdrop-blur-2xl transition-all duration-300 ${isScrolled ? 'bg-black/50' : 'bg-black/30'
+          }`}
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between md:px-8">
           <div className="flex items-center gap-4">
@@ -69,16 +68,16 @@ export default function Navigation() {
                 {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
               </button>
             )}
-            
+
             <Link to="/" className="relative group">
-              <motion.span 
+              <motion.span
                 className="text-base sm:text-xl font-bold text-white"
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
                 raghav.fit
 
-                
+
               </motion.span>
             </Link>
           </div>
@@ -89,11 +88,10 @@ export default function Navigation() {
                   <Link
                     key={item.title}
                     to={item.href}
-                    className={`transition-colors duration-300 ${
-                      isActive(item.href)
+                    className={`transition-colors duration-300 ${isActive(item.href)
                         ? 'text-white font-semibold font-'
                         : 'text-gray-400 hover:text-white'
-                    }`}
+                      }`}
                   >
                     {item.title}
                   </Link>
@@ -115,11 +113,10 @@ export default function Navigation() {
                   key={item.title}
                   to={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`text-2xl font-medium transition-colors ${
-                    isActive(item.href)
+                  className={`text-2xl font-medium transition-colors ${isActive(item.href)
                       ? 'text-white'
                       : 'text-gray-400 hover:text-white'
-                  }`}
+                    }`}
                 >
                   {item.title}
                 </Link>

@@ -18,6 +18,7 @@ export default function Now() {
           xGap={16}
           yGap={40}
         />
+
       </div>
     </div>
   );
