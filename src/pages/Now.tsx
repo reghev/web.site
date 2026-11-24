@@ -1,8 +1,8 @@
-import tailwindcss from 'tailwindcss/tailwind.css';
 import Waves from '../components/Waves';
 
 export default function Now() {
   return (
+
     <div className="min-h-screen bg-black relative overflow-hidden">
       <div className="fixed inset-0 pointer-events-none">
         <Waves
@@ -19,10 +19,6 @@ export default function Now() {
           yGap={40}
         />
       </div>
-      <head>
-        <link rel="stylesheet" href={tailwindcss} />
-        <p>History</p>
-      </head>
     </div>
   );
 }
