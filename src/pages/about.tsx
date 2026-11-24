@@ -31,7 +31,7 @@ export default function about() {
 
         <section className="pt-40 pb-24 px-8">
           <div className="max-w-5xl mx-auto text-center">
-            <h1 className="text-6xl md:text-7xl font-bold text-white mb-6">
+            <h1 className="text-6xl md:text-7xl font-bold text-white mb-6 font-mono text-xs text-gray-400">
               <SplitText text="about me" />
             </h1>
           </div>
@@ -40,11 +40,11 @@ export default function about() {
         <section className="pb-32 px-8">
           <div className="max-w-4xl mx-auto">
             <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-10">
-              <h2 className="text-3xl text-white font-semibold mb-6">
+              <h2 className="text-3xl text-white font-semibold mb-6 font-mono text-xs text-gray-400">
                 Hi, I'm Raghav
               </h2>
-              <p className="text-gray-300 text-lg leading-relaxed">
-                I've been coding since about 10 years old and then built my first pc at 11. I started lifting at 12 and did my first powerlifting meet at 13, right now im working on renovating this website because its not what i want it to be. 
+              <p className="text-gray-300 text-lg leading-relaxed font-mono text-xs text-gray-400">
+                I've been coding since about 10 years old and then built my first pc at 11. I started lifting at 12 and did my first powerlifting meet at 13, right now im working on renovating this website because its not what i want it to be.
               </p>
             </div>
           </div>
@@ -57,23 +57,23 @@ export default function about() {
         <div style={{ width: '100vw', height: '100vh' }}>
           <DomeGallery
             images={[
-            '/photodome/castle1.jpg',
-            '/photodome/castle2.jpg',
-            '/photodome/md.jpg',
-            '/photodome/snowcastle.jpg',
-            '/photodome/aust.jpg',
-            '/photodome/montreal.jpeg',
-            '/photodome/montreal2.jpeg',
-            '/photodome/montreal3.jpeg',
-            '/photodome/scremaing.jpeg',
-            '/photodome/vienna.jpeg',
-            
+              '/photodome/castle1.jpg',
+              '/photodome/castle2.jpg',
+              '/photodome/md.jpg',
+              '/photodome/snowcastle.jpg',
+              '/photodome/aust.jpg',
+              '/photodome/montreal.jpeg',
+              '/photodome/montreal2.jpeg',
+              '/photodome/montreal3.jpeg',
+              '/photodome/scremaing.jpeg',
+              '/photodome/vienna.jpeg',
 
-            ]}   
+
+            ]}
             fit={1}
             minRadius={300}
             maxVerticalRotationDeg={20}
-            segments={30}  
+            segments={30}
             dragDampening={0}
             fitBasis={'auto'}
             overlayBlurColor={'rgba(0, 0, 0, 0.5)'}
