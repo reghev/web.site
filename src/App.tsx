@@ -11,7 +11,7 @@ import Shhh from './pages/shhh'
 import Fuzzgenes from './pages/Fuzzgenes'
 import Dexterio from './pages/dexterio'
 import Clash from './pages/clash'
-import GuestBook from './pages/guestbook'
+import Now from './pages/Now'
 import Projects from './pages/projects'
 import Raghavbeer from './pages/raghavdotbeer'
 import WHYISTHETVTURNINGOFF from './pages/WHYISTHETVTURNINGOFF'
@@ -38,8 +38,8 @@ function App() {
         <Route path="/fuzzgenes" element={<Fuzzgenes />} />
         <Route path="/dexterio" element={<Dexterio />} />
         <Route path="/clash" element={<Clash />} />
-        <Route path="/guestbook" element={<GuestBook />} />
-        <Route path="/projects" element={<Projects />} />  
+        <Route path="/now" element={<Now />} />
+        <Route path="/projects" element={<Projects />} />
         <Route path="/project/raghavdotbeer" element={<Raghavbeer />} />
         <Route path="/project/WHYISTHETVTURNINGOFF" element={<WHYISTHETVTURNINGOFF />} />
         <Route path="/project/ClutchClaudeBot9000" element={<ClutchClaudeBot9000 />} />
