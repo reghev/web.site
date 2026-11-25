@@ -56,10 +56,10 @@ export default function Footer() {
               Navigation
             </h3>
             <div className="flex flex-col gap-3">
-              <Link to="/" className="text-gray-500 hover:text-white transition-colors text-sm">
+              <Link to="/" className="text-gray-500 hover:text-white transition-colors text-smtext-white font-semibold mb-6 font-mono">
                 Home
               </Link>
-              <Link to="/about" className="text-gray-500 hover:text-white transition-colors text-sm">
+              <Link to="/about" className="text-gray-500 hover:text-white transition-colors text-smtext-white font-semibold mb-6 font-mono">
                 About
               </Link>
               <Link to="/projects" className="text-gray-500 hover:text-white transition-colors text-smtext-white font-semibold mb-6 font-mono">
@@ -80,7 +80,7 @@ export default function Footer() {
               >
                 GitHub
                 <img
-                src="https://img.icons8.com/?size=100&id=62856&format=png&color=000000"
+                src="https://img.icons8.com/?size=100&id=bQfpMAcJiPCD&format=png&color=000000"
                 alt="github"
                 className="w-4 h-4 object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
                 />
@@ -93,7 +93,7 @@ export default function Footer() {
               >
                 LinkedIn
                 <img
-                src="https://img.icons8.com/?size=100&id=8808&format=png&color=000000"
+                src="https://img.icons8.com/?size=100&id=60ZV_wYC0BM2&format=png&color=000000"
                 alt="linkedin"
                 className="w-4 h-4 object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
                 />
@@ -104,7 +104,7 @@ export default function Footer() {
               >
                 Email
                 <img
-                src="https://img.icons8.com/?size=100&id=Y2GfpkgYNp42&format=png&color=000000"
+                src="https://img.icons8.com/?size=100&id=80664&format=png&color=000000"
                 alt="gmail"
                 className="w-4 h-4 object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
                 />
@@ -116,7 +116,7 @@ export default function Footer() {
                 className="text-gray-500 hover:text-white transition-colors text-sm"
               >
                 <img
-                src="https://img.icons8.com/?size=100&id=ZOFC5nSr215Y&format=png&color=000000"
+                src="https://img.icons8.com/?size=100&id=hK7HDtSy9QsB&format=png&color=000000"
                 alt="instagram"
                 className="w-4 h-4 object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
                 />
