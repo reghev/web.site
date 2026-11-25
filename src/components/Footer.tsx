@@ -52,23 +52,29 @@ export default function Footer() {
             <FooterRandomText />
           </div>
           <div>
-            <h3 className="font-semibold mb-4 text-white text-sm uppercase tracking-wider">
+            <h3 className="font-semibold mb-4 text-white text-sm uppercase tracking-wider font-mono">
               Navigation
             </h3>
             <div className="flex flex-col gap-3">
               <Link to="/" className="text-gray-500 hover:text-white transition-colors text-smtext-white font-semibold mb-6 font-mono">
-                Home
+                home
               </Link>
               <Link to="/about" className="text-gray-500 hover:text-white transition-colors text-smtext-white font-semibold mb-6 font-mono">
-                About
+                about
               </Link>
               <Link to="/projects" className="text-gray-500 hover:text-white transition-colors text-smtext-white font-semibold mb-6 font-mono">
-                Projects
+                projects
+              </Link>
+              <Link to="/now" className="text-gray-500 hover:text-white transition-colors text-smtext-white font-semibold mb-6 font-mono">
+                right now
+              </Link>
+              <Link to="/photodome" className="text-gray-500 hover:text-white transition-colors text-smtext-white font-semibold mb-6 font-mono">
+                photodome
               </Link>
             </div>
           </div>
           <div>
-            <h3 className="font-semibold mb-4 text-white text-sm uppercase tracking-wider">
+            <h3 className="font-semibold mb-4 text-white text-sm uppercase tracking-wider font-mono">
               Connect
             </h3>
             <div className="flex flex-col gap-3">

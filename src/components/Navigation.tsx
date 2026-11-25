@@ -39,6 +39,7 @@ export default function Navigation() {
     { title: 'About', href: '/about' },
     { title: 'Projects', href: '/projects' },
     { title: 'Right Now', href: '/now' },
+    { title: 'Photodome', href: '/photodome' },
   ]
 
   return (
