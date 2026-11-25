@@ -4,13 +4,7 @@ import About from './pages/about'
 import ProjectLois from './pages/mark-wahlberg'
 import ProjectCircuit from './pages/takeachillpill'
 import ProjectDinosaur from './pages/seth-green'
-import IceCream from './pages/icecreamtierlist'
-import ProteinPowder from './pages/proteinpowdertierlist'
-import EnergyDrinks from './pages/energydrinkstierlist'
 import Shhh from './pages/shhh'
-import Fuzzgenes from './pages/Fuzzgenes'
-import Dexterio from './pages/dexterio'
-import Clash from './pages/clash'
 import Now from './pages/Now'
 import Projects from './pages/projects'
 import Raghavbeer from './pages/raghavdotbeer'
@@ -31,13 +25,7 @@ function App() {
         <Route path="/project/pathfinder" element={<ProjectLois />} />
         <Route path="/project/reality" element={<ProjectCircuit />} />
         <Route path="/project/solder" element={<ProjectDinosaur />} />
-        <Route path="tl/icecream" element={<IceCream />} />
-        <Route path="tl/protein" element={<ProteinPowder />} />
-        <Route path="tl/energydrinks" element={<EnergyDrinks />} />
         <Route path="/shhh" element={<Shhh />} />
-        <Route path="/fuzzgenes" element={<Fuzzgenes />} />
-        <Route path="/dexterio" element={<Dexterio />} />
-        <Route path="/clash" element={<Clash />} />
         <Route path="/now" element={<Now />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/project/raghavdotbeer" element={<Raghavbeer />} />
