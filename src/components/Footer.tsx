@@ -78,7 +78,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-white transition-colors text-sm"
               >
-                <h3 className="font-semibold mb-4 text-white text-sm uppercase tracking-wider">
+                <h3 className="text-gray-500 hover:text-white transition-colors text-smtext-white font-semibold mb-6 font-mono">
               github
             </h3>
                 <img
@@ -93,7 +93,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-white transition-colors text-sm"
               >
-                <h3 className="font-semibold mb-4 text-white text-sm uppercase tracking-wider">
+                <h3 className="text-gray-500 hover:text-white transition-colors text-smtext-white font-semibold mb-6 font-mono">
               linkedin
             </h3>
                 <img
@@ -106,7 +106,7 @@ export default function Footer() {
                 href="mailto:raghavmadiraju@gmail.com"
                 className="text-gray-500 hover:text-white transition-colors text-sm"
               >
-                <h3 className="font-semibold mb-4 text-white text-sm uppercase tracking-wider">
+                <h3 className="text-gray-500 hover:text-white transition-colors text-smtext-white font-semibold mb-6 font-mono">
               email
             </h3>
                 <img
@@ -121,7 +121,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-white transition-colors text-sm"
               >
-                <h3 className="font-semibold mb-4 text-white text-sm uppercase tracking-wider">
+                <h3 className="text-gray-500 hover:text-white transition-colors text-smtext-white font-semibold mb-6 font-mono">
               instagram
             </h3>
                 <img
