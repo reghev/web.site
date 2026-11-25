@@ -67,6 +67,14 @@ export default function about() {
               '/photodome/montreal3.jpeg',
               '/photodome/scremaing.jpeg',
               '/photodome/vienna.jpeg',
+              '/photodome/vienna2.jpeg',
+              '/photodome/vienna3.jpeg',
+              '/photodome/tulum.jpeg',
+              '/photodome/tulum2.jpeg',
+              '/photodome/tulum3.jpeg',
+              '/photodome/austin.jpeg',
+              '/photodome/austin2.jpeg',
+              '/photodome/aura.jpeg',
 
 
             ]}
