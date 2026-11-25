@@ -3,7 +3,6 @@ import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import Waves from '@/components/Waves'
 import { SplitText } from '@/components/ui/split-text'
-import DomeGallery from '@/components/DomeGallery';
 
 export default function about() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
@@ -53,7 +52,7 @@ export default function about() {
         <div className="max-w-6xl mx-auto px-8">
           <div className="h-px bg-white/10 mb-32" />
         </div>
-        
+
         <div className="h-px bg-white/10 mb-32" />
 
         <Footer />
