@@ -48,13 +48,6 @@ export default function about() {
             </div>
           </div>
         </section>
-
-        <div className="max-w-6xl mx-auto px-8">
-          <div className="h-px bg-white/10 mb-32" />
-        </div>
-
-        <div className="h-px bg-white/10 mb-32" />
-
         <Footer />
       </div>
 
