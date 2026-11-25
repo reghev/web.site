@@ -53,41 +53,7 @@ export default function about() {
         <div className="max-w-6xl mx-auto px-8">
           <div className="h-px bg-white/10 mb-32" />
         </div>
-
-        <div style={{ width: '100vw', height: '100vh' }}>
-          <DomeGallery
-            images={[
-              '/photodome/castle1.jpg',
-              '/photodome/castle2.jpg',
-              '/photodome/md.jpg',
-              '/photodome/snowcastle.jpg',
-              '/photodome/aust.jpg',
-              '/photodome/montreal.jpeg',
-              '/photodome/montreal2.jpeg',
-              '/photodome/montreal3.jpeg',
-              '/photodome/scremaing.jpeg',
-              '/photodome/vienna.jpeg',
-              '/photodome/vienna2.jpeg',
-              '/photodome/vienna3.jpeg',
-              '/photodome/tulum.jpeg',
-              '/photodome/tulum2.jpeg',
-              '/photodome/tulum3.jpeg',
-              '/photodome/austin.jpeg',
-              '/photodome/austin2.jpeg',
-              '/photodome/aura.jpeg',
-
-
-            ]}
-            fit={1}
-            minRadius={300}
-            maxVerticalRotationDeg={20}
-            segments={30}
-            dragDampening={0}
-            fitBasis={'auto'}
-            overlayBlurColor={'rgba(0, 0, 0, 0.5)'}
-            grayscale={false}
-          />
-        </div>
+        
         <div className="h-px bg-white/10 mb-32" />
 
         <Footer />
