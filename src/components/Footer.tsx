@@ -78,7 +78,9 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-white transition-colors text-sm"
               >
-                GitHub
+                <h3 className="font-semibold mb-4 text-white text-sm uppercase tracking-wider">
+              github
+            </h3>
                 <img
                 src="https://img.icons8.com/?size=100&id=bQfpMAcJiPCD&format=png&color=000000"
                 alt="github"
@@ -91,22 +93,26 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-white transition-colors text-sm"
               >
-                LinkedIn
+                <h3 className="font-semibold mb-4 text-white text-sm uppercase tracking-wider">
+              linkedin
+            </h3>
                 <img
                 src="https://img.icons8.com/?size=100&id=60ZV_wYC0BM2&format=png&color=000000"
                 alt="linkedin"
-                className="w-4 h-4 object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                className="w-4 h-4"
                 />
               </a>
               <a
                 href="mailto:raghavmadiraju@gmail.com"
                 className="text-gray-500 hover:text-white transition-colors text-sm"
               >
-                Email
+                <h3 className="font-semibold mb-4 text-white text-sm uppercase tracking-wider">
+              email
+            </h3>
                 <img
                 src="https://img.icons8.com/?size=100&id=80664&format=png&color=000000"
                 alt="gmail"
-                className="w-4 h-4 object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                className="w-4 h-4"
                 />
               </a>
               <a
@@ -115,12 +121,14 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-white transition-colors text-sm"
               >
+                <h3 className="font-semibold mb-4 text-white text-sm uppercase tracking-wider">
+              instagram
+            </h3>
                 <img
                 src="https://img.icons8.com/?size=100&id=hK7HDtSy9QsB&format=png&color=000000"
                 alt="instagram"
-                className="w-4 h-4 object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                className="w-4 h-4"
                 />
-                Instagram
               </a>
             </div>
           </div>
