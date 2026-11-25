@@ -31,7 +31,7 @@ export default function about() {
 
         <section className="pt-40 pb-24 px-8">
           <div className="max-w-5xl mx-auto text-center">
-            <h1 className="text-6xl md:text-7xl font-bold text-white mb-6 font-mono text-xs text-gray-400">
+            <h1 className="text-6xl text-white font-semibold mb-6 font-mono text-xs text-gray-400">
               <SplitText text="about me" />
             </h1>
           </div>

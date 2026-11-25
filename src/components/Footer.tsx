@@ -65,9 +65,6 @@ export default function Footer() {
               <Link to="/projects" className="text-gray-500 hover:text-white transition-colors text-sm">
                 Projects
               </Link>
-              <Link to="/guestbook" className="text-gray-500 hover:text-white transition-colors text-sm">
-                Guest Book
-              </Link>
             </div>
           </div>
           <div>
@@ -82,6 +79,11 @@ export default function Footer() {
                 className="text-gray-500 hover:text-white transition-colors text-sm"
               >
                 GitHub
+                <img
+                src="https://img.icons8.com/?size=100&id=62856&format=png&color=000000"
+                alt="github"
+                className="w-4 h-4 object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                />
               </a>
               <a
                 href="https://www.linkedin.com/in/raghav-madiraju-1363bb338"
@@ -90,12 +92,22 @@ export default function Footer() {
                 className="text-gray-500 hover:text-white transition-colors text-sm"
               >
                 LinkedIn
+                <img
+                src="https://img.icons8.com/?size=100&id=8808&format=png&color=000000"
+                alt="linkedin"
+                className="w-4 h-4 object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                />
               </a>
               <a
                 href="mailto:raghavmadiraju@gmail.com"
                 className="text-gray-500 hover:text-white transition-colors text-sm"
               >
                 Email
+                <img
+                src="https://img.icons8.com/?size=100&id=Y2GfpkgYNp42&format=png&color=000000"
+                alt="gmail"
+                className="w-4 h-4 object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                />
               </a>
               <a
                 href="https://www.instagram.com/reghevbetta"
@@ -103,6 +115,11 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-white transition-colors text-sm"
               >
+                <img
+                src="https://img.icons8.com/?size=100&id=ZOFC5nSr215Y&format=png&color=000000"
+                alt="instagram"
+                className="w-4 h-4 object-contain grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all"
+                />
                 Instagram
               </a>
             </div>
@@ -111,13 +128,9 @@ export default function Footer() {
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-500 text-sm">
-              © 2024 raghav.fit · Built with React & Tailwind
+              © 2026 raghav.fit · Built with React & Tailwind
             </p>
             <div className="flex gap-6 text-sm">
-              
-              <Link to="/guestbook" className="text-gray-500 hover:text-white transition-colors">
-                Sign Guest Book
-              </Link>
             </div>
           </div>
         </div>
