@@ -1,4 +1,3 @@
-import AnimatedContent from '@/components/ui/animated-content'
 import { Button } from '@/components/ui/button'
 import { Link } from 'react-router-dom'
 import Navigation from '@/components/Navigation'
@@ -66,18 +65,17 @@ export default function home() {
               className="text-[clamp(3rem,8vw,6.5rem)] font-extrabold tracking-tight text-white mb-6 leading-[0.95] font-mono"
             />
 
-            <AnimatedContent distance={60} direction="vertical" duration={1} delay={0.5}>
+
               <p className="text-[clamp(1.25rem,3vw,2rem)] font-medium tracking-tight text-white mb-6 leading-relaxed font-mono">
                 14-year-old developer, hacker, amateur powerlifter and bodybuilder. "The dream of a person defines more than themselves, but the entire world for who they choose to use as their canvas."
               </p>
-            </AnimatedContent>
+
           </div>
         </section>
 
 
-        <section className="py-40 px-8 text-center relative border-t border-white/10 bg-black overflow-hidden">
           <div className="relative z-10">
-            <AnimatedContent distance={60} duration={0.8}>
+
               <h2 className="text-6xl font-bold text-white mb-6 leading-tight font-mono">
                 want to see how i waste my time?
               </h2>
@@ -87,9 +85,9 @@ export default function home() {
               >
                 <Link to="/projects">View All Projects →</Link>
               </Button>
-            </AnimatedContent>
+
           </div>
-        </section>
+
 
         <Footer />
       </div>
