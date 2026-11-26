@@ -54,9 +54,6 @@ export default function home() {
         <Navigation />
 
         <section className="min-h-screen flex items-center justify-center px-8 relative">
-          <div className="absolute inset-0 -z-10 flex justify-center items-center">
-            <div className="w-[700px] h-[700px] rounded-full bg-gradient-to-br from-white/20 to-transparent blur-[160px]" />
-          </div>
 
           <div className="max-w-4xl w-full text-center">
 
@@ -77,74 +74,10 @@ export default function home() {
           </div>
         </section>
 
-        <section className="py-16 px-8 border-y border-white/10 relative overflow-hidden bg-black">
-
-          <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" />
-          <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" />
-        </section>
+        
 
         <section className="py-40 px-8 relative">
           <div className="absolute inset-0 bg-white/[0.02] backdrop-blur-[2px]" />
-
-
-              /*gif stickers*/
-          <div className="absolute inset-0 pointer-events-none overflow-hidden">
-            <div className="absolute top-10 left-[10%] rotate-[-8deg] group">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-6 bg-white/10 backdrop-blur-sm rotate-[-2deg] z-10" />
-              <div className="bg-white p-2 shadow-2xl">
-                <img
-                  src="/gifs/in utero.gif"
-                  alt=""
-                  className="w-32 h-32 object-cover"
-                />
-              </div>
-            </div>
-            <div className="absolute top-20 right-[15%] rotate-[12deg] group">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-6 bg-white/10 backdrop-blur-sm rotate-[3deg] z-10" />
-              <div className="bg-white p-2 shadow-2xl">
-                <img
-                  src="/gifs/trentwins.gif"
-                  alt=""
-                  className="w-40 h-40 object-cover"
-                />
-              </div>
-            </div>
-            <div className="absolute bottom-32 left-[8%] rotate-[6deg] group">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-24 h-6 bg-white/10 backdrop-blur-sm rotate-[-4deg] z-10" />
-              <div className="bg-white p-2 shadow-2xl">
-                <img
-                  src="/gifs/patrick.gif"
-                  alt=""
-                  className="w-36 h-36 object-cover"
-                />
-              </div>
-            </div>
-            <div className="absolute bottom-20 right-[12%] rotate-[-10deg] group">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-6 bg-white/10 backdrop-blur-sm rotate-[2deg] z-10" />
-              <div className="bg-white p-2 shadow-2xl">
-                <img
-                  src="/gifs/tspud.gif"
-                  alt=""
-                  className="w-32 h-32 object-cover"
-                />
-              </div>
-            </div>
-            <div className="absolute top-1/2 left-[5%] -translate-y-1/2 rotate-[-15deg] group">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-6 bg-white/10 backdrop-blur-sm rotate-[5deg] z-10" />
-              <div className="bg-white p-2 shadow-2xl">
-                <img
-                  src="/gifs/carterhere.gif"
-                  alt=""
-                  className="w-28 h-28 object-cover"
-                />
-              </div>
-            </div>
-          </div>
-
-
-
-
-
         </section>
 
         <section className="py-32 px-8 border-t border-white/10 bg-gradient-to-b from-black via-white/[0.02] to-black relative">
