@@ -63,11 +63,11 @@ export default function home() {
               animateBy="words"
               direction="top"
               onAnimationComplete={handleAnimationComplete}
-              className="text-[clamp(3rem,8vw,6.5rem)] font-extrabold tracking-tight text-white mb-6 leading-[0.95]"
+              className="text-[clamp(3rem,8vw,6.5rem)] font-extrabold tracking-tight text-white mb-6 leading-[0.95] font-mono"
             />
 
             <AnimatedContent distance={60} direction="vertical" duration={1} delay={0.5}>
-              <p className="text-[clamp(1.25rem,3vw,2rem)] font-medium tracking-tight text-white mb-6 leading-relaxed">
+              <p className="text-[clamp(1.25rem,3vw,2rem)] font-medium tracking-tight text-white mb-6 leading-relaxed font-mono">
                 14-year-old developer, hacker, amateur powerlifter and bodybuilder. "The dream of a person defines more than themselves, but the entire world for who they choose to use as their canvas."
               </p>
             </AnimatedContent>
@@ -76,25 +76,14 @@ export default function home() {
 
 
         <section className="py-40 px-8 text-center relative border-t border-white/10 bg-black overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.05)_0%,transparent_70%)] pointer-events-none" />
-
-          <div
-            className="absolute inset-0 opacity-[0.03] pointer-events-none"
-            style={{
-              backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-                        linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-              backgroundSize: '50px 50px',
-            }}
-          />
-
           <div className="relative z-10">
             <AnimatedContent distance={60} duration={0.8}>
-              <h2 className="text-6xl font-bold text-white mb-6 leading-tight">
+              <h2 className="text-6xl font-bold text-white mb-6 leading-tight font-mono">
                 want to see how i waste my time?
               </h2>
               <Button
                 asChild
-                className="bg-white text-black rounded-full px-12 py-7 text-xl font-medium transition-all hover:scale-[1.04] hover:shadow-[0_0_40px_rgba(255,255,255,0.35)]"
+                className="bg-white text-black rounded-full px-12 py-7 text-xl font-medium transition-all hover:scale-[1.04] hover:shadow-[0_0_40px_rgba(255,255,255,0.35)] font-mono"
               >
                 <Link to="/projects">View All Projects →</Link>
               </Button>

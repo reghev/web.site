@@ -133,7 +133,7 @@ export default function Footer() {
         </div>
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-500 text-sm">
+            <p className="text-gray-500 text-sm font-mono">
               © 2026 raghav.fit · Built with React & Tailwind
             </p>
             <div className="flex gap-6 text-sm">
