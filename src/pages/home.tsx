@@ -74,17 +74,6 @@ export default function home() {
           </div>
         </section>
 
-        
-
-        <section className="py-40 px-8 relative">
-          <div className="absolute inset-0 bg-white/[0.02] backdrop-blur-[2px]" />
-        </section>
-
-        <section className="py-32 px-8 border-t border-white/10 bg-gradient-to-b from-black via-white/[0.02] to-black relative">
-          <div className="absolute inset-0 opacity-[0.015] pointer-events-none" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
-          }} />
-        </section>
 
         <section className="py-40 px-8 text-center relative border-t border-white/10 bg-black overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.05)_0%,transparent_70%)] pointer-events-none" />
