@@ -22,6 +22,7 @@ export default function Now() {
           xGap={16}
           yGap={40}
         />
+      </div>
         <div className="max-w-4xl w-full text-center">
 
           <BlurText
@@ -33,7 +34,6 @@ export default function Now() {
             className="text-[clamp(3rem,8vw,6.5rem)] font-extrabold tracking-tight text-white mb-6 leading-[0.95]"
           />
         </div>
-      </div>
     </div>
   );
 }

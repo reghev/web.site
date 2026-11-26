@@ -37,8 +37,8 @@ export default function home() {
 
       <div className="fixed inset-0 pointer-events-none">
         <Waves
-          lineColor="#ffffff05"
-          backgroundColor="rgba(0, 0, 0, 1)"
+          lineColor="#0F0F0F"
+          backgroundColor="rgba(15, 15, 15, 1)"
           waveSpeedX={0.003}
           waveSpeedY={0.002}
           waveAmpX={30}
