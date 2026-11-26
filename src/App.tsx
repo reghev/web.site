@@ -32,7 +32,7 @@ function App() {
         <Route path="/project/WHYISTHETVTURNINGOFF" element={<WHYISTHETVTURNINGOFF />} />
         <Route path="/project/ClutchClaudeBot9000" element={<ClutchClaudeBot9000 />} />
         <Route path="/project/liedetector" element={<Liedetector />} />
-        <Route path="/project/photodome" element={<Photodome />} />
+        <Route path="/photodome" element={<Photodome />} />
       </Routes>
     </Router>
   )

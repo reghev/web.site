@@ -35,11 +35,11 @@ export default function Navigation() {
   }
 
   const navItems = [
-    { title: 'Home', href: '/' },
-    { title: 'About', href: '/about' },
-    { title: 'Projects', href: '/projects' },
-    { title: 'Right Now', href: '/now' },
-    { title: 'Photodome', href: '/photodome' },
+    { title: 'home', href: '/' },
+    { title: 'about', href: '/about' },
+    { title: 'projects', href: '/projects' },
+    { title: 'right now', href: '/now' },
+    { title: 'photodome', href: '/photodome' },
   ]
 
   return (
