@@ -1,4 +1,5 @@
 import Waves from '../components/Waves';
+import GithubPushFeed from '../components/GithubPushFeed';
 
 
 export default function Now() {
@@ -23,7 +24,9 @@ export default function Now() {
           yGap={40} 
         />
       </div>
-      
+       <div>
+      <GithubPushFeed username="reghev" />
+    </div>
     </div>
   </div>
 
