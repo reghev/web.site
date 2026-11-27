@@ -28,7 +28,7 @@ export default function about() {
       <div className="relative z-10">
         <Navigation />
 
-
+      <div className="h-px bg-white/10 mb-32" />
         <div style={{ width: '100vw', height: '100vh' }}>
           <DomeGallery
             images={[

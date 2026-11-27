@@ -63,10 +63,10 @@ export default function Projects() {
 
         <section className="pt-32 pb-20 px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight font-mono">
               Things I've Built
             </h1>
-            <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto">
+            <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto font-mono">
               stuff i do
             </p>
           </div>
@@ -78,10 +78,10 @@ export default function Projects() {
 
           <div className="max-w-6xl mx-auto relative z-10">
             <div className="mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-2 font-mono">
                 Hackclub Projects
               </h2>
-              <p className="text-gray-500">
+              <p className="text-gray-500 font-mono">
                 Things I built for Hackclub stuff
               </p>
             </div>

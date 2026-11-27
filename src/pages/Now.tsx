@@ -25,8 +25,8 @@ export default function Now() {
         />
       </div>
        <div>
-      <GithubPushFeed username="reghev" />
-    </div>
+          <GithubPushFeed username="reghev" />
+        </div>
     </div>
   </div>
 

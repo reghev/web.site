@@ -31,7 +31,7 @@ export default function GithubPushFeed({ username }: { username: string }) {
         const detailedPushes = await Promise.all(
           recentPushEvents.map(async (event: any) => {
             const latestCommit = event.payload.commits[event.payload.commits.length - 1];
-            const repoName = event.repo.name; // format: "username/repo"
+            const repoName = event.repo.name;
 
             const commitRes = await fetch(
               `https://github.com{repoName}/commits/${latestCommit.sha}`
@@ -41,7 +41,7 @@ export default function GithubPushFeed({ username }: { username: string }) {
 
             return {
               id: event.id,
-              repo: repoName.split('/')[1], // Extracts just the repo name
+              repo: repoName.split('/')[1], 
               message: latestCommit.message,
               date: new Date(event.created_at).toLocaleDateString(),
               sha: latestCommit.sha.substring(0, 7),

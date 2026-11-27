@@ -67,7 +67,7 @@ export default function home() {
 
 
               <p className="text-[clamp(1.25rem,3vw,2rem)] font-medium tracking-tight text-white mb-6 leading-relaxed font-mono">
-                14-year-old developer, hacker, amateur powerlifter and bodybuilder. "The dream of a person defines more than themselves, but the entire world for who they choose to use as their canvas."
+                14-year-old developer, hacker, amateur powerlifter and bodybuilder. "The dream of a person defines more than themselves, but the entire world for who they choose to use them as their canvas."
               </p>
 
           </div>
@@ -75,7 +75,6 @@ export default function home() {
 
 
           <div className="relative z-10">
-
               <h2 className="text-6xl font-bold text-white mb-6 leading-tight font-mono">
                 want to see how i waste my time?
               </h2>
@@ -85,8 +84,9 @@ export default function home() {
               >
                 <Link to="/projects">View All Projects →</Link>
               </Button>
-
           </div>
+
+          
 
 
         <Footer />
