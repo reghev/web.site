@@ -34,7 +34,7 @@ export default function About() {
                   <SplitText text="ClutchClaudeBot9000" className="font-bold text-white" />
                 </div>
               </div>
-            <div className="text-2xl md:text-3xl font-medium mb-12">
+            <div className="text-2xl md:text-3xl font-medium mb-12 font-mono">
                 <ShinyText
                   text="the worlds worst car since whatever BMW did with the iX series"
                   disabled={false}
@@ -59,16 +59,16 @@ export default function About() {
 
                     <div className="prose prose-lg max-w-none">
                       <CardHeader>
-                        <CardTitle className="text-3xl text-white">About this project</CardTitle>
+                        <CardTitle className="text-3xl text-white font-mono">About this project</CardTitle>
                       </CardHeader>
-                      <p className="text-lg text-white">
+                      <p className="text-lg text-white font-mono">
                         This was at Stasis with my 2 friends Hira and Johnny it was super fun to work on this with them and overall it genuinely made my year to spend this time at an event like this with friends and to make cool stuff like whatever this was
                       </p>
 
                       <CardHeader>
-                        <CardTitle className="text-3xl text-white">What does it do?</CardTitle>
+                        <CardTitle className="text-3xl text-white font-mono">What does it do?</CardTitle>
                       </CardHeader>
-                      <p className="text-lg text-white">
+                      <p className="text-lg text-white font-mono">
                         We wanted to make a car that uses a pedal board as a kind of manual gear switch, so we did with a random pedal board we found and we also made a spinout function where if you accelerated too fast youd spin out for 3 seconds or something
                       </p>
 
