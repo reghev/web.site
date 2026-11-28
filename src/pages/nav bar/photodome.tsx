@@ -63,8 +63,7 @@ export default function about() {
             grayscale={false}
           />
         </div>
-
-</div>
+      </div>
 
         <Footer />
       </div>

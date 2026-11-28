@@ -18,30 +18,31 @@ export default function GithubPushFeed({ username }: { username: string }) {
   useEffect(() => {
     async function fetchPushHistory() {
       try {
-
-        const eventsRes = await fetch(`https://github.com{username}/events/public`);
+        const eventsUrl = ['https://api.github.com', 'users', username, 'events', 'public'].join('/');
+        const eventsRes = await fetch(eventsUrl);
         const events = await eventsRes.json();
 
+        if (!Array.isArray(events)) {
+          setLoading(false);
+          return;
+        }
 
         const recentPushEvents = events
           .filter((e: any) => e.type === 'PushEvent' && e.payload.commits?.length > 0)
           .slice(0, 4);
 
-
         const detailedPushes = await Promise.all(
           recentPushEvents.map(async (event: any) => {
             const latestCommit = event.payload.commits[event.payload.commits.length - 1];
-            const repoName = event.repo.name;
+            const repoName: string = event.repo.name;
 
-            const commitRes = await fetch(
-              `https://github.com{repoName}/commits/${latestCommit.sha}`
-            );
-
+            const commitUrl = ['https://api.github.com', 'repos', repoName, 'commits', latestCommit.sha].join('/');
+            const commitRes = await fetch(commitUrl);
             const commitData = await commitRes.json();
 
             return {
               id: event.id,
-              repo: repoName.split('/')[1], 
+              repo: repoName.split('/')[1],
               message: latestCommit.message,
               date: new Date(event.created_at).toLocaleDateString(),
               sha: latestCommit.sha.substring(0, 7),
@@ -69,6 +70,10 @@ export default function GithubPushFeed({ username }: { username: string }) {
     return <div className="text-neutral-400 text-sm">Loading recent pushes...</div>;
   }
 
+  if (pushes.length === 0) {
+    return <div className="text-neutral-400 text-sm">No recent public pushes found.</div>;
+  }
+
   return (
     <div className="w-full max-w-xl space-y-3">
       {pushes.map((push) => {
@@ -79,7 +84,6 @@ export default function GithubPushFeed({ username }: { username: string }) {
             key={push.id}
             className="bg-[#0F0F0F] border border-neutral-800 rounded-lg overflow-hidden transition-colors hover:border-neutral-700"
           >
-
             <button
               onClick={() => toggleDropdown(push.id)}
               className="w-full flex items-center justify-between p-4 text-left focus:outline-none"
@@ -100,8 +104,9 @@ export default function GithubPushFeed({ username }: { username: string }) {
               </div>
 
               <ChevronDown
-                className={`w-5 h-5 text-neutral-400 shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''
-                  }`}
+                className={`w-5 h-5 text-neutral-400 shrink-0 transition-transform duration-200 ${
+                  isOpen ? 'rotate-180' : ''
+                }`}
               />
             </button>
 

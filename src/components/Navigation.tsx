@@ -72,7 +72,7 @@ export default function Navigation() {
 
             <Link to="/" className="relative group">
               <motion.span
-                className="text-base sm:text-xl font-bold text-white"
+                className="text-base sm:text-xl font-bold text-white font-mono"
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
