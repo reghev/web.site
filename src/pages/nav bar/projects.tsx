@@ -79,7 +79,7 @@ export default function Projects() {
           <div className="max-w-6xl mx-auto relative z-10">
             <div className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-2 font-mono">
-                Hackclub Projects
+                (finished) Hackclub Projects
               </h2>
               <p className="text-gray-500 font-mono">
                 Things I built for Hackclub stuff
@@ -91,41 +91,7 @@ export default function Projects() {
 
 
 
-
-
-
-
-              <Card className="border border-white/10 shadow-xl transition-all duration-300 rounded-2xl overflow-hidden bg-black/50 backdrop-blur-sm hover:border-white/30 hover:-translate-y-1 group">
-                <div className="aspect-[4/3] overflow-hidden">
-                  <ImageWithLoader
-                    src="/images/liedetector.png"
-                    alt="liedetector"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    onClick={() => setSelectedImage("/images/liedetector.png")}
-                  />
-                </div>
-                <CardHeader>
-                  <CardTitle className="text-xl text-white font-mono">Super Awesome totally trustable Lie detector</CardTitle>
-                  <CardDescription className="text-sm text-gray-400 font-mono">
-                    Project for Hackclub's Stasis and Forge and like 3 others (still unfinished)
-                  </CardDescription>
-                </CardHeader>
-                <CardFooter className="flex gap-2">
-                  <Button asChild className=" font-mono flex-1 bg-white text-black hover:bg-gray-200 rounded-full transition-all">
-                    <a href="https://github.com/reghev/awesome-lie-detector" target="_blank" rel="noopener noreferrer font-mono">
-                      GitHub
-                    </a>
-                  </Button>
-                  <Button asChild variant="outline" className="font-mono flex-1 border border-white/20 text-white hover:bg-white hover:text-black rounded-full transition-all font-mono">
-                    <Link to="/project/liedetector">Details</Link>
-                  </Button>
-                </CardFooter>
-              </Card>
-
-
-
-
-
+              //claude car
               <Card className="border border-white/10 shadow-xl transition-all duration-300 rounded-2xl overflow-hidden bg-black/50 backdrop-blur-sm hover:border-white/30 hover:-translate-y-1 group">
                 <div className="aspect-[4/3] overflow-hidden">
                   <ImageWithLoader
@@ -155,7 +121,7 @@ export default function Projects() {
 
 
 
-
+              //tv remote
               <Card className="border border-white/10 shadow-xl transition-all duration-300 rounded-2xl overflow-hidden bg-black/50 backdrop-blur-sm hover:border-white/30 hover:-translate-y-1 group">
                 <div className="aspect-[4/3] overflow-hidden">
                   <ImageWithLoader
@@ -185,7 +151,7 @@ export default function Projects() {
 
 
 
-
+              /raghav.beer
               <Card className="border border-white/10 shadow-xl transition-all duration-300 rounded-2xl overflow-hidden bg-black/50 backdrop-blur-sm hover:border-white/30 hover:-translate-y-1 group">
                 <div className="aspect-[4/3] overflow-hidden">
                   <ImageWithLoader
@@ -211,7 +177,7 @@ export default function Projects() {
                     <Link to="/project/raghavdotbeer">Details</Link>
                   </Button>
                   <Button asChild variant="outline" className="font-mono flex-1 border border-white/20 text-white hover:bg-white hover:text-black rounded-full transition-all font-mono">
-                    <Link to="https://thebeginningoftheend-fronjend.vercel.app/">Demo!</Link>
+                    <Link to="https://raghav.beer">Demo!</Link>
                   </Button>
                 </CardFooter>
               </Card>
@@ -220,7 +186,7 @@ export default function Projects() {
 
 
 
-
+              /mark-wahlberg
               <Card className="border border-white/10 shadow-xl transition-all duration-300 rounded-2xl overflow-hidden bg-black/50 backdrop-blur-sm hover:border-white/30 hover:-translate-y-1 group">
                 <div className="aspect-[4/3] overflow-hidden">
                   <ImageWithLoader
@@ -250,7 +216,7 @@ export default function Projects() {
 
 
 
-
+              /seth-blue
               <Card className="border border-white/10 shadow-xl transition-all duration-300 rounded-2xl overflow-hidden bg-black/50 backdrop-blur-sm hover:border-white/30 hover:-translate-y-1 group">
                 <div className="aspect-[4/3] overflow-hidden">
                   <ImageWithLoader
@@ -278,6 +244,9 @@ export default function Projects() {
                 </CardFooter>
               </Card>
 
+
+
+              /seth-green
               <Card className="border border-white/10 shadow-xl transition-all duration-300 rounded-2xl overflow-hidden bg-black/50 backdrop-blur-sm hover:border-white/30 hover:-translate-y-1 group">
                 <div className="aspect-[4/3] overflow-hidden">
                   <ImageWithLoader
@@ -304,6 +273,42 @@ export default function Projects() {
                   </Button>
                 </CardFooter>
               </Card>
+
+
+
+              //web.site
+              <Card className="border border-white/10 shadow-xl transition-all duration-300 rounded-2xl overflow-hidden bg-black/50 backdrop-blur-sm hover:border-white/30 hover:-translate-y-1 group">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <ImageWithLoader
+                    src="/images/projectcards/web.site.png"
+                    alt="raghav.beer"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    onClick={() => setSelectedImage("/images/raghav.beer.png")}
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle className="text-xl text-white">raghav.beer</CardTitle>
+                  <CardDescription className="text-sm text-gray-400 font-mono">
+                    Personal website
+                  </CardDescription>
+                </CardHeader>
+                <CardFooter className="flex gap-2">
+                  <Button asChild className="font-mono flex-1 bg-white text-black hover:bg-gray-200 rounded-full transition-all">
+                    <a href="https://github.com/reghev/web.site" target="_blank" rel="noopener noreferrer font-mono">
+                      GitHub
+                    </a>
+                  </Button>
+                  <Button asChild variant="outline" className=" font-mono flex-1 border border-white/20 text-white hover:bg-white hover:text-black rounded-full transition-all">
+                    <Link to="/">Details</Link>
+                  </Button>
+                  <Button asChild variant="outline" className="font-mono flex-1 border border-white/20 text-white hover:bg-white hover:text-black rounded-full transition-all font-mono">
+                    <Link to="https://raghav.fit">Demo!</Link>
+                  </Button>
+                </CardFooter>
+              </Card>
+
+
+
             </div>
           </div>
         </section>
