@@ -231,18 +231,18 @@ export default function Projects() {
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-xl text-white">mark-wahlberg</CardTitle>
-                  <CardDescription className="text-sm text-gray-400">
+                  <CardTitle className="font-mono text-xl text-white">mark-wahlberg</CardTitle>
+                  <CardDescription className="font-mono text-sm text-gray-400">
                     My project for pathfinder
                   </CardDescription>
                 </CardHeader>
                 <CardFooter className="flex gap-2">
-                  <Button asChild className="flex-1 bg-white text-black hover:bg-gray-200 rounded-full transition-all">
-                    <a href="https://github.com/reghev/mark-wahlberg" target="_blank" rel="noopener noreferrer">
+                  <Button asChild className=" font-mono flex-1 bg-white text-black hover:bg-gray-200 rounded-full transition-all">
+                    <a href="https://github.com/reghev/mark-wahlberg" target="_blank" rel="noopener noreferrer font-mono">
                       GitHub
                     </a>
                   </Button>
-                  <Button asChild variant="outline" className="flex-1 border border-white/20 text-white hover:bg-white hover:text-black rounded-full transition-all">
+                  <Button asChild variant="outline" className="font-mono flex-1 border border-white/20 text-white hover:bg-white hover:text-black rounded-full transition-all">
                     <Link to="/project/pathfinder">Details</Link>
                   </Button>
                 </CardFooter>
@@ -261,18 +261,18 @@ export default function Projects() {
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-xl text-white">seth-blue</CardTitle>
-                  <CardDescription className="text-sm text-gray-400">
+                  <CardTitle className="font-mono text-xl text-white">seth-blue</CardTitle>
+                  <CardDescription className=" font-mono text-sm text-gray-400">
                     My project for reality
                   </CardDescription>
                 </CardHeader>
                 <CardFooter className="flex gap-2">
-                  <Button asChild className="flex-1 bg-white text-black hover:bg-gray-200 rounded-full transition-all">
+                  <Button asChild className="font-mono flex-1 bg-white text-black hover:bg-gray-200 rounded-full transition-all">
                     <a href="https://github.com/reghev/seth-blue" target="_blank" rel="noopener noreferrer">
                       GitHub
                     </a>
                   </Button>
-                  <Button asChild variant="outline" className="flex-1 border border-white/20 text-white hover:bg-white hover:text-black rounded-full transition-all">
+                  <Button asChild variant="outline" className=" font-mono flex-1 border border-white/20 text-white hover:bg-white hover:text-black rounded-full transition-all">
                     <Link to="/project/reality">Details</Link>
                   </Button>
                 </CardFooter>
@@ -288,18 +288,18 @@ export default function Projects() {
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-xl text-white">seth-green</CardTitle>
-                  <CardDescription className="text-sm text-gray-400">
+                  <CardTitle className="text-xl text-white font-mono ">seth-green</CardTitle>
+                  <CardDescription className="text-sm text-gray-400 font-mono ">
                     My project for solder
                   </CardDescription>
                 </CardHeader>
-                <CardFooter className="flex gap-2">
-                  <Button asChild className="flex-1 bg-white text-black hover:bg-gray-200 rounded-full transition-all">
+                <CardFooter className="flex gap-2 font-mono ">
+                  <Button asChild className="font-mono flex-1 bg-white text-black hover:bg-gray-200 rounded-full transition-all">
                     <a href="https://github.com/reghev/seth-green" target="_blank" rel="noopener noreferrer">
                       GitHub
                     </a>
                   </Button>
-                  <Button asChild variant="outline" className="flex-1 border border-white/20 text-white hover:bg-white hover:text-black rounded-full transition-all">
+                  <Button asChild variant="outline" className="font-mono flex-1 border border-white/20 text-white hover:bg-white hover:text-black rounded-full transition-all">
                     <Link to="/project/solder">Details</Link>
                   </Button>
                 </CardFooter>
