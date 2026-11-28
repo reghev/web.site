@@ -29,7 +29,6 @@ export default function about() {
         <Navigation />
 
   <div style={{ background: 'linear-gradient(to bottom, #191919 0%, #000000 100%)' }}>
-</div>
         <div style={{ width: '100vw', height: '100vh' }}>
           <DomeGallery
             images={[
@@ -64,7 +63,7 @@ export default function about() {
             grayscale={false}
           />
         </div>
-<div style={{ background: 'linear-gradient(to bottom, #191919 0%, #000000 100%)' }}>
+
 </div>
 
         <Footer />
