@@ -28,7 +28,7 @@ export default function about() {
       <div className="relative z-10">
         <Navigation />
 
-      <div className="h-px bg-white/10 mb-32" />
+      <div className="h-px bg-white/10 mb-32bg-gradient-to-b from-[#191919] to-black" />
         <div style={{ width: '100vw', height: '100vh' }}>
           <DomeGallery
             images={[
@@ -63,7 +63,7 @@ export default function about() {
             grayscale={false}
           />
         </div>
-        <div className="h-px bg-white/10 mb-32" />
+        <div className="h-px bg-white/10 mb-32 bg-gradient-to-b from-[#191919] to-black " />
 
         <Footer />
       </div>
