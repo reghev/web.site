@@ -105,18 +105,18 @@ export default function Projects() {
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-xl text-white">Super Awesome totally trustable Lie detector</CardTitle>
-                  <CardDescription className="text-sm text-gray-400">
+                  <CardTitle className="text-xl text-white font-mono">Super Awesome totally trustable Lie detector</CardTitle>
+                  <CardDescription className="text-sm text-gray-400 font-mono">
                     Project for Hackclub's Stasis and Forge and like 3 others (still unfinished)
                   </CardDescription>
                 </CardHeader>
                 <CardFooter className="flex gap-2">
                   <Button asChild className="flex-1 bg-white text-black hover:bg-gray-200 rounded-full transition-all">
-                    <a href="https://github.com/reghev/awesome-lie-detector" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/reghev/awesome-lie-detector" target="_blank" rel="noopener noreferrer font-mono">
                       GitHub
                     </a>
                   </Button>
-                  <Button asChild variant="outline" className="flex-1 border border-white/20 text-white hover:bg-white hover:text-black rounded-full transition-all">
+                  <Button asChild variant="outline" className="flex-1 border border-white/20 text-white hover:bg-white hover:text-black rounded-full transition-all font-mono">
                     <Link to="/project/liedetector">Details</Link>
                   </Button>
                 </CardFooter>
@@ -136,18 +136,18 @@ export default function Projects() {
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-xl text-white">Clutch ClaudeBot9000</CardTitle>
-                  <CardDescription className="text-sm text-gray-400">
+                  <CardTitle className="text-xl text-white font-mono">Clutch ClaudeBot9000</CardTitle>
+                  <CardDescription className="text-sm text-gray-400 font-mono">
                     Mine and my friends projects for Hackclub's Stasis
                   </CardDescription>
                 </CardHeader>
-                <CardFooter className="flex gap-2">
+                <CardFooter className="flex gap-2 font-mono">
                   <Button asChild className="flex-1 bg-white text-black hover:bg-gray-200 rounded-full transition-all">
                     <a href="https://github.com/Dynix7/Stasis-Project" target="_blank" rel="noopener noreferrer">
                       GitHub
                     </a>
                   </Button>
-                  <Button asChild variant="outline" className="flex-1 border border-white/20 text-white hover:bg-white hover:text-black rounded-full transition-all">
+                  <Button asChild variant="outline" className="flex-1 border border-white/20 text-white hover:bg-white hover:text-black rounded-full transition-all font-mono">
                     <Link to="/project/ClutchClaudeBot9000">Details</Link>
                   </Button>
                 </CardFooter>
@@ -166,18 +166,18 @@ export default function Projects() {
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-xl text-white">WHYISTHETVTURNINGOFF</CardTitle>
-                  <CardDescription className="text-sm text-gray-400">
+                  <CardTitle className="text-xl text-white font-mono">WHYISTHETVTURNINGOFF</CardTitle>
+                  <CardDescription className="text-sm text-gray-400 font-mono">
                     Something I made for something I guess
                   </CardDescription>
                 </CardHeader>
-                <CardFooter className="flex gap-2">
-                  <Button asChild className="flex-1 bg-white text-black hover:bg-gray-200 rounded-full transition-all">
-                    <a href="https://github.com/reghev/WHYISTHETVTURNINGOFF" target="_blank" rel="noopener noreferrer">
+                <CardFooter className="flex gap-2 ">
+                  <Button asChild className="flex-1 bg-white text-black hover:bg-gray-200 rounded-full transition-all font-mono">
+                    <a href="https://github.com/reghev/WHYISTHETVTURNINGOFF" target="_blank" rel="noopener noreferrer font-mono">
                       GitHub
                     </a>
                   </Button>
-                  <Button asChild variant="outline" className="flex-1 border border-white/20 text-white hover:bg-white hover:text-black rounded-full transition-all">
+                  <Button asChild variant="outline" className=" font-mono flex-1 border border-white/20 text-white hover:bg-white hover:text-black rounded-full transition-all">
                     <Link to="/project/WHYISTHETVTURNINGOFF">Details</Link>
                   </Button>
                 </CardFooter>
@@ -197,20 +197,20 @@ export default function Projects() {
                 </div>
                 <CardHeader>
                   <CardTitle className="text-xl text-white">raghav.beer</CardTitle>
-                  <CardDescription className="text-sm text-gray-400">
+                  <CardDescription className="text-sm text-gray-400 font-mono">
                     One of my projects for Terra
                   </CardDescription>
                 </CardHeader>
                 <CardFooter className="flex gap-2">
                   <Button asChild className="flex-1 bg-white text-black hover:bg-gray-200 rounded-full transition-all">
-                    <a href="https://github.com/reghev/thebeginningoftheend" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/reghev/thebeginningoftheend" target="_blank" rel="noopener noreferrer font-mono">
                       GitHub
                     </a>
                   </Button>
-                  <Button asChild variant="outline" className="flex-1 border border-white/20 text-white hover:bg-white hover:text-black rounded-full transition-all">
+                  <Button asChild variant="outline" className=" font-mono flex-1 border border-white/20 text-white hover:bg-white hover:text-black rounded-full transition-all">
                     <Link to="/project/raghavdotbeer">Details</Link>
                   </Button>
-                  <Button asChild variant="outline" className="flex-1 border border-white/20 text-white hover:bg-white hover:text-black rounded-full transition-all">
+                  <Button asChild variant="outline" className="flex-1 border border-white/20 text-white hover:bg-white hover:text-black rounded-full transition-all font-mono">
                     <Link to="https://thebeginningoftheend-fronjend.vercel.app/">Demo!</Link>
                   </Button>
                 </CardFooter>
