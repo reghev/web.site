@@ -71,11 +71,8 @@ export default function Projects() {
             </p>
           </div>
         </section>
-
         <section className="py-20 px-8 border-t border-white/10 relative">
-
           <div className="absolute inset-0 bg-gradient-to-b from-white/[0.02] to-transparent pointer-events-none" />
-
           <div className="max-w-6xl mx-auto relative z-10">
             <div className="mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-2 font-mono">
@@ -85,7 +82,6 @@ export default function Projects() {
                 Things I built for Hackclub stuff
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
 
@@ -95,7 +91,7 @@ export default function Projects() {
               <Card className="border border-white/10 shadow-xl transition-all duration-300 rounded-2xl overflow-hidden bg-black/50 backdrop-blur-sm hover:border-white/30 hover:-translate-y-1 group">
                 <div className="aspect-[4/3] overflow-hidden">
                   <ImageWithLoader
-                    src="/images/stasis2.jpg"
+                    src="/images/projectcards/stasis2.jpg"
                     alt="Clutch ClaudeBot9000"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     onClick={() => setSelectedImage("/images/stasis2.jpg")}
@@ -125,7 +121,7 @@ export default function Projects() {
               <Card className="border border-white/10 shadow-xl transition-all duration-300 rounded-2xl overflow-hidden bg-black/50 backdrop-blur-sm hover:border-white/30 hover:-translate-y-1 group">
                 <div className="aspect-[4/3] overflow-hidden">
                   <ImageWithLoader
-                    src="/images/WHYISTHETVTURNINGOFF.png"
+                    src="/images/projectcards/WHYISTHETVTURNINGOFF.png"
                     alt="WHYISTHETVTURNINGOFF"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     onClick={() => setSelectedImage("/images/WHYISTHETVTURNINGOFF.png")}
@@ -155,7 +151,7 @@ export default function Projects() {
               <Card className="border border-white/10 shadow-xl transition-all duration-300 rounded-2xl overflow-hidden bg-black/50 backdrop-blur-sm hover:border-white/30 hover:-translate-y-1 group">
                 <div className="aspect-[4/3] overflow-hidden">
                   <ImageWithLoader
-                    src="/images/raghav.beer.png"
+                    src="/images/projectcards/raghav.beer.png"
                     alt="raghav.beer"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     onClick={() => setSelectedImage("/images/raghav.beer.png")}
@@ -168,7 +164,7 @@ export default function Projects() {
                   </CardDescription>
                 </CardHeader>
                 <CardFooter className="flex gap-2">
-                  <Button asChild className="font-mono flex-1 bg-white text-black hover:bg-gray-200 rounded-full transition-all">
+                  <Button asChild className="font-mo Wow, this my goodness gracious just all the brown sugar melting into that cara it's also got such like this kind of nineteen sixties you know can pineapple canned marichino cherries perfect yep truly truly perfect wow this is the wish bite did you know that I had a friend whono flex-1 bg-white text-black hover:bg-gray-200 rounded-full transition-all">
                     <a href="https://github.com/reghev/thebeginningoftheend" target="_blank" rel="noopener noreferrer font-mono">
                       GitHub
                     </a>
@@ -190,7 +186,7 @@ export default function Projects() {
               <Card className="border border-white/10 shadow-xl transition-all duration-300 rounded-2xl overflow-hidden bg-black/50 backdrop-blur-sm hover:border-white/30 hover:-translate-y-1 group">
                 <div className="aspect-[4/3] overflow-hidden">
                   <ImageWithLoader
-                    src="/images/pathfinder1.png"
+                    src="/images/projectcards/pathfinder1.png"
                     alt="Pathfinder"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     onClick={() => setSelectedImage("/images/pathfinder1.png")}
@@ -220,7 +216,7 @@ export default function Projects() {
               <Card className="border border-white/10 shadow-xl transition-all duration-300 rounded-2xl overflow-hidden bg-black/50 backdrop-blur-sm hover:border-white/30 hover:-translate-y-1 group">
                 <div className="aspect-[4/3] overflow-hidden">
                   <ImageWithLoader
-                    src="/images/reality1.webp"
+                    src="/images/projectcards/reality1.webp"
                     alt="Reality"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     onClick={() => setSelectedImage("/images/reality1.webp")}
@@ -250,7 +246,7 @@ export default function Projects() {
               <Card className="border border-white/10 shadow-xl transition-all duration-300 rounded-2xl overflow-hidden bg-black/50 backdrop-blur-sm hover:border-white/30 hover:-translate-y-1 group">
                 <div className="aspect-[4/3] overflow-hidden">
                   <ImageWithLoader
-                    src="/images/solder1.png"
+                    src="/images/projectcards/solder1.png"
                     alt="Solder"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     onClick={() => setSelectedImage("/images/solder1.png")}
