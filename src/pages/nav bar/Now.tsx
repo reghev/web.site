@@ -1,5 +1,5 @@
-import Waves from '../components/Waves';
-import GithubPushFeed from '../components/GithubPushFeed';
+import Waves from '../../components/Waves';
+import GithubPushFeed from '../../components/GithubPushFeed';
 
 
 export default function Now() {
