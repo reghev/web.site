@@ -87,7 +87,6 @@ export default function Projects() {
 
 
 
-              /*claude car*/
               <Card className="border border-white/10 shadow-xl transition-all duration-300 rounded-2xl overflow-hidden bg-black/50 backdrop-blur-sm hover:border-white/30 hover:-translate-y-1 group">
                 <div className="aspect-[4/3] overflow-hidden">
                   <ImageWithLoader
@@ -117,7 +116,6 @@ export default function Projects() {
 
 
 
-              /*tv remote*/
               <Card className="border border-white/10 shadow-xl transition-all duration-300 rounded-2xl overflow-hidden bg-black/50 backdrop-blur-sm hover:border-white/30 hover:-translate-y-1 group">
                 <div className="aspect-[4/3] overflow-hidden">
                   <ImageWithLoader
@@ -147,7 +145,7 @@ export default function Projects() {
 
 
 
-              /*raghav.beer*/
+
               <Card className="border border-white/10 shadow-xl transition-all duration-300 rounded-2xl overflow-hidden bg-black/50 backdrop-blur-sm hover:border-white/30 hover:-translate-y-1 group">
                 <div className="aspect-[4/3] overflow-hidden">
                   <ImageWithLoader
@@ -182,7 +180,7 @@ export default function Projects() {
 
 
 
-              /*mark-wahlberg*/
+
               <Card className="border border-white/10 shadow-xl transition-all duration-300 rounded-2xl overflow-hidden bg-black/50 backdrop-blur-sm hover:border-white/30 hover:-translate-y-1 group">
                 <div className="aspect-[4/3] overflow-hidden">
                   <ImageWithLoader
@@ -212,7 +210,7 @@ export default function Projects() {
 
 
 
-              /*seth-blue*/
+
               <Card className="border border-white/10 shadow-xl transition-all duration-300 rounded-2xl overflow-hidden bg-black/50 backdrop-blur-sm hover:border-white/30 hover:-translate-y-1 group">
                 <div className="aspect-[4/3] overflow-hidden">
                   <ImageWithLoader
@@ -242,7 +240,7 @@ export default function Projects() {
 
 
 
-              /*seth-green*/
+
               <Card className="border border-white/10 shadow-xl transition-all duration-300 rounded-2xl overflow-hidden bg-black/50 backdrop-blur-sm hover:border-white/30 hover:-translate-y-1 group">
                 <div className="aspect-[4/3] overflow-hidden">
                   <ImageWithLoader
@@ -272,7 +270,6 @@ export default function Projects() {
 
 
 
-              /*web.site*/
               <Card className="border border-white/10 shadow-xl transition-all duration-300 rounded-2xl overflow-hidden bg-black/50 backdrop-blur-sm hover:border-white/30 hover:-translate-y-1 group">
                 <div className="aspect-[4/3] overflow-hidden">
                   <ImageWithLoader

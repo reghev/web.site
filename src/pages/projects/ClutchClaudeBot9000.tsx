@@ -11,7 +11,7 @@ export default function About() {
     <div className="h-full bg-black relative">
       <Navigation />
       <div className="fixed inset-0 pointer-events-none">
-        <Waves
+                <Waves
           lineColor="#0F0F0F"
           backgroundColor="rgba(15, 15, 15, 1)"
           waveSpeedX={0.003}
