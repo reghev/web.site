@@ -111,12 +111,12 @@ export default function Projects() {
                   </CardDescription>
                 </CardHeader>
                 <CardFooter className="flex gap-2">
-                  <Button asChild className="flex-1 bg-white text-black hover:bg-gray-200 rounded-full transition-all">
+                  <Button asChild className=" font-mono flex-1 bg-white text-black hover:bg-gray-200 rounded-full transition-all">
                     <a href="https://github.com/reghev/awesome-lie-detector" target="_blank" rel="noopener noreferrer font-mono">
                       GitHub
                     </a>
                   </Button>
-                  <Button asChild variant="outline" className="flex-1 border border-white/20 text-white hover:bg-white hover:text-black rounded-full transition-all font-mono">
+                  <Button asChild variant="outline" className="font-mono flex-1 border border-white/20 text-white hover:bg-white hover:text-black rounded-full transition-all font-mono">
                     <Link to="/project/liedetector">Details</Link>
                   </Button>
                 </CardFooter>
@@ -142,12 +142,12 @@ export default function Projects() {
                   </CardDescription>
                 </CardHeader>
                 <CardFooter className="flex gap-2 font-mono">
-                  <Button asChild className="flex-1 bg-white text-black hover:bg-gray-200 rounded-full transition-all">
+                  <Button asChild className="font-mono flex-1 bg-white text-black hover:bg-gray-200 rounded-full transition-all">
                     <a href="https://github.com/Dynix7/Stasis-Project" target="_blank" rel="noopener noreferrer">
                       GitHub
                     </a>
                   </Button>
-                  <Button asChild variant="outline" className="flex-1 border border-white/20 text-white hover:bg-white hover:text-black rounded-full transition-all font-mono">
+                  <Button asChild variant="outline" className="font-mono flex-1 border border-white/20 text-white hover:bg-white hover:text-black rounded-full transition-all font-mono">
                     <Link to="/project/ClutchClaudeBot9000">Details</Link>
                   </Button>
                 </CardFooter>
@@ -172,7 +172,7 @@ export default function Projects() {
                   </CardDescription>
                 </CardHeader>
                 <CardFooter className="flex gap-2 ">
-                  <Button asChild className="flex-1 bg-white text-black hover:bg-gray-200 rounded-full transition-all font-mono">
+                  <Button asChild className="font-mono flex-1 bg-white text-black hover:bg-gray-200 rounded-full transition-all font-mono">
                     <a href="https://github.com/reghev/WHYISTHETVTURNINGOFF" target="_blank" rel="noopener noreferrer font-mono">
                       GitHub
                     </a>
@@ -202,7 +202,7 @@ export default function Projects() {
                   </CardDescription>
                 </CardHeader>
                 <CardFooter className="flex gap-2">
-                  <Button asChild className="flex-1 bg-white text-black hover:bg-gray-200 rounded-full transition-all">
+                  <Button asChild className="font-mono flex-1 bg-white text-black hover:bg-gray-200 rounded-full transition-all">
                     <a href="https://github.com/reghev/thebeginningoftheend" target="_blank" rel="noopener noreferrer font-mono">
                       GitHub
                     </a>
@@ -210,7 +210,7 @@ export default function Projects() {
                   <Button asChild variant="outline" className=" font-mono flex-1 border border-white/20 text-white hover:bg-white hover:text-black rounded-full transition-all">
                     <Link to="/project/raghavdotbeer">Details</Link>
                   </Button>
-                  <Button asChild variant="outline" className="flex-1 border border-white/20 text-white hover:bg-white hover:text-black rounded-full transition-all font-mono">
+                  <Button asChild variant="outline" className="font-mono flex-1 border border-white/20 text-white hover:bg-white hover:text-black rounded-full transition-all font-mono">
                     <Link to="https://thebeginningoftheend-fronjend.vercel.app/">Demo!</Link>
                   </Button>
                 </CardFooter>
@@ -316,7 +316,7 @@ export default function Projects() {
           onClick={() => setSelectedImage(null)}
         >
           <button
-            className="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition-colors z-10"
+            className="font-mono absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition-colors z-10"
             onClick={() => setSelectedImage(null)}
           >
             ×
